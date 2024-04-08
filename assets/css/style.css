@@ -1188,3 +1188,23 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
+
+/* Horario */
+td.free {
+  background: orange;
+}
+td.thai {
+  background: hwb(113 2% 9%);
+}
+td.boxing {
+  background: #0d6efd;
+}
+td.kids {
+  background: #f54021;
+}
+td.femenino {
+  background: purple;
+}
+td.bjj {
+  background: yellow;
+}
