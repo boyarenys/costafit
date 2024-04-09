@@ -1174,7 +1174,7 @@ section .container {
 }
 
 .credits a {
-  color: #0083ff;
+  color: whitesmoke;
   transition: 0.3s;
 }
 
