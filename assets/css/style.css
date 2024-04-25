@@ -1182,67 +1182,277 @@ section .container {
   color: #fff;
 }
 
-/* Horario */
-td.free {
-  background: orange;
-}
-td.thai {
-  background: hwb(113 2% 9%);
-}
-td.boxing {
-  background: #0d6efd;
-}
-td.kids {
-  background: #f54021;
-}
-td.femenino {
-  background: purple;
-}
-td.bjj {
-  background: yellow;
-}
-
-
-.m-b-2 {
-    margin-bottom: 2px !important;
-}
-
 
 /* Las clases */
-
-
-.rte .boxHeadline {
-    font-size: 18px;
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin: 0 0 25px 0;
+.modal-dialog {
+    max-width: 40%;
+    margin: 30px auto;
 }
 
+.modal-body {
+    position: relative;
+    padding: 0px;
+}
 
-
-.language-buttons {
+.close {
     position: absolute;
-    top: 50px; /* Ajusta la posición verticalmente según sea necesario */
-    right: 20px; /* Coloca los botones en el lado derecho */
+    right: 0px;
+    top: 0;
+    z-index: 999;   
+    font-weight: normal;
+    background-color: red;
+    opacity: 1;
 }
 
-.language-button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
 }
 
-    .language-button.active {
-        background-color: #007bff;
-        color: #fff;
-        border-color: #007bff;
+    .embed-responsive::before {
+        display: block;
+        content: "";
+        padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625 or 56.25%) */
     }
 
-    .language-button:hover {
-        background-color: #ddd;
+    .embed-responsive .embed-responsive-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        max-width: 100%; /* Set maximum width to 100% */
+        max-height: 100%; /* Set maximum height to 100% */
     }
+
+
+/* Horario */
+
+td.free {
+    background: orange;
+}
+
+td.thai {
+    background: hwb(113 2% 9%);
+}
+
+td.boxing {
+    background: #0d6efd;
+}
+
+td.kids {
+    background: #f54021;
+}
+
+td.femenino {
+    background: purple;
+}
+
+td.bjj {
+    background: yellow;
+}
+
+
+.schedule-table table thead th {
+    padding: 25px 50px;
+    color: #000;
+    background: #f0f1f3;
+    border: 1px solid red;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    position: relative;
+    border: 0;
+}
+.schedule-table table tbody td {
+    vertical-align: middle;
+    border: 1px solid #e2edf8;
+    font-weight: 500;
+    padding: 30px;
+    text-align: center;
+}
+
+    .schedule-table table tbody td.day {
+        font-size: 22px;
+        font-weight: 600;
+        background: #f0f1f3;
+        border: 1px solid #e4e4e4;
+        position: relative;
+        transition: all 0.3s linear 0s;
+        min-width: 165px;
+    }
+
+    .schedule-table table tbody td.active {
+        position: relative;
+        z-index: 10;
+        transition: all 0.3s linear 0s;
+        min-width: 165px;
+    }
+
+        .schedule-table table tbody td.active h4 {
+            font-weight: 700;
+            color: #000;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .schedule-table table tbody td.active p {
+            font-size: 16px;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+
+    .schedule-table table tbody td .hover h4 {
+        font-weight: 700;
+        font-size: 20px;
+        color: #ffffff;
+        margin-bottom: 5px;
+    }
+
+    .schedule-table table tbody td .hover p {
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: #ffffff;
+        line-height: normal;
+    }
+
+    .schedule-table table tbody td .hover span {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .schedule-table table tbody td.active::before {
+        position: absolute;
+        content: "";
+        min-width: 100%;
+        min-height: 100%;
+        transform: scale(0);
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: all 0.3s linear 0s;
+    }
+
+    .schedule-table table tbody td .hover {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 90%;
+        height: 90%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 99;
+        background: red;       
+        padding: 10px 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s linear 0s;
+    }
+
+    .schedule-table table tbody td.active:hover .hover {
+        transform: translate(-50%, -50%) scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+
+ 
+
+@media screen and (max-width: 1199px) {
+    .schedule-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+        .schedule-table table thead th {
+            padding: 25px 40px;
+        }
+
+        .schedule-table table tbody td {
+            padding: 20px;
+        }
+
+            .schedule-table table tbody td.active h4 {
+                font-size: 18px;
+            }
+
+            .schedule-table table tbody td.active p {
+                font-size: 15px;
+            }
+
+            .schedule-table table tbody td.day {
+                font-size: 20px;
+            }
+
+            .schedule-table table tbody td .hover {
+                padding: 15px 0;
+            }
+
+                .schedule-table table tbody td .hover span {
+                    font-size: 17px;
+                }
+}
+
+@media screen and (max-width: 991px) {
+    .schedule-table table thead th {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .schedule-table table tbody td.day {
+        font-size: 18px;
+    }
+
+    .schedule-table table tbody td.active h4 {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .schedule-table table thead th {
+        padding: 15px;
+    }
+
+    .schedule-table table tbody td {
+        padding: 15px;
+    }
+
+        .schedule-table table tbody td.active h4 {
+            font-size: 16px;
+        }
+
+        .schedule-table table tbody td.active p {
+            font-size: 14px;
+        }
+
+        .schedule-table table tbody td .hover {
+            padding: 10px 0;
+        }
+
+        .schedule-table table tbody td.day {
+            font-size: 18px;
+        }
+
+        .schedule-table table tbody td .hover span {
+            font-size: 15px;
+        }
+}
+
+@media screen and (max-width: 575px) {
+    .schedule-table table tbody td.day {
+        min-width: 135px;
+    }
+}
+
+.hover i {
+    color: #ffffff; 
+    font-size: 2rem;
+}
