@@ -1454,5 +1454,32 @@ td.bjj {
 
 .hover i {
     color: #ffffff; 
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+/* Ventana modal */
+/* Estilos para la ventana modal y su contenido */
+.modal-content {
+    color: black; /* Color del texto negro */
+    
+}
+
+/* Estilos para el encabezado de la ventana modal */
+.modal-header {
+    background-color: #f8f9fa; /* Color de fondo del encabezado */
+    color: black; /* Color del texto negro */
+    border-bottom: 1px solid #dee2e6; /* Borde inferior ligero */
+}
+
+/* Estilos para el cuerpo de la ventana modal */
+.modal-body {
+    color: black; /* Color del texto negro */
+    margin: 20px;
+}
+
+/* Estilos para el pie de la ventana modal */
+.modal-footer {
+    background-color: #f8f9fa; /* Color de fondo del pie */
+    border-top: 1px solid #dee2e6; /* Borde superior ligero */
+    color: black; /* Color del texto negro */
 }
