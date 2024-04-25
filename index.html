@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Personal Bootstrap Template</title>
+  <title>Costa Fit Calella</title>
   <meta content="¡Descubre nuestra escuela de Muay Thai en Calella de Mar! Ofrecemos clases de boxeo, Muay Thai y Jiu Jitsu Brasileño (JJB) para todos los niveles. ¡Ven y entrena con nosotros!" name="description">
   <meta content="Muay Thai Calella de Mar,Escuela de boxeo Calella de Mar,Clases de Muay Thai en Calella,Jiu Jitsu Brasileño Calella,Entrenamiento de artes marciales en Calella,Gimnasio de Muay Thai en Costa Brava
   ,Clases de boxeo tailandés en Calella" name="keywords">
@@ -27,7 +27,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -40,22 +39,23 @@
             <h1><a href="index.html">Costa Fit Calella</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <a href="index.html" class="mr-auto"><img src="assets/img/logo-costafitcalella.png" alt="costafitcalella" class="img-fluid"></a>
-            <h2>Clases <span>MuayThai</span>, entrenador personal y Osteopatía</h2>
-
+            <h2 data-key="title-main-part1">Clases de <span>MuayThai</span>, entrenador personal y Osteopatía</h2>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link active" href="#header">Inicio</a></li>
-                    <li><a class="nav-link" href="#about">Sobre mi</a></li>
-                    <li><a class="nav-link" href="#osteopatia">Osteopatía </a></li>
-                    <li><a class="nav-link" href="#instalaciones">Instalaciones</a></li>
-                    <li><a class="nav-link" href="#clases">Las Clases </a></li>
-                    <li><a class="nav-link" href="#horario">Horario</a></li>
-                    <li><a class="nav-link" href="#contact">Contacto</a></li>
+                    <li><a class="nav-link active translate" href="#header" data-key="menu_inicio">Inicio</a></li>
+                    <li><a class="nav-link translate" href="#about" data-key="menu_about">Sobre mi</a></li>
+                    <li><a class="nav-link translate" href="#osteopatia" data-key="menu_osteo">Osteopatía </a></li>
+                    <li><a class="nav-link translate" href="#instalaciones" data-key="menu_instalaciones">Instalaciones</a></li>
+                    <li><a class="nav-link translate" href="#clases" data-key="menu_clases">Las Clases </a></li>
+                    <li><a class="nav-link translate" href="#horario" data-key="menu_horario">Horario</a></li>
+                    <li><a class="nav-link translate" href="#contact" data-key="menu_contacto">Contacto</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
 
             <div class="social-links">
+                <!--<a href="#" id="spanishBtn">ES</a>
+                <a href="#" id="englishBtn">CA</a>-->
                 <a href="https://www.facebook.com/ruben.siamgym" target="_blank" class="facebook" title="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/costafit_calella/" target="_blank" class="instagram" title="instagram"><i class="bi bi-instagram"></i></a>
                 <a href="https://www.youtube.com/@yougarci" target="_blank" class="youtube" title="youtube"><i class="bi bi-youtube"></i></a>
@@ -71,7 +71,7 @@
         <div class="about-me container">
 
             <div class="section-title">
-                <h2>Sobre mi</h2>
+                <h2 id="menu_about">Sobre mi</h2>
             </div>
 
             <div class="row">
@@ -81,7 +81,7 @@
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                     <h3>Entrenador de Muaythai</h3>
                     <p>
-                        Con más de tres décadas dedicadas al arte del Muay Thai, puedo afirmar con orgullo que mi pasión por este deporte ha sido una constante en mi vida. Desde mis primeros pasos en el gimnasio hasta competir en el ring,
+                        Desde el 1989 dedicado al arte del Muay Thai, puedo afirmar con orgullo que mi pasión por este deporte ha sido una constante en mi vida. Desde mis primeros pasos en el gimnasio hasta competir en el ring,
                         cada momento ha sido una oportunidad para aprender, crecer y compartir mi amor por esta disciplina.
                     </p>
                     <p>
@@ -323,8 +323,8 @@
                     <iframe width="100%" height="360" src="https://www.youtube.com/embed/pvtlLXPfO14" frameborder="0" allowfullscreen=""></iframe>
                 </div>
             </div>
-           
-          
+
+
         </div>
     </section>
 
@@ -464,6 +464,50 @@
     <div class="credits">
         by <a href="https://scordero.com/" target="_blank">scordero.com</a>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var translations = {
+                'ca': {
+                    'menu_horario': 'Horari',
+                    'menu_contacto': 'Contacte',
+                    'menu_instalaciones': 'Instal·lacions',
+                    'menu_clases': 'Les classes',
+                    'menu_osteo': 'Osteopatía',
+                    'menu_about': 'Acerca de mi',
+                    'menu_inicio': 'Inici',
+                },
+                'es': {
+                    'menu_horario': 'Horario',
+                    'menu_contacto': 'Contacto',
+                    'menu_instalaciones': 'Instalaciones',
+                    'menu_clases': 'Las clases',
+                    'menu_osteo': 'Osteopatía',
+                    'menu_about': 'Sobre mi',
+                    'menu_inicio': 'Inicio',
+                }
+            };
+
+            function changeLanguage(lang) {
+                $('.translate').each(function () {
+                    var key = $(this).data('key');
+                    $(this).text(translations[lang][key]);
+                });
+            }
+
+            $('#spanishBtn').click(function () {
+                changeLanguage('es');
+            });
+
+            $('#englishBtn').click(function () {
+                changeLanguage('ca');
+            });
+
+            changeLanguage('es'); // Establecer idioma predeterminado
+        });
+    </script>
+
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

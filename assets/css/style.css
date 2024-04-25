@@ -1218,5 +1218,31 @@ td.bjj {
     margin: 0 0 25px 0;
 }
 
-   
 
+
+.language-buttons {
+    position: absolute;
+    top: 50px; /* Ajusta la posición verticalmente según sea necesario */
+    right: 20px; /* Coloca los botones en el lado derecho */
+}
+
+.language-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+    .language-button.active {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+    }
+
+    .language-button:hover {
+        background-color: #ddd;
+    }
