@@ -1457,24 +1457,46 @@ td.bjj {
     font-size: 3rem;
 }
 
-/* Ventana modal */
-/* Estilos para la ventana modal y su contenido */
+/* 
+    Ventana modal 
+
+*/
+
+.modal-dialog {
+    max-width: 90%;
+    margin: 1rem auto;
+    color: black;
+}
+
 .modal-content {
-    color: black; /* Color del texto negro */
     
+    width: 100%; /* Ancho del contenido de la ventana modal */
+    max-width: 600px; /* Ancho máximo de la ventana modal */
+    margin: auto; /* Centrar horizontalmente */
+}
+.close {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    font-weight: normal; /* Peso de la fuente normal */
+    line-height: 1; /* Altura de línea normal */
+    opacity: 1; /* Opacidad completa */
+    text-shadow: none; /* No hay sombra de texto */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    padding: 10px; /* Sin relleno */
+    cursor: pointer; /* Cursor de puntero */
 }
 
 /* Estilos para el encabezado de la ventana modal */
 .modal-header {
     background-color: #f8f9fa; /* Color de fondo del encabezado */
-    color: black; /* Color del texto negro */
+   
     border-bottom: 1px solid #dee2e6; /* Borde inferior ligero */
+    padding: 10px; /* Espaciado interno */
 }
 
 /* Estilos para el cuerpo de la ventana modal */
 .modal-body {
-    color: black; /* Color del texto negro */
-    margin: 20px;
+    padding: 20px; /* Espaciado interno */
 }
 
 /* Estilos para el pie de la ventana modal */
@@ -1482,4 +1504,95 @@ td.bjj {
     background-color: #f8f9fa; /* Color de fondo del pie */
     border-top: 1px solid #dee2e6; /* Borde superior ligero */
     color: black; /* Color del texto negro */
+    padding: 10px; /* Espaciado interno */
 }
+
+/*
+ Chatbox + button open chat
+*/
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 320px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#closeChat {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+    #closeChat:hover {
+        color: #ccc;
+    }
+
+#userInput {
+    width: calc(100% - 80px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#sendMessage {
+    padding: 5px 8px;
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+    #sendMessage:hover {
+        background-color: rgba(37, 211, 102, 0.8); 
+    }
+/* ICon */
+.conversation-icon {
+    background-color: #25d366;
+    color: #fff;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}
+
+    .conversation-icon:hover {
+        background-color: rgba(37, 211, 102, 0.8); 
+    }
+
+
+

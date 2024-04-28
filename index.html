@@ -53,6 +53,19 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
 
+            <div id="chatIcon" class="conversation-icon"><i class="bi bi-whatsapp"></i></div>
+
+
+
+            <div id="chatBox" class="chat-box">
+                <div class="chat-header">
+                    <img src="assets/img/logo-costafitcalella.png" alt="Perfil" class="profile-picture">
+                    <button id="closeChat">&times;</button>
+                </div>
+                <input type="text" id="userInput" placeholder="Quiero más información" disabled>
+                <a href="https://wa.me/34679089961?text=Mensaje desde la web de costafit_calella: " target="_blank" id="sendMessage"><i class="bi bi-send"></i></a>
+            </div>
+
             <div class="social-links">
                 <a href="#" id="spanishBtn" title="Español">ES</a>
                 <a href="#" id="catalanBtn" title="Catalán">CA</a>
@@ -694,6 +707,38 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
     <script>
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            var chatIcon = document.getElementById("chatIcon");
+            var chatBox = document.getElementById("chatBox");
+            var closeChat = document.getElementById("closeChat");
+
+            chatIcon.addEventListener("click", function () {
+                chatBox.style.display = "block";
+            });
+
+            closeChat.addEventListener("click", function () {
+                chatBox.style.display = "none";
+            });
+
+       
+            document.addEventListener("click", function (event) {
+                if (event.target !== chatIcon && event.target !== chatBox && !chatBox.contains(event.target)) {
+                    chatBox.style.display = "none";
+                }
+            });
+        });
+
+        document.getElementById("sendMessage").addEventListener("click", function () {
+            var userInput = document.getElementById("userInput").value;
+            if (userInput.trim() !== "") {
+                var messageElement = document.createElement("div");
+                messageElement.textContent = "Tú: " + userInput;
+                document.getElementById("chatMessages").appendChild(messageElement);
+              
+            }
+        });
+
         $(document).ready(function () {
 
             var translations = {
