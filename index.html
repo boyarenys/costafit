@@ -56,7 +56,7 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
 
-            <!--<div id="chatIcon" class="conversation-icon"><i class="bi bi-whatsapp"></i></div>
+            <div id="chatIcon" class="conversation-icon"><i class="bi bi-whatsapp"></i></div>
 
 
 
@@ -67,7 +67,7 @@
                 </div>
                 <input type="text" id="userInput" placeholder="Quiero más información" disabled>
                 <a href="https://wa.me/34679089961?text=Mensaje desde la web de costafit_calella: " target="_blank" id="sendMessage"><i class="bi bi-send"></i></a>
-            </div>-->
+            </div>
 
             <div class="social-links">
                 <a href="#" id="spanishBtn" title="Español">ES</a>
@@ -678,7 +678,6 @@
                     <p>Usted tiene derecho a acceder, rectificar o eliminar sus datos personales en cualquier momento. Puede ponerse en contacto con nosotros para ejercer estos derechos.</p>
 
 
-                    <h5>Contacto</h5>
                     <p>Si tiene preguntas sobre nuestra Política de Privacidad o el tratamiento de sus datos personales, no dude en ponerse en contacto con nosotros.</p>
                 </div>
                 <div class="modal-footer">
@@ -705,8 +704,8 @@
     </div>
 
 
-    <!-- Start cookieyes banner -->
-    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/c9de8a10d6ca9d9bb0c0471d/script.js"></script> <!-- End cookieyes banner -->
+
+   
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
     <!-- Vendor JS Files -->
@@ -833,6 +832,37 @@
                 'feature_osteo_9': 'Mantener la salud general y el bienestar físico',
             }
         };
+        /* Mensaje style chatbox */
+        document.addEventListener("DOMContentLoaded", function () {
+            var chatIcon = document.getElementById("chatIcon");
+            var chatBox = document.getElementById("chatBox");
+            var closeChat = document.getElementById("closeChat");
+
+            chatIcon.addEventListener("click", function () {
+                chatBox.style.display = "block";
+            });
+
+            closeChat.addEventListener("click", function () {
+                chatBox.style.display = "none";
+            });
+
+
+            document.addEventListener("click", function (event) {
+                if (event.target !== chatIcon && event.target !== chatBox && !chatBox.contains(event.target)) {
+                    chatBox.style.display = "none";
+                }
+            });
+        });
+
+        document.getElementById("sendMessage").addEventListener("click", function () {
+            var userInput = document.getElementById("userInput").value;
+            if (userInput.trim() !== "") {
+                var messageElement = document.createElement("div");
+                messageElement.textContent = "Tú: " + userInput;
+                document.getElementById("chatMessages").appendChild(messageElement);
+
+            }
+        });
     </script>
     <script src="assets/js/main.js"></script>
 

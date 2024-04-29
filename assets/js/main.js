@@ -2,9 +2,8 @@ $(document).ready(function () {
 
     (function () {
         "use strict";
-
+               
        
-
         function changeLanguage(lang) {
             $('.translate').each(function () {
                 var key = $(this).data('key');
@@ -172,6 +171,6 @@ $(document).ready(function () {
 
     })();
 
-   
-
 });
+ 
+
