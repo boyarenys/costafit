@@ -1,119 +1,147 @@
 $(document).ready(function () {
-    // Objeto con traducciones
-    var translations = {
-        'ca': {
-            'menu_contacto': 'Contacte',
-            'menu_instalaciones': 'Instal·lacions',
-            'menu_clases': 'Les classes',
-        },
-        'es': {
-            'menu_contacto': 'Contacto',
-            'menu_instalaciones': 'Instalaciones',
-            'menu_clases': 'Las clases',
-        }
-    };
 
-    // Función para cambiar el idioma
-    function changeLanguage(lang) {
-        $('.translate').each(function () {
-            var key = $(this).data('key');
-            $(this).text(translations[lang][key]);
-        });
-        localStorage.setItem('selectedLanguage', lang);
-    }
+    (function () {
+        "use strict";
 
-    // Función para cargar el idioma seleccionado
-    function loadSelectedLanguage() {
-        var selectedLang = localStorage.getItem('selectedLanguage');
-        changeLanguage(selectedLang || 'es'); // Establecer el idioma predeterminado si no hay uno seleccionado
-    }
-    loadSelectedLanguage();
-
-    // Evento clic para cambiar al español
-    $('#spanishBtn').click(function () {
-        changeLanguage('es');
-    });
-
-    // Evento clic para cambiar al catalán
-    $('#catalanBtn').click(function () {
-        changeLanguage('ca');
-    });
-
-    // Mobile nav toggle
-    $('.mobile-nav-toggle').click(function () {
-        $('#navbar').toggleClass('navbar-mobile');
-        $(this).toggleClass('bi-list bi-x');
-    });
-
-    // Scroll con desplazamiento en los enlaces con clase .scrollto
-    $('#navbar .nav-link').click(function (e) {
-        var section = $(this.hash);
-        if (section.length) {
-            e.preventDefault();
-            var navbar = $('#navbar');
-            var header = $('#header');
-            var sections = $('section');
-            var navlinks = $('#navbar .nav-link');
-
-            navlinks.removeClass('active');
-            $(this).addClass('active');
-
-            if (navbar.hasClass('navbar-mobile')) {
-                navbar.removeClass('navbar-mobile');
-                $('.mobile-nav-toggle').toggleClass('bi-list bi-x');
-            }
-
-            if (this.hash == '#header') {
-                header.removeClass('header-top');
-                sections.removeClass('section-show');
-                return;
-            }
-
-            if (!header.hasClass('header-top')) {
-                header.addClass('header-top');
-                setTimeout(function () {
-                    sections.removeClass('section-show');
-                    section.addClass('section-show');
-                }, 350);
+        /**
+         * Easy selector helper function
+         */
+        const select = (el, all = false) => {
+            el = el.trim()
+            if (all) {
+                return [...document.querySelectorAll(el)]
             } else {
-                sections.removeClass('section-show');
-                section.addClass('section-show');
+                return document.querySelector(el)
             }
-
-            window.scrollTo({
-                top: section.offset().top,
-                behavior: 'smooth'
-            });
         }
-    });
 
-    // Animación de habilidades
-    var skillsContent = $('.skills-content');
-    if (skillsContent.length) {
-        new Waypoint({
-            element: skillsContent[0],
-            offset: '80%',
-            handler: function () {
-                $('.progress .progress-bar').each(function () {
-                    $(this).css('width', $(this).attr('aria-valuenow') + '%');
-                });
+        /**
+         * Easy event listener function
+         */
+        const on = (type, el, listener, all = false) => {
+            let selectEl = select(el, all)
+
+            if (selectEl) {
+                if (all) {
+                    selectEl.forEach(e => e.addEventListener(type, listener))
+                } else {
+                    selectEl.addEventListener(type, listener)
+                }
             }
-        });
-    }
+        }
 
-    // Mostrar ventana modal de video
+        /**
+         * Scrolls to an element with header offset
+         */
+        const scrollto = (el) => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+
+        /**
+         * Mobile nav toggle
+         */
+        on('click', '.mobile-nav-toggle', function (e) {
+            select('#navbar').classList.toggle('navbar-mobile')
+            this.classList.toggle('bi-list')
+            this.classList.toggle('bi-x')
+        })
+
+        /**
+         * Scrool with ofset on links with a class name .scrollto
+         */
+        on('click', '#navbar .nav-link', function (e) {
+            let section = select(this.hash)
+            if (section) {
+                e.preventDefault()
+
+                let navbar = select('#navbar')
+                let header = select('#header')
+                let sections = select('section', true)
+                let navlinks = select('#navbar .nav-link', true)
+
+                navlinks.forEach((item) => {
+                    item.classList.remove('active')
+                })
+
+                this.classList.add('active')
+
+                if (navbar.classList.contains('navbar-mobile')) {
+                    navbar.classList.remove('navbar-mobile')
+                    let navbarToggle = select('.mobile-nav-toggle')
+                    navbarToggle.classList.toggle('bi-list')
+                    navbarToggle.classList.toggle('bi-x')
+                }
+
+                if (this.hash == '#header') {
+                    header.classList.remove('header-top')
+                    sections.forEach((item) => {
+                        item.classList.remove('section-show')
+                    })
+                    return;
+                }
+
+                if (!header.classList.contains('header-top')) {
+                    header.classList.add('header-top')
+                    setTimeout(function () {
+                        sections.forEach((item) => {
+                            item.classList.remove('section-show')
+                        })
+                        section.classList.add('section-show')
+
+                    }, 350);
+                } else {
+                    sections.forEach((item) => {
+                        item.classList.remove('section-show')
+                    })
+                    section.classList.add('section-show')
+                }
+
+                scrollto(this.hash)
+            }
+        }, true)
+
+        /**
+         * Skills animation
+         */
+        let skilsContent = select('.skills-content');
+        if (skilsContent) {
+            new Waypoint({
+                element: skilsContent,
+                offset: '80%',
+                handler: function (direction) {
+                    let progress = select('.progress .progress-bar', true);
+                    progress.forEach((el) => {
+                        el.style.width = el.getAttribute('aria-valuenow') + '%'
+                    });
+                }
+            })
+        }
+
+        
+
+    })();
+
+    /**
+     * Show video modal windows
+    */
     var $videoSrc;
     $('.video-btn').click(function () {
         $videoSrc = $(this).data("src");
     });
 
-    // Reproducir video al abrir la ventana modal
-    $('#myModal').on('shown.bs.modal', function () {
+    // when the modal is opened autoplay it
+    $('#myModal').on('shown.bs.modal', function (e) {
+        // set the video src to autoplay and not to show related video
         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-    });
+    })
 
-    // Detener video al cerrar la ventana modal
-    $('#myModal').on('hide.bs.modal', function () {
+    // stop playing the youtube video when I close the modal
+    $('#myModal').on('hide.bs.modal', function (e) {
+        // a poor man's stop video
         $("#video").attr('src', $videoSrc);
-    });
+    })
+
 });
