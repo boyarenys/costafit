@@ -53,7 +53,7 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
 
-            <div id="chatIcon" class="conversation-icon"><i class="bi bi-whatsapp"></i></div>
+            <!--<div id="chatIcon" class="conversation-icon"><i class="bi bi-whatsapp"></i></div>
 
 
 
@@ -64,7 +64,7 @@
                 </div>
                 <input type="text" id="userInput" placeholder="Quiero más información" disabled>
                 <a href="https://wa.me/34679089961?text=Mensaje desde la web de costafit_calella: " target="_blank" id="sendMessage"><i class="bi bi-send"></i></a>
-            </div>
+            </div>-->
 
             <div class="social-links">
                 <a href="#" id="spanishBtn" title="Español">ES</a>
@@ -711,36 +711,36 @@
     <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/c9de8a10d6ca9d9bb0c0471d/script.js"></script>
     <script>
 
-        document.addEventListener("DOMContentLoaded", function () {
-            var chatIcon = document.getElementById("chatIcon");
-            var chatBox = document.getElementById("chatBox");
-            var closeChat = document.getElementById("closeChat");
+        //document.addEventListener("DOMContentLoaded", function () {
+        //    var chatIcon = document.getElementById("chatIcon");
+        //    var chatBox = document.getElementById("chatBox");
+        //    var closeChat = document.getElementById("closeChat");
 
-            chatIcon.addEventListener("click", function () {
-                chatBox.style.display = "block";
-            });
+        //    chatIcon.addEventListener("click", function () {
+        //        chatBox.style.display = "block";
+        //    });
 
-            closeChat.addEventListener("click", function () {
-                chatBox.style.display = "none";
-            });
+        //    closeChat.addEventListener("click", function () {
+        //        chatBox.style.display = "none";
+        //    });
 
 
-            document.addEventListener("click", function (event) {
-                if (event.target !== chatIcon && event.target !== chatBox && !chatBox.contains(event.target)) {
-                    chatBox.style.display = "none";
-                }
-            });
-        });
+        //    document.addEventListener("click", function (event) {
+        //        if (event.target !== chatIcon && event.target !== chatBox && !chatBox.contains(event.target)) {
+        //            chatBox.style.display = "none";
+        //        }
+        //    });
+        //});
 
-        document.getElementById("sendMessage").addEventListener("click", function () {
-            var userInput = document.getElementById("userInput").value;
-            if (userInput.trim() !== "") {
-                var messageElement = document.createElement("div");
-                messageElement.textContent = "Tú: " + userInput;
-                document.getElementById("chatMessages").appendChild(messageElement);
+        //document.getElementById("sendMessage").addEventListener("click", function () {
+        //    var userInput = document.getElementById("userInput").value;
+        //    if (userInput.trim() !== "") {
+        //        var messageElement = document.createElement("div");
+        //        messageElement.textContent = "Tú: " + userInput;
+        //        document.getElementById("chatMessages").appendChild(messageElement);
 
-            }
-        });
+        //    }
+        //});
 
         $(document).ready(function () {
 
