@@ -705,7 +705,9 @@
 
 
 
-   
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/c9de8a10d6ca9d9bb0c0471d/script.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
     <!-- Vendor JS Files -->
@@ -838,17 +840,20 @@
             var chatBox = document.getElementById("chatBox");
             var closeChat = document.getElementById("closeChat");
 
-            chatIcon.addEventListener("click", function () {
-                chatBox.style.display = "block";
+            // Agrega el evento de clic al contenedor chatIcon
+            chatIcon.addEventListener("click", function (event) {
+                // Comprueba si el clic ocurrió en el icono de WhatsApp o en el contenedor
+                if (event.target === chatIcon || event.target.parentElement === chatIcon) {
+                    chatBox.style.display = "block";
+                }
             });
 
             closeChat.addEventListener("click", function () {
                 chatBox.style.display = "none";
             });
 
-
             document.addEventListener("click", function (event) {
-                if (event.target !== chatIcon && event.target !== chatBox && !chatBox.contains(event.target)) {
+                if (event.target !== chatIcon && !chatIcon.contains(event.target) && event.target !== chatBox && !chatBox.contains(event.target)) {
                     chatBox.style.display = "none";
                 }
             });
@@ -860,7 +865,6 @@
                 var messageElement = document.createElement("div");
                 messageElement.textContent = "Tú: " + userInput;
                 document.getElementById("chatMessages").appendChild(messageElement);
-
             }
         });
     </script>
