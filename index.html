@@ -2,627 +2,914 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Costa Fit Calella</title>
     <meta content="¡Descubre nuestra escuela de Muay Thai en Calella de Mar! Ofrecemos clases de boxeo, Muay Thai para adultos y NIÑOS, Kali, Yoga y Jiu Jitsu Brasileño (JJB) para todos los niveles. ¡Ven y entrena con nosotros!" name="description">
     <meta content="Muay Thai Calella de Mar,Escuela de boxeo Calella de Mar,Clases de Muay Thai en Calella,Jiu Jitsu Brasileño Calella, Clases Kali, Clases Yoga, Muay Thai para niños, Entrenamiento de artes marciales en Calella,Gimnasio de Muay Thai en Costa Brava
-  ,Clases de boxeo tailandés en Calella" name="keywords">
-
-
+,Clases de boxeo tailandés en Calella" name="keywords">
+    <title>Costa Fit Calella</title>
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- FontAwesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
-
 <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
 
-    <!-- ======= Header ======= -->
-    <header id="header">
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid" role="navigation">
+            <div class="row align-items-center py-2 justify-content-center">
+                <!-- Enlaces de idiomas a la izquierda del logo -->
+                <div class="col-auto d-flex align-items-center language-links">
+                    <a href="#" id="spanishBtn" title="Español" class="lang-circle">ES</a>
+                    <a href="#" id="catalanBtn" title="Català" class="lang-circle">CA</a>
+                </div>
+
+                <!-- Logo en el centro con idiomas justo a su lado -->
+                <div class="col-auto text-center logo-container">
+                    <a href="index.html"><img src="img/logo.png" alt="costafitcalella" class="logo"></a>
+                </div>
+
+                <!-- Enlaces de idiomas a la derecha del logo -->
+                <div class="col-auto d-flex align-items-center language-links">
+                    <a href="#" id="englishBtn" title="English" class="lang-circle">EN</a>
+                    <a href="#" id="frenchBtn" title="French" class="lang-circle">FR</a>
+                </div>
+            </div>
+            <div class="row text-center align-items-center g-0">
+                <div class="col-12 d-lg-none">
+                    <button class="btn btn-outline-secondary w-100" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        Menú
+                    </button>
+                </div>
+                <div class="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-xs-none ms-auto">
+                    <div class="d-flex justify-content-around border-top border-bottom border-dark">
+                        <div class="customLink"><a class="d-inline-block p-3 translate" href="#aboutme" data-key="menu_about">Sobre mi</a></div>
+                        <!-- Clases -->
+                        <div class="customLink dropdown">
+                            <a class="d-inline-block p-3 dropdown-toggle translate" href="#disciplines" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-key="menu_discipline">
+                                <i class="fas fa-fist-raised"></i> Disciplinas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#disciplines">Muay Thai</a></li>
+                                <li><a class="dropdown-item" href="#thaikids">Muay Thai Kids</a></li>
+                                <li><a class="dropdown-item" href="#disciplines">Boxing</a></li>
+                                <li><a class="dropdown-item" href="#disciplines">Jiu-Jitsu</a></li>
+                                <li><a class="dropdown-item" href="#disciplines">Kali</a></li>
+                                <li><a class="dropdown-item" href="#disciplines">Yoga</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="customLink">
+                            <a class="d-inline-block p-3 translate" href="#osteopatia" data-key="menu_ostepatia">
+                                <i class="fas fa-hands fs-3"></i> Osteopatía
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ini Social networks -->
+                <div class="col-lg-2 col-md-2 mx-auto icon-container">
+                    <a href="https://www.facebook.com/ruben.siamgym" target="_blank" title="facebook"><i class="fab fa-facebook social-icon facebook"></i></a>
+                    <a href="https://www.youtube.com/@yougarci" target="_blank" title="youtube"><i class="fab fa-youtube social-icon youtube"></i></a>
+                    <a href="https://www.instagram.com/costafit_calella/" target="_blank" title="instagram"><i class="fab fa-instagram social-icon instagram"></i></a>
+                    <a href="https://wa.me/34679089961?text=Mensaje desde la web de costafit_calella: " target="_blank" title="whatsapp">
+                        <i class="fab fa-whatsapp social-icon whatsapp"></i>
+                    </a>
+                </div>
+                <!-- End Social networks -->
+
+                <div class="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-xs-none me-auto">
+                    <div class="d-flex justify-content-around border-top border-bottom border-dark">
+                        <div class="customLink"><a class="d-inline-block p-3 translate" href="#gallery" data-key="menu_gallery">Galeria</a></div>
+                        <div class="customLink"><a class="d-inline-block p-3 translate" href="#timetable" data-key="menu_timetable">Horario</a></div>
+                        <div class="customLink"><a class="d-inline-block p-3 translate" href="#contact" data-key="menu_contacto">Contacto</a></div>
+                    </div>
+                </div>
+
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse d-lg-none" id="navbarSupportedContent">
+                    <div class="d-flex flex-column text-center border-top border-bottom border-dark">
+                        <div class="customLink"><a class="d-inline-block p-3 translate" href="#aboutme" data-key="menu_about">Sobre mi</a></div>
+                        <div class="customLink dropdown">
+                            <a class="d-inline-block p-3 dropdown-toggle translate" href="#" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" data-key="menu_discipline">Disciplinas</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                <li><a class="dropdown-item" href="#disciplines">Muay Thai</a></li>
+                                <li><a class="dropdown-item" href="#disciplines">Muay Thai Kids</a></li>
+                                <li><a class="dropdown-item" href="#disciplines">Boxing</a></li>
+                                <li><a class="dropdown-item" href="#disciplines">Jiu-Jitsu</a></li>
+                                <li><a class="dropdown-item" href="#disciplines">Kali</a></li>
+                                <li><a class="dropdown-item" href="#disciplines">Yoga</a></li>
+                            </ul>
+                        </div>
+                        <div class="customLink">
+                            <a class="d-inline-block p-3 translate" href="#osteopatia" data-key="menu_ostepatia">
+                                <i class="fas fa-hands fs-3"></i> Osteopatía
+                            </a>
+                        </div>
+                        <div class="customLink">
+                            <a class="d-inline-block p-3 translate" href="#gallery" data-key="menu_gallery">Galeria</a>
+                        </div>
+                        <div class="customLink">
+                            <a class="d-inline-block p-3" href="#timetable" data-key="menu_timetable">Horario</a>
+                        </div>
+                        <div class="customLink">
+                            <a class="d-inline-block p-3 translate" href="#contact" data-key="menu_contacto">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section ">
         <div class="container">
-
-            <h1><a href="index.html">Costa Fit Calella</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="index.html" class="mr-auto"><img src="assets/img/logo-costafitcalella.png" alt="costafitcalella" class="img-fluid"></a>
-            <h2 data-key="texto_main" class="translate">Clases de <span>MuayThai</span>, entrenador personal y Osteopatía</h2>
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link active translate" href="#header" data-key="menu_inicio">Inicio</a></li>
-                    <li><a class="nav-link translate" href="#about" data-key="menu_about">Sobre mi</a></li>
-                    <li><a class="nav-link translate" href="#osteopatia" data-key="menu_osteo">Osteopatía </a></li>
-                    <li><a class="nav-link translate" href="#instalaciones" data-key="menu_instalaciones">Instalaciones</a></li>
-                    <li><a class="nav-link translate" href="#clases" data-key="menu_clases">Las Clases </a></li>
-                    <li><a class="nav-link translate" href="#artesmarciales" data-key="menu_martial_arts">Artes marciales </a></li>
-                    <li><a class="nav-link translate" href="#contact" data-key="menu_contacto">Contacto</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
-
-            <div id="chatIcon" class="conversation-icon"><i class="bi bi-whatsapp"></i></div>
-
-
-
-            <div id="chatBox" class="chat-box">
-                <div class="chat-header">
-                    <img src="assets/img/logo-costafitcalella.png" alt="Perfil" class="profile-picture">
-                    <button id="closeChat">&times;</button>
-                </div>
-                <input type="text" id="userInput" placeholder="Quiero más información" disabled>
-                <a href="https://wa.me/34679089961?text=Mensaje desde la web de costafit_calella: " target="_blank" id="sendMessage"><i class="bi bi-send"></i></a>
-            </div>
-
-            <div class="social-links">
-                <a href="#" id="spanishBtn" title="Español">ES</a>
-                <a href="#" id="catalanBtn" title="Catalán">CA</a>
-                <a href="https://www.facebook.com/ruben.siamgym" target="_blank" class="facebook" title="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/costafit_calella/" target="_blank" class="instagram" title="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.youtube.com/@yougarci" target="_blank" class="youtube" title="youtube"><i class="bi bi-youtube"></i></a>
-                <a href="https://wa.me/34679089961?text=Mensaje desde la web de costafit_calella: " target="_blank" title="whatsapp">  <i class="bi bi-whatsapp"></i> </a>
-            </div>
-
-        </div>
-    </header><!-- End Header -->
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-        <div class="about-me container">
-
-            <div class="section-title">
-                <h2 id="menu_about" data-key="menu_about" class="translate">Sobre mi</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4" data-aos="fade-right">
-                    <img src="assets/img/me.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                    <h3>Entrenador de Muaythai</h3>
-                    <p data-key="about_t1" class="translate">
-                        Desde el 1989 dedicado al arte del Muay Thai, puedo afirmar con orgullo que mi pasión por este deporte ha sido una constante en mi vida. Desde mis primeros pasos en el gimnasio hasta competir en el ring,
-                        cada momento ha sido una oportunidad para aprender, crecer y compartir mi amor por esta disciplina.
-                    </p>
-                    <p data-key="about_t2" class="translate">
-                        Mi viaje en el Muay Thai comenzó hace en 1993, cuando decidí adentrarme en este arte marcial tan cautivador.
-                        Desde entonces, he dedicado innumerables horas al entrenamiento, perfeccionando mi técnica y sumergiéndome en la rica historia y filosofía que rodea al Muay Thai.
-                    </p>
-                    <p data-key="about_t3" class="translate">
-                        Como competidor, he tenido el privilegio de enfrentarme a desafíos emocionantes y aprender lecciones valiosas en el ring. Cada pelea ha sido una oportunidad para poner a prueba mis habilidades, mi resistencia y mi determinación,
-                        y estoy agradecido por cada experiencia que me ha ayudado a crecer como atleta y como persona.
-                    </p>
-                    <p data-key="about_t4" class="translate">
-                        Pero mi pasión por el Muay Thai va más allá de la competición. Durante más de dos décadas, he tenido el honor de compartir mis conocimientos y mi amor por este arte con mis alumnos. Como profesor de Muay Thai, mi objetivo es inspirar, motivar y guiar a cada uno de mis estudiantes en su viaje hacia la maestría de este deporte.
-                    </p>
-                    <p data-key="about_t5" class="translate">
-                        En mi academia, no solo enseñamos técnicas de combate, sino también valores como el respeto, la disciplina y la perseverancia.
-                        Creo firmemente que el Muay Thai es mucho más que una forma de luchar; es un camino hacia el autodescubrimiento y el crecimiento personal.
-                    </p>
-                    <p data-key="about_t6" class="translate">
-                        Si estás buscando aprender Muay Thai de la mano de un instructor con experiencia y pasión por este arte, has llegado al lugar indicado.
-                        Estoy aquí para ayudarte a alcanzar tus objetivos, ya sea que desees competir en el ring o simplemente mejorar tu condición física y tu confianza.
-                    </p>
-                    <p data-key="about_t7" class="translate">
-                        Únete a mí en esta emocionante aventura en el mundo del Muay Thai. ¡Juntos, alcanzaremos nuevas alturas!
-                        ¡Nos vemos en el gimnasio!
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="interests container">
-
-            <div class="section-title">
-                <h2 data-key="features_thai" class="translate">Beneficios del Muaythai</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-4">
-                    <div class="icon-box">
-                        <i class="ri-gradienter-line" style="color: #ffbb2c;"></i>
-                        <h3 data-key="feature_thai_1" class="translate">Aumenta la fuerza</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="ri-gradienter-line" style="color: #5578ff;"></i>
-                        <h3 data-key="feature_thai_2" class="translate">Tonifica el cuerpo</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="ri-gradienter-line" style="color: #e80368;"></i>
-                        <h3 data-key="feature_thai_3" class="translate">Ayuda a adelgazar</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-                    <div class="icon-box">
-                        <i class="ri-gradienter-line" style="color: #e361ff;"></i>
-                        <h3 data-key="feature_thai_4" class="translate">Mejora la salud cardiováscular</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4">
-                    <div class="icon-box">
-                        <i class="ri-gradienter-line" style="color: #47aeff;"></i>
-                        <h3 data-key="feature_thai_5" class="translate">Mejora nuestra coordinación</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4">
-                    <div class="icon-box">
-                        <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-                        <h3 data-key="feature_thai_6" class="translate">Ayuda a liberar estrés</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4">
-                    <div class="icon-box">
-                        <i class="ri-gradienter-line" style="color: #11dbcf;"></i>
-                        <h3 data-key="feature_thai_7" class="translate">Ayuda a tener autoseguridad</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4">
-                    <div class="icon-box">
-                        <i class="ri-gradienter-line" style="color: #4233ff;"></i>
-                        <h3 data-key="feature_thai_8" class="translate">Ayuda a tener más agilidad</h3>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Seccion osteopatia -->
-    <section id="osteopatia" class="resume">
-        <div class="container">
-
-            <div class="section-title">
-                <h2 class="translate" data-key="menu_osteo">Osteopatía</h2>
-                <p>Susanna Bartoli</p>
-            </div>
-
             <div class="row">
                 <div class="col-lg-12">
-                    <div>
-                        <p class="translate" data-key="osteo_main">
-                            Soy Susanna y desde el gimnasio también se ofrecen servicios de osteopatía de alta calidad diseñados para mejorar tu bienestar general y promover una vida más saludable.
-                            Nuestro enfoque se centra en tratamientos holísticos que abordan las raíces de tus dolencias para lograr resultados efectivos y duraderos.
-                        </p>
-
-                    </div>
-                    <br />
-
-                    <div class="resume-item">
-                        <h4 class="translate" data-key="osteo_title_1">¿Qué es la osteopatía?</h4>
-                        <p class="translate" data-key="osteo_subtitle_1">
-                            La osteopatía es una disciplina terapéutica que se basa en el principio de que el bienestar del cuerpo depende de que sus sistemas estén en equilibrio.
-                            Nuestros osteópatas altamente capacitados utilizan técnicas manuales especializadas para aliviar el dolor, mejorar la movilidad y restaurar la función óptima del cuerpo.
-                        </p>
-                    </div>
-                    <br />
-                    <div class="resume-item">
-                        <h4 class="translate" data-key="osteo_title_2">Osteopatía y el Muaythai</h4>
-                        <p class="translate" data-key="osteo_subtitle_2">
-                            La osteopatía es beneficiosa para los practicantes de muay thai debido a su capacidad para:
-                            <ul>
-                                <li class="translate" data-key="feature_osteo_1">Aliviar el dolor muscular y articular.</li>
-                                <li class="translate" data-key="feature_osteo_2">Mejorar la flexibilidad y la movilidad.</li>
-                                <li class="translate" data-key="feature_osteo_3">Corregir desequilibrios posturales.</li>
-                                <li class="translate" data-key="feature_osteo_4">Acelerar la recuperación de lesiones.</li>
-                                <li class="translate" data-key="feature_osteo_5">Optimizar el rendimiento físico.</li>
-                                <li class="translate" data-key="feature_osteo_6">Reducir el riesgo de lesiones crónicas.</li>
-                                <li class="translate" data-key="feature_osteo_7">Promover la circulación sanguínea.</li>
-                                <li class="translate" data-key="feature_osteo_8">Equilibrar el cuerpo y la mente.</li>
-                                <li class="translate" data-key="feature_osteo_9">Mantener la salud general y el bienestar físico</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <br />
-                    <div class="resume-item">
-                        <h4 class="translate" data-key="menu_contacto">Contacto</h4>
-                        <a href="https://wa.me/34608607998?text=Mensaje desde la web de costafit_calella: " target="_blank" title="whatsapp">  <i class="bi bi-whatsapp"></i> </a>
+                    <div class="hero-text">
+                        <span class="translate" data-key="title_martial_arts">Artes marciales</span>
+                        <h1>
+                            Costa Fit Calella
+                            <!-- Botón de Play -->
+                            <a href="#" class="btn-play-video">
+                                <i class="fa fa-play"></i>
+                            </a>
+                        </h1>
                     </div>
                 </div>
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <!-- Seccion instalaciones -->
-    <section id="instalaciones" class="portfolio">
-        <div class="container">
-
-            <div class="section-title">
-                <h2 class="translate" data-key="menu_instalaciones">Instalaciones</h2>
-            </div>
-
-
-            <div class="row portfolio-container">
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/instalaciones/local-1.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <div class="portfolio-links">
-                                <a href="assets/img/instalaciones/local-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                                    <i class="bx bx-zoom-in"></i>
-                                </a>
+                <div class="col-lg-12">
+                    <div class="form-container">
+                        <h2 class="translate" data-key="free_day">¡Entreno gratis! Completa!</h2>
+                        <form id="contact-form-one-day" class="google-style-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" placeholder="Nombre" required>
+                                <input type="email" class="form-control no-border" id="email" placeholder="Email" required>
+                                <input type="date" class="form-control no-border" id="day" required>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/instalaciones/local-2.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <div class="portfolio-links">
-                                <a href="assets/img/instalaciones/local-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                                    <i class="bx bx-zoom-in"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/instalaciones/local-3.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <div class="portfolio-links">
-                                <a href="assets/img/instalaciones/local-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/instalaciones/local-4.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <div class="portfolio-links">
-                                <a href="assets/img/instalaciones/local-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/instalaciones/local-5.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <div class="portfolio-links">
-                                <a href="assets/img/instalaciones/local-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/instalaciones/local-6.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <div class="portfolio-links">
-                                <a href="assets/img/instalaciones/local-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- ======= Seccion artesmarciales ======= -->
-    <section id="artesmarciales" class="services">
-        <div class="container">
 
-            <div class="section-title">
-                <h2 class="translate" data-key="menu_martial_arts">Artes marciales</h2>
+    <div id="videoPopup" class="video-popup">
+        <div class="video-popup-content">
+            <span class="close">&times;</span>
+            <div class="video-wrapper">
+                <iframe id="youtubeVideo"
+                        src="https://www.youtube.com/embed/7I5jAaO03pk"
+                        title="YouTube video"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen>
+                </iframe>
             </div>
+        </div>
+    </div>
 
+
+    <!-- Banner Section Begin -->
+    <!--<section class="footer-banner">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                        <div class="icon">B</div>
-                        <h4><a href="">Boxing</a></h4>
-                        <p class="translate" data-key="boxing_description">
+                <div class="col-lg-6">
+                    <div class="footer-banner-item set-bg" data-setbg="img/footer-banner/footer-banner-1.jpg">
+                        <span>Nuevo</span>
+                        <h2>Muay thai KIDS</h2>
+                        <  <p>lorem ripsum</p>
+                        <a href="#" class="primary-btn">Go</a>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <div class="icon">J</div>
-                        <h4><a href="">Jiu-Jitsu</a></h4>
-                        <p class="translate" data-key="jiujitsu_description">
+                <div class="col-lg-6">
+                    <div class="footer-banner-item set-bg" data-setbg="img/footer-banner/footer-banner-2.jpg">
+                        <span>Publicacion xx</span>
+                        <h2>telf</h2>
+                        <p>lorem ripsum</p>
+                        <a href="#" class="primary-btn">Go</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- Banner Section End -->
+    <!-- Section About Begin -->
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="icon-box">
-                        <div class="icon">K</div>
-                        <h4><a href="">Kali</a></h4>
-                        <p class="translate" data-key="Kali_description">
+    <section id="aboutme" class="spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 class="translate" data-key="title_about">Sobre mi</h2>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
-                        <div class="icon">MK</div>
-                        <h4><a href="">Muay Thai Kids</a></h4>
-                        <p class="translate" data-key="thai_kids_description">
+            <div class="col-12 mx-auto">
+                <div class="bg-white shadow rounded overflow-hidden">
+                    <div class="px-4 pt-0 pb-4 cover">
+                        <div class="media align-items-end profile-head">
+                            <div class="profile mr-3">
+                                <img src="img/me.jpg" alt="Rubén Costa" width="190" class="rounded mb-2 img-thumbnail">
+                            </div>
+                            <div class="media-body mb-5 text-white">
+                                <a href="https://www.instagram.com" target="_blank" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com" target="_blank" class="text-white mr-2"><i class="fab fa-facebook"></i></a>
+                                <a href="https://www.youtube.com" target="_blank" class="text-white"><i class="fab fa-youtube"></i></a>
+
+                                <h4 class="mt-0 mb-0">Rubén Costa</h4>
+                                <p class="small mb-4 translate" data-key="aboutme_profile">
+                                    <i class="fas fa-fist-raised mr-2"></i>
+                                    Profesor de Muay thai, Boxing, Entrenador personal y fundador
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <br />
+                        <div class="p-4 translate">
+                            <p class="translate" data-key="aboutme_text1">
+                                Desde 1989, me dedico al arte del Muay Thai, una pasión que ha sido una constante en mi vida. Comencé en 1993, perfeccionando mi técnica y adentrándome en la filosofía que rodea este deporte. Como competidor, he enfrentado grandes desafíos, aprendiendo valiosas lecciones en cada pelea.
+                            </p>
+                            <p class="translate" data-key="aboutme_text2">
+                                Mi pasión por el Muay Thai va más allá de la competición. Como instructor, he tenido el honor de compartir mis conocimientos durante más de dos décadas, guiando a mis estudiantes hacia la maestría, siempre con los valores de respeto, disciplina y perseverancia.
+                            </p>
+                            <p class="translate" data-key="aboutme_text3">
+                                En mi academia, enseñamos no solo técnicas de combate, sino también crecimiento personal. Si buscas aprender Muay Thai con un instructor experimentado y apasionado, estás en el lugar correcto. Únete a mí para alcanzar nuevas alturas en este emocionante camino. ¡Nos vemos en el gimnasio!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="py-4 px-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="mb-0 translate" data-key="aboutme_beneficios_thai">Beneficios del Muay Thai</h5>
+                        </div>
+                        <div class="container mt-5">
+                            <div class="row text-center mt-4">
+                                <div class="col-lg-4 col-md-6 mb-4 benefit-card-container">
+                                    <div class="p-3 border rounded benefit-card">
+                                        <i class="fas fa-heartbeat fa-3x text-danger mb-3 benefit-icon"></i>
+                                        <h5 class="translate" data-key="aboutme_beneficios_1_title">Mejora la salud cardiovascular</h5>
+                                        <p class="translate" data-key="aboutme_beneficios_1_text">Fortalece el corazón y mejora la circulación sanguínea.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 benefit-card-container">
+                                    <div class="p-3 border rounded benefit-card">
+                                        <i class="fas fa-dumbbell fa-3x text-primary mb-3"></i>
+                                        <h5 class="translate" data-key="aboutme_beneficios_2_title">Aumenta la fuerza</h5>
+                                        <p class="translate" data-key="aboutme_beneficios_2_text">Desarrolla la musculatura y mejora la resistencia física.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 benefit-card-container">
+                                    <div class="p-3 border rounded benefit-card">
+                                        <i class="fas fa-brain fa-3x text-info mb-3"></i>
+                                        <h5 class="translate" data-key="aboutme_beneficios_3_title">Desarrolla la concentración</h5>
+                                        <p class="translate" data-key="aboutme_beneficios_3_text">Ayuda a mejorar el enfoque mental y la agilidad mental.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 benefit-card-container">
+                                    <div class="p-3 border rounded benefit-card">
+                                        <i class="fas fa-users fa-3x text-success mb-3"></i>
+                                        <h5 class="translate" data-key="aboutme_beneficios_4_title">Fomenta el trabajo en equipo</h5>
+                                        <p class="translate" data-key="aboutme_beneficios_4_text">Inspira a trabajar en conjunto y a apoyarse mutuamente.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 benefit-card-container">
+                                    <div class="p-3 border rounded benefit-card">
+                                        <i class="fas fa-balance-scale fa-3x text-warning mb-3"></i>
+                                        <h5 class="translate" data-key="aboutme_beneficios_5_title">Fortalece la disciplina</h5>
+                                        <p class="translate" data-key="aboutme_beneficios_5_text">Promueve la autodisciplina y la constancia en los entrenamientos.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 benefit-card-container">
+                                    <div class="p-3 border rounded benefit-card">
+                                        <i class="fas fa-peace fa-3x text-secondary mb-3"></i>
+                                        <h5 class="translate" data-key="aboutme_beneficios_6_title">Reduce el estrés</h5>
+                                        <p class="translate" data-key="aboutme_beneficios_6_text">Libera tensiones acumuladas y mejora el bienestar emocional.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 benefit-card-container">
+                                    <div class="p-3 border rounded benefit-card">
+                                        <i class="fas fa-shield-alt fa-3x text-dark mb-3"></i>
+                                        <h5 class="translate" data-key="aboutme_beneficios_7_title">Aumenta la confianza</h5>
+                                        <p class="translate" data-key="aboutme_beneficios_7_text">Desarrolla la autoestima y la seguridad en uno mismo.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 benefit-card-container">
+                                    <div class="p-3 border rounded benefit-card">
+                                        <i class="fas fa-running fa-3x text-danger mb-3"></i>
+                                        <h5 class="translate" data-key="aboutme_beneficios_8_title">Mejora la condición física</h5>
+                                        <p class="translate" data-key="aboutme_beneficios_8_text">Incrementa la resistencia, velocidad y agilidad corporal.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 benefit-card-container">
+                                    <div class="p-3 border rounded benefit-card">
+                                        <i class="fas fa-heart fa-3x text-pink mb-3"></i>
+                                        <h5 class="translate" data-key="aboutme_beneficios_9_title">Bienestar emocional</h5>
+                                        <p class="translate" data-key="aboutme_beneficios_9_text">Proporciona un espacio para liberar emociones y energías.</pclass="translate">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
-                        <div class="icon">M</div>
-                        <h4><a href="">Muay Thai </a></h4>
-                        <p class="translate" data-key="thai_description">
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
-                        <div class="icon">Y</div>
-                        <h4><a href="">Yoga</a></h4>
-                        <p class="translate" data-key="yoga_description">
-                    </div>
-                </div>
-
             </div>
 
         </div>
-    </section><!-- End Services Section -->
-    <!-- ======= Horario ======= -->
-    <section id="clases" class="contact">
+    </section>
+
+    <!-- Section About End -->
+    <!-- Disciplines Section Begin -->
+    <section id="disciplines" class="disciplines-section">
         <div class="container">
-
-            <div class="section-title">
-                <h2 class="translate" data-key="menu_clases">Las clases</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 class="translate" data-key="menu_discipline">Artes marciales</h2>
+                    </div>
+                </div>
             </div>
+            <div class="row">
+                <!-- Muay Thai -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="discipline-item">
+                        <div class="discipline-image" style="background-image: url('img/discipline/classes-1.jpg');"></div>
+                        <div class="discipline-content">
+                            <h4 class="translate" data-key="discipline_muaythai_title">Muay Thai</h4>
+                            <p class="translate" data-key="discipline_muaythai_text">El Muay Thai es una disciplina de combate originaria de Tailandia que combina fuerza, agilidad y resistencia.</p>
+                            <ul>
+                                <li class="translate" data-key="discipline_muaythai_1">Aumenta la fuerza</li>
+                                <li class="translate" data-key="discipline_muaythai_2">Tonifica el cuerpo</li>
+                                <li class="translate" data-key="discipline_muaythai_3">Mejora la salud cardiovascular</li>
+                            </ul>
+                        </div>
+                        <div class="trainer-info">
+                            <img src="img/trainer/trainer-2.jpg" alt="Rubén Costa" class="trainer-photo">
+                            <span>Rubén Costa</span>
+                            <div class="trainer-social">
+                                <a href="https://www.instagram.com/costafit_calella/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/ruben.siamgym" target="_blank"><i class="fab fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Yoga -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="discipline-item">
+                        <div class="discipline-image" style="background-image: url('img/discipline/classes-4.jpg');"></div>
+                        <div class="discipline-content">
+                            <h4 class="translate" data-key="discipline_yoga_title">Yoga</h4>
+                            <p class="translate" data-key="discipline_yoga_text">El Yoga combina posturas físicas y técnicas de respiración para mejorar la flexibilidad y la salud mental.</p>
+                            <ul>
+                                <li class="translate" data-key="discipline_yoga_1">Mejora la flexibilidad</li>
+                                <li class="translate" data-key="discipline_yoga_2">Reduce el estrés</li>
+                                <li class="translate" data-key="discipline_yoga_3">Favorece la salud mental</li>
+                            </ul>
+                        </div>
+                        <div class="trainer-info">
+                            <img src="img/trainer/trainer-3.jpg" alt="Rubén Costa" class="trainer-photo">
+                            <span>Auzira</span>
+                            <div class="trainer-social">
+                                <a href="#" target="_blank" title="instagram"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kali Filipino -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="discipline-item">
+                        <div class="discipline-image" style="background-image: url('img/discipline/classes-2.jpg');"></div>
 
-            <div class="text-center">
-                <button type="button" class="btn btn-primary video-btn translate" data-toggle="modal" data-key="clase_ver_entreno1"
-                        data-src="https://www.youtube.com/embed/uerll7gG5Wc" data-target="#myModal">
-                    <i class="bi bi-play-circle"></i> Ver Entreno MuayThai Costa fit Calella
-                </button>
+                        <div class="discipline-content">
+                            <h4 class="translate" data-key="discipline_kali_title">Kali Filipino</h4>
+                            <p class="translate" data-key="discipline_kali_text">El Kali Filipino es un arte marcial que enseña defensa personal utilizando bastones y otras armas blancas.</p>
+                            <ul>
+                                <li class="translate" data-key="discipline_kali_1">Mejora la agilidad</li>
+                                <li class="translate" data-key="discipline_kali_2">Aumenta la autoseguridad</li>
+                                <li class="translate" data-key="discipline_kali_3">Mejora la coordinación</li>
+                            </ul>
+                        </div>
+                        <div class="trainer-info">
+                            <img src="img/trainer/trainer-1.jpg" alt="Rafa" class="trainer-photo">
+                            <span>Rafa Diaz</span>
+                            <div class="trainer-social">
+                                <a href="https://www.instagram.com/bjj_grappling_calella/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Boxing -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="discipline-item">
+                        <div class="discipline-image" style="background-image: url('img/discipline/classes-5.jpg');"></div>
+                        <div class="discipline-content">
+                            <h4 class="translate" data-key="discipline_boxing_title">Boxing</h4>
+                            <p class="translate" data-key="discipline_boxing_text">El Boxeo es un deporte de combate que mejora la resistencia y la fuerza física a través de entrenamientos exigentes.</p>
+                            <ul>
+                                <li class="translate" data-key="discipline_boxing_1">Aumenta la fuerza</li>
+                                <li class="translate" data-key="discipline_boxing_2">Mejora la coordinación</li>
+                                <li class="translate" data-key="discipline_boxing_3">Reduce el estrés</li>
+                            </ul>
+                        </div>
+                        <div class="trainer-info">
+                            <img src="img/trainer/trainer-2.jpg" alt="Rubén Costa" class="trainer-photo">
+                            <span>Rubén Costa</span>
+                            <div class="trainer-social">
+                                <a href="https://www.instagram.com/costafit_calella/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/ruben.siamgym" target="_blank"><i class="fab fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jiu-Jitsu -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="discipline-item">
+                        <div class="discipline-image" style="background-image: url('img/discipline/classes-3.jpg');"></div>
+                        <div class="discipline-content">
+                            <h4 class="translate" data-key="discipline_jjb_title">Jiu-Jitsu</h4>
+                            <p class="translate" data-key="discipline_jjb_text">El Jiu-Jitsu es un arte marcial que se enfoca en técnicas de lucha en el suelo y en sumisiones.</p>
+                            <ul>
+                                <li class="translate" data-key="discipline_jjb_1">Aumenta la flexibilidad</li>
+                                <li class="translate" data-key="discipline_jjb_2">Mejora la coordinación</li>
+                                <li class="translate" data-key="discipline_jjb_3">Favorece la agilidad</li>
+                            </ul>
+                        </div>
+                        <div class="trainer-info">
+                            <img src="img/trainer/trainer-1.jpg" alt="Rafa" class="trainer-photo">
+                            <span>Rafa Diaz</span>
+                            <div class="trainer-social">
+                                <a href="https://www.instagram.com/bjj_grappling_calella/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Muay Thai Kids -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="discipline-item">
+                        <div class="discipline-image" style="background-image: url('img/discipline/classes-6.jpg');"></div>
+                        <div class="discipline-content">
+                            <h4 class="translate" data-key="discipline_thaiKids_title">Muay Thai Kids</h4>
+                            <p class="translate" data-key="discipline_thaiKids_text">Muay Thai Kids es una versión diseñada para enseñar a los más pequeños disciplina y autodefensa.</p>
+                            <ul>
+                                <li class="translate" data-key="discipline_thaiKids_1">Fomenta la disciplina</li>
+                                <li class="translate" data-key="discipline_thaiKids_2">Desarrolla habilidades motoras</li>
+                                <li class="translate" data-key="discipline_thaiKids_3">Aumenta la confianza</li>
+                            </ul>
+                        </div>
+                        <div class="trainer-info">
+                            <img src="img/trainer/trainer-2.jpg" alt="Rubén Costa" class="trainer-photo">
+                            <span>Rubén Costa</span>
+                            <div class="trainer-social">
+                                <a href="https://www.instagram.com/costafit_calella/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/ruben.siamgym" target="_blank"><i class="fab fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="row mt-2">
-                <div class="col-md-12">
+        </div>
+    </section>
+    <!-- Disciplinas Section End -->
+    <!-- Timetable Section Begin -->
+    <section id="timetable" class="classes-timetable spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 class="translate" data-key="menu_timetable">Horario</h2>
+                    </div>
+                    <div class="nav-controls">
+                        <ul>
+                            <li class="active translate" data-tsfilter="all" data-key="menu_discipline">Clases</li>
+                            <li data-tsfilter="muaythai">Muay thai</li>
+                            <li data-tsfilter="muaythaiKids">Muay thai Kids</li>
+                            <li data-tsfilter="kali">Kali</li>
+                            <li data-tsfilter="boxing">Boxing</li>
+                            <li data-tsfilter="jiujitzu">JiuJitzu</li>
+                            <li data-tsfilter="yoga">Yoga</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="schedule-table">
-                        <table class="table bg-white">
+                        <table>
                             <thead>
                                 <tr>
-                                    <th>
-                                        <a href="assets/Horario-costafitcalella.pdf" target="_blank">
-                                            <i class="bi bi-download"></i>
-                                        </a>
-                                    </th>
-                                    <th scope="col" class="translate" data-key="clase_dia_1">Lunes</th>
-                                    <th scope="col" class="translate" data-key="clase_dia_2">Martes</th>
-                                    <th scope="col" class="translate" data-key="clase_dia_3">Miércoles</th>
-                                    <th scope="col" class="translate" data-key="clase_dia_4">Jueves</th>
-                                    <th scope="col" class="translate" data-key="clase_dia_5">Viernes</th>
+                                    <th></th>
+                                    <th class="translate" data-key="day_week_1">Lunes</th>
+                                    <th class="translate" data-key="day_week_2">Martes</th>
+                                    <th class="translate" data-key="day_week_3">Miercoles</th>
+                                    <th class="translate" data-key="day_week_4">Thursday</th>
+                                    <th class="translate" data-key="day_week_5">Friday</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="day">07:30 - 08:30</td>
+                                    <td class="workout-time">07:30</td>
                                     <td></td>
-                                    <td class="active yoga">
-                                        <h4>Yoga</h4>
-
+                                    <td class="hover-bg ts-item" data-tsmeta="yoga">
+                                        <h6>Yoga</h6>
+                                        <span>07:30 - 08:30</span>
                                     </td>
-                                    <td class="active yoga">
-                                        <h4>Yoga</h4>
-
-                                    </td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="day">10:00 - 11:00</td>
-                                    <td></td>
-                                    <td class="active femenino">
-                                        <h4>Kali</h4>
-                                    </td>
-                                    <td class="active femenino">
-                                        <h4>Kali</h4>
+                                    <td class="hover-bg ts-item" data-tsmeta="yoga">
+                                        <h6>Yoga</h6>
+                                        <span>07:30 - 08:30</span>
                                     </td>
                                     <td></td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class="day translate">17:00 - 18:00</td>
+                                    <td class="workout-time">10.00</td>
                                     <td></td>
-                                    <td class="active kids">
-                                        <h4>Muaythai Kids/Junior</h4>
-
+                                    <td class="hover-bg ts-item" data-tsmeta="jiujitzu">
+                                        <h6>Jiujitzu</h6>
+                                        <span>10:00 - 11:00</span>
                                     </td>
-                                    <td></td>
-                                    <td class="active kids">
-                                        <h4>Muaythai Kids/Junior</h4>
-
-                                    </td>
-                                    <td class="active kids">
-                                        <h4>Muaythai Junior</h4>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="day">18:00 - 19:00</td>
-                                    <td class="active boxing">
-                                        <h4>Boxing</h4>
-                                        <div class="hover">
-                                            <h4>Rubén Costa</h4>
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="active boxing">
-                                        <h4>Boxing</h4>
-                                        <div class="hover">
-                                            <h4>Rubén Costa</h4>
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="active boxing">
-                                        <h4>Boxing</h4>
-                                        <div class="hover">
-                                            <h4>Rubén Costa</h4>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="day">19:00 - 20:00</td>
-                                    <td></td>
-                                    <td class="active thai">
-                                        <h4>Muaythai</h4>
-                                        <div class="hover">
-                                            <h4>Rubén Costa</h4>
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="active thai">
-                                        <h4>Muaythai</h4>
-                                        <div class="hover">
-                                            <h4>Rubén Costa</h4>
-                                        </div>
-                                    </td>
-                                    <td class="active thai">
-                                        <h4>Muaythai</h4>
-                                        <div class="hover">
-                                            <h4>Rubén Costa</h4>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="day">19:30 - 21:00</td>
-                                    <td class="active bjj">
-                                        <h4>Brazilian Jiu-Jitsu</h4>
-
-                                    </td>
-                                    <td></td>
-                                    <td class="active bjj">
-                                        <h4>Brazilian Jiu-Jitsu</h4>
-
+                                    <td class="hover-bg ts-item" data-tsmeta="kali">
+                                        <h6>Kali</h6>
+                                        <span>10:00 - 11:00</span>
                                     </td>
                                     <td></td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class="day">20:00 - 21:00</td>
+                                    <td class="workout-time">17.00</td>
                                     <td></td>
-                                    <td class="active femenino">
-                                        <h4>Kali</h4>
-
+                                    <td class="hover-bg ts-item" data-tsmeta="muaythaiKids">
+                                        <h6>Muaythai Kids</h6>
+                                        <span>17.00 - 18.00</span>
                                     </td>
                                     <td></td>
-                                    <td class="active femenino">
-                                        <h4>Kali</h4>
-
+                                    <td class="hover-bg ts-item" data-tsmeta="muaythaiKids">
+                                        <h6>Muaythai Kids</h6>
+                                        <span>17.00 - 18.00</span>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="muaythaiKids">
+                                        <h6>Muaythai Kids</h6>
+                                        <span>17.00 - 18.00</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workout-time">18.00</td>
+                                    <td class="hover-bg ts-item" data-tsmeta="boxing">
+                                        <h6>Boxing</h6>
+                                        <span>18.00 - 19.00</span>
+                                    </td>
+                                    <td></td>
+                                    <td class="hover-bg ts-item" data-tsmeta="boxing">
+                                        <h6>Boxing</h6>
+                                        <span>18.00 - 19.00</span>
+                                    </td>
+                                    <td></td>
+                                    <td class="hover-bg ts-item" data-tsmeta="boxing">
+                                        <h6>Boxing</h6>
+                                        <span>18.00 - 19.00</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workout-time">19.00</td>
+                                    <td></td>
+                                    <td class="hover-bg ts-item" data-tsmeta="muaythai">
+                                        <h6>Muaythai</h6>
+                                        <span>19:00 - 20:00</span>
+                                    </td>
+                                    <td></td>
+                                    <td class="hover-bg ts-item" data-tsmeta="muaythai">
+                                        <h6>Muaythai</h6>
+                                        <span>19:00 - 20:00</span>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="muaythai">
+                                        <h6>Muaythai</h6>
+                                        <span>19:00 - 20:00</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workout-time">19:30</td>
+                                    <td class="hover-bg ts-item" data-tsmeta="jiujitzu">
+                                        <h6>Jiu-Jitsu</h6>
+                                        <span>19:30 - 21:00</span>
+                                    </td>
+                                    <td></td>
+                                    <td class="hover-bg ts-item" data-tsmeta="jiujitzu">
+                                        <h6>Jiu-Jitsu</h6>
+                                        <span>19:30 - 21:00</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="workout-time">20:00</td>
+                                    <td></td>
+                                    <td class="hover-bg ts-item" data-tsmeta="kali">
+                                        <h6>Kali</h6>
+                                        <span>20:00 - 21:00</span>
+                                    </td>
+                                    <td></td>
+                                    <td class="hover-bg ts-item" data-tsmeta="kali">
+                                        <h6>Kali</h6>
+                                        <span>20:00 - 21:00</span>
                                     </td>
                                     <td></td>
                                 </tr>
                             </tbody>
                         </table>
-
-                        <br>
-                        <p>* Muay Thai Kids de 6 a 11 anys | Muay Thai Junior de 12 a 15 anys</p>
-
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <!-- Timetable Section End -->
+    <!-- Osteopatia Section Begin -->
+    <section id="osteopatia" class="section-osteopatia">
         <div class="container">
-
             <div class="section-title">
-                <h2 class="translate" data-key="menu_contacto">Contacto</h2>
+                <h2>Osteopatía</h2>
             </div>
-
-            <div class="row mt-2">
-
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-map"></i>
-                        <h3 data-key="contact_address" class="translate">Dirección</h3>
-                        <p>
-                            <a href="https://www.google.es/maps/place/Carrer+de+Jovara,+64,+08370+Calella,+Barcelona/@41.6123104,2.6551698,17z/data=!4m15!1m8!3m7!1s0x12bb39aa8d8990d5:0x200ba45cdf8ea2f8!2sCarrer+de+Jovara,+64,+08370+Calella,+Barcelona!3b1!8m2!3d41.6123064!4d2.6577447!16s%2Fg%2F11bw4jc150!3m5!1s0x12bb39aa8d8990d5:0x200ba45cdf8ea2f8!8m2!3d41.6123064!4d2.6577447!16s%2Fg%2F11bw4jc150?entry=ttu"
-                               target="_blank">
-                                Jovara 64, Calella de Mar
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-share-alt"></i>
-                        <h3 data-key="contact_social" class="translate">Redes sociales</h3>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/ruben.siamgym" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.instagram.com/costafit_calella/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+            <div class="content">
+                <div class="author-info">
+                    <img src="img/services/osteopatia.jpg" alt="Osteopatía" class="author-img">
+                    <div class="author-details">
+                        <h5>Susanna Bartoli</h5>
+                        <p class="translate" data-key="osteopatia_service">En el centro, ofrecemos servicios de osteopatía enfocados en tu bienestar. Con tratamientos holísticos y técnicas manuales, buscamos aliviar el dolor, restaurar la movilidad y promover un equilibrio duradero.</p>
+                        <div class="benefits">
+                            <h6 class="translate" data-key="osteopatia_benefits">Beneficios de la osteopatía:</h6>
+                            <div class="benefits-columns">
+                                <ul class="benefits-list">
+                                    <li class="translate" data-key="osteopatia_benefits_1">Alivio del dolor muscular y articular</li>
+                                    <li class="translate" data-key="osteopatia_benefits_2">Mejora de la flexibilidad y movilidad</li>
+                                    <li class="translate" data-key="osteopatia_benefits_3">Corrección de desequilibrios posturales</li>
+                                    <li class="translate" data-key="osteopatia_benefits_4">Reducción del estrés y la tensión</li>
+                                </ul>
+                                <ul class="benefits-list">
+                                    <li class="translate" data-key="osteopatia_benefits_5">Prevención de lesiones</li>
+                                    <li class="translate" data-key="osteopatia_benefits_6">Optimización del rendimiento físico</li>
+                                    <li class="translate" data-key="osteopatia_benefits_7">Mejora de la circulación sanguínea</li>
+                                    <li class="translate" data-key="osteopatia_benefits_8">Salud física y bienestar general</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contact-osteopatia">
+                            <a href="https://wa.me/34608607998?text=Mensaje desde la web de costafit_calella:" target="_blank" title="whatsapp" class="translate" data-key="osteopatia_contact"><i class="fab fa-whatsapp"></i> Contáctame</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-envelope"></i>
-                        <h3>Email</h3>
-                        <p>garuda996@hotmail.com</p>
+            </div>
+        </div>
+    </section>
+    <!-- Osteopatia Section End -->
+    <!-- Thai Kids Section Begin -->
+    <section id="thaikids" class="kids-style">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <h2>Muay Thai Kids</h2>
                     </div>
                 </div>
-                <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-phone-call"></i>
-                        <h3>Whatsapp</h3>
-                        <p> <a href="https://wa.me/34679089961?text=Mensaje desde la web de costafit_calella: " target="_blank">+34 679 089 961</a></p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="kids-pic">
+                        <img src="img/services/muay-thai-kids.jpg" alt="">
                     </div>
+                </div>
+                <div class="col-lg-8">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="kids-item">
+                                <div class="number-icon">1</div>
+                                <h4 class="translate" data-key="text_thaiKids_1_title">Forja su Carácter</h4>
+                                <p class="translate" data-key="text_thaiKids_1_text">
+                                    En Muay Thai Kids, tu hijo aprende a ser fuerte y respetuoso.
+                                    Sin agresividad, solo con respeto y disciplina, logrará entender el verdadero significado de la fuerza.
+                                </p>
+                            </div>
+                            <div class="kids-item">
+                                <div class="number-icon">2</div>
+                                <h4 class="translate" data-key="text_thaiKids_2_title">Mejora Socialmente</h4>
+                                <p class="translate" data-key="text_thaiKids_2_text">
+                                    Aquí, tu hijo hace amigos mientras aprende valores de respeto.
+                                    En cada clase de Muay Thai, mejora su habilidad para relacionarse y fortalecer amistades.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="kids-item">
+                                <div class="number-icon">3</div>
+                                <h4 class="translate" data-key="text_thaiKids_3_title">Defensa Personal Segura</h4>
+                                <p class="translate" data-key="text_thaiKids_3_text">
+                                    Muay Thai le ofrece herramientas para defenderse con respeto y autoconfianza, sin caer en la violencia. Enseña disciplina, control emocional, fortalece el cuerpo y la mente, promoviendo un estilo de vida saludable y equilibrado.
+                                </p>
+                            </div>
+                            <div class="kids-item">
+                                <div class="number-icon">4</div>
+                                <h4 class="translate" data-key="text_thaiKids_4_title">Ejercicio Físico</h4>
+                                <p class="translate" data-key="text_thaiKids_4_text">
+                                    Mantente activo y saludable con Muay Thai, ideal para mejorar su condición física de manera divertida y segura.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
+    <!-- Thai Kids Section End -->
+    <!-- Gallery Section Begin -->
+
+    <section id="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <h2 class="translate" data-key="menu_gallery">Galeria</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item row">
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-1.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-2.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-3.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-4.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-5.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-5.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-6.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-7.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-7.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-8.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-8.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-9.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-9.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-10.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-10.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-11.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-11.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="img/gallery/installation-12.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="img/gallery/installation-12.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section End -->
 
 
-
-
-    <div class="credits">
-        by <a href="https://scordero.com/" target="_blank">scordero.com</a> |
-        <a data-toggle="modal" data-target="#privacyModal" href="#" class="translate" data-key="menu_politica">Politica de privacidad</a> |
-        <a data-toggle="modal" data-target="#avisoModal" href="#" class="translate" data-key="menu_aviso">Aviso legal</a>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2 class="translate" data-key="menu_contacto">Contacto</h2>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Map Section Begin -->
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2326.591895269895!2d2.6551698!3d41.6123104!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1729779316863!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <img src="img/favicon.png" alt="">
+    </div>
+    <!-- Map Section End -->
+    <!-- Footer Section Begin -->
+    <footer id="contact" class="footer-section">
+        <section class="contact-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="contact-info">
+                            <div class="contact-address">
+                                <div class="ca-widget">
+                                    <div class="cw-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="cw-text">
+                                        <h5><a href="https://www.google.es/maps/place/Carrer+de+Jovara,+64,+08370+Calella,+Barcelona/@41.6123104,2.6551698,17z/data=!4m15!1m8!3m7!1s0x12bb39aa8d8990d5:0x200ba45cdf8ea2f8!2sCarrer+de+Jovara,+64,+08370+Calella,+Barcelona!3b1!8m2!3d41.6123064!4d2.6577447!16s%2Fg%2F11bw4jc150!3m5!1s0x12bb39aa8d8990d5:0x200ba45cdf8ea2f8!8m2!3d41.6123064!4d2.6577447!16s%2Fg%2F11bw4jc150?entry=ttu" target="_blank">Jovara 64, Calella de Mar</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="contact-info">
+                            <div class="contact-address">
+                                <div class="ca-widget">
+                                    <div class="cw-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="cw-text">
+                                        <h5><a href="https://wa.me/34679089961?text=Mensaje desde la web de costafit_calella: " target="_blank">+34 679 089 961</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="contact-info">
+                            <div class="contact-address">
+                                <div class="ca-widget">
+                                    <div class="cw-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="cw-text">
+                                        <h5>garuda996@hotmail.com</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="copyright-text">
+                <ul>
+                    <li><a href="#" class="translate" data-toggle="modal" data-target="#privacyModal" data-key="politica_privacidad">Política de privacidad</a></li>
+                    <li><a href="#" class="translate" data-toggle="modal" data-target="#avisoModal" data-key="aviso_legal">Aviso legal</a></li>
+                    <li>by <a href="https://scordero.com/" target="_blank">scordero.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
-
+    <!-- Footer Section End -->
     <!-- Ventana Modal de Aviso legal -->
     <div class="modal fade" id="avisoModal" tabindex="-1" role="dialog" aria-labelledby="avisoModallLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title translate" id="avisoModallLabel" data-key="menu_aviso">Aviso legal</h5>
+                    <h5 class="modal-title" id="avisoModallLabel" data-key="menu_aviso">Aviso legal</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -650,13 +937,12 @@
         </div>
     </div>
 
-
     <!-- Ventana Modal de Política de Privacidad -->
     <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title translate" id="privacyModalLabel" data-key="menu_politica">Política de Privacidad</h5>
+                    <h5 class="modal-title" id="privacyModalLabel" data-key="menu_politica">Política de Privacidad</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -692,167 +978,488 @@
         </div>
     </div>
 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive">
-                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
+
+    <div id="chatBox" class="chat-box">
+        <div class="chat-header">
+            <img src="img/logo.png" alt="costafitcalella" class="profile-picture">
+            <button id="closeChat">&times;</button>
+        </div>
+        <input type="text" id="userInput" placeholder="Quiero más información" disabled>
+        <a href="https://wa.me/34679089961?text=Mensaje desde la web de costafit_calella: " target="_blank" id="sendMessage"><i class="fas fa-paper-plane"></i></a>
+    </div>
+    <div id="chatIcon" class="conversation-icon"><i class="fab fa-whatsapp "></i></div>
+
+    <!-- Scroll top -->
+    <button id="scrollTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-hand-rock"></i>
+    </button>
 
 
     <!-- Start cookieyes banner -->
     <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/c9de8a10d6ca9d9bb0c0471d/script.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/main.js"></script>
 
     <script>
         var translations = {
             'ca': {
                 'menu_contacto': 'Contacte',
-                'menu_instalaciones': 'Instal·lacions',
-                'menu_clases': 'Les classes',
-                'menu_martial_arts': 'Arts marcials',
-                'menu_osteo': 'Osteopatia',
-                'menu_about': 'Acerca de mi',
-                'menu_inicio': 'Inici',
-                'menu_politica': 'Politica de privacitat',
-                'menu_aviso': 'Avis legal',
-                'texto_main': 'Classes de MuayThai, Boxing, Jiu-jitsu, Kali i Yoga. Entrenador personal i Osteopatia',
-                'about_t1': 'Des del 1989 dedicat a l\'art del Muay Thai, puc afirmar amb orgull que la meva passió ' +
-                    'per aquest esport ha estat una constant en la meva vida. Des dels meus primers passos al gimnàs fins a competir al ring,' +
-                    'cada moment ha estat una oportunitat per aprendre, créixer i compartir el meu amor per aquesta disciplina.',
-                'about_t2': 'El meu viatge al Muay Thai va començar fa el 1993, quan vaig decidir endinsar-me en aquest art marcial tan captivador. Des de llavors, ' +
-                    'he dedicat innombrables hores a l\'entrenament, perfeccionant la meva tècnica i submergint- me en la rica història i filosofia que envolta el Muay Thai.',
-                'about_t3': 'Com a competidor, he tingut el privilegi d\'enfrontar- me a desafiaments emocionants i aprendre lliçons valuoses al ring. ' +
-                    'Cada baralla ha estat una oportunitat per posar a prova les meves habilitats, ' +
-                    'la meva resistència i la meva determinació, i estic agraït per cada experiència que m\'ha ajudat a créixer com a atleta i com a persona.',
-                'about_t4': 'Però la meva passió pel Muay Thai va més enllà de la competició. Durant més de dues dècades he tingut l\'honor de compartir els meus ' +
-                    'coneixements i el meu amor per aquest art amb els meus alumnes. ' +
-                    'Com a professor de Muay Thai, el meu objectiu és inspirar, motivar i guiar cada un dels meus estudiants en el viatge cap al mestratge d\'aquest esport.',
-                'about_t5': 'A la meva acadèmia, no només ensenyem tècniques de combat, sinó també valors com el respecte, la disciplina i la perseverança. ' +
-                    'Crec fermament que el Muay Thai és molt més que una manera de lluitar; és un camí cap a l\'autodescobriment i el creixement personal.',
-                'about_t6': 'Si vols aprendre Muay Thai de la mà d\'un instructor amb experiència i passió per aquest art, has arribat al lloc indicat. ' +
-                    'Estic aquí per ajudar- te a assolir els teus objectius, ja sigui que vulguis competir al ring o simplement millorar la teva condició física i la teva confiança.',
-                'about_t7': 'Uneix-te a mi en aquesta emocionant aventura al món del Muay Thai. Junts, arribarem a noves altures! Ens veiem al gimnàs!',
-                'features_thai': 'BENEFICIS DEL MUAYTHAI',
-                'feature_thai_1': 'Augmenta la força',
-                'feature_thai_2': 'Tonifica el cos',
-                'feature_thai_3': 'Ajuda a aprimar-se',
-                'feature_thai_4': 'Millora la salut cardiovàscular',
-                'feature_thai_5': 'Millora la nostra coordinació',
-                'feature_thai_6': 'Ajuda a alliberar estrès',
-                'feature_thai_7': 'Ajuda a tenir autoseguretat',
-                'feature_thai_8': 'Ajuda a tenir més agilitat',
-                'contact_social': 'Xarxes socials',
-                'contact_address': 'Adreça',
-                'clase_dia_1': 'Dilluns',
-                'clase_dia_2': 'Dimarts',
-                'clase_dia_3': 'Dimecres',
-                'clase_dia_4': 'Dijous',
-                'clase_dia_5': 'Divendres',
-                'clase_ver_entreno1': 'Arts marcials Costa fit Calella',
-                'osteo_main': 'Sóc Susanna i des del gimnàs també ofereix serveis d\'osteopatia d\'alta qualitat dissenyats per millorar el teu benestar general i promoure una vida més saludable. ' +
-                    ' El nostre enfocament se centra en tractaments holístics que aborden les arrels de les teves malalties per aconseguir resultats efectius i duradors.',
-                'osteo_title_1': 'QUÈ ÉS L\'OSTEOPATIA?',
-                'osteo_subtitle_1': 'L\'osteopatia és una disciplina terapèutica basada en el principi que el benestar del cos depèn que els seus sistemes estiguin en equilibri. ' +
-                    'Els nostres osteòpates altament capacitats utilitzen tècniques manuals especialitzades per alleujar el dolor, millorar la mobilitat i restaurar la funció òptima del cos.',
-                'osteo_title_2': 'OSTEOPATIA I EL MUAYTHAI',
-                'osteo_subtitle_2': 'L\'osteopatia és beneficiosa per als practicants de muay thai a causa de la seva capacitat per',
-                'feature_osteo_1': 'Alleujar el dolor muscular i articula',
-                'feature_osteo_2': 'Millorar la flexibilitat i la mobilitat.',
-                'feature_osteo_3': 'Corregir desequilibris posturals.',
-                'feature_osteo_4': 'Accelerar la recuperació de lesions.',
-                'feature_osteo_5': 'Optimitzar el rendiment físic.',
-                'feature_osteo_6': 'Reduir el risc de lesions cròniques',
-                'feature_osteo_7': 'Promoure la circulació sanguínia.',
-                'feature_osteo_8': 'Equilibrar el cos i la ment.',
-                'feature_osteo_9': 'Mantenir la salut general i el benestar físic',
-                'boxing_description': 'La boxa millora la condició física, enforteix la ment i ensenya disciplina. A més, és una excel·lent manera d\'alliberar estrès, millorar la coordinació i augmentar la confiança personal.Ideal per a totes les edats.',
-                'Kali_description': 'El Kali és un art marcial filipí que ensenya autodefensa amb armes i mans nues. Millora els reflexos, la coordinació i la concentració, oferint eines pràctiques per a la protecció personal i el creixement mental.',
-                'thai_description': 'El Muay Thai és un entrenament complet que millora la força, la resistència i la disciplina. A més, és ideal per alliberar estrès, augmentar la confiança i aprendre tècniques d\'autodefensa.',
-                'thai_kids_description': 'El Muay Thai per a nens fomenta la disciplina, la confiança i el respecte. Millora la seva condició física, coordinació i autocontrol, mentre aprenen valors com la perseverança en un entorn segur i divertit.',
-                'yoga_description': 'El ioga millora la flexibilitat, la força i l\'equilibri, mentre redueix l\'estrès i fomenta la calma mental. És una pràctica ideal per a connectar cos i ment, beneficiant la salut global.',
-                'jiujitsu_description': 'El Jiu-jitsu és un art marcial que ensenya tècniques de control i submissió. Millora la força, la flexibilitat i la confiança, mentre fomenta el respecte i la disciplina. Ideal per a totes les edats.',
+                'menu_timetable': 'Horari',
+                'menu_about': 'Sobre mi',
+                'menu_discipline': 'Disciplina',
+                'menu_ostepatia': 'Osteopatia',
+                'menu_gallery': 'Galeria',
+                'title_about': 'Sobre mi',
+
+                //Section About me
+                'aboutme_profile': ' Professor de Muay Thai, Boxa, Entrenador personal i fundador',
+                'aboutme_text1': 'Des del 1989, em dedico a l’art del Muay Thai, una passió que ha estat una constant a la meva vida. Vaig començar el 1993, perfeccionant la meva tècnica i aprofundint en la filosofia que envolta aquest esport. Com a competidor, he afrontat grans desafiaments, aprenent valuoses lliçons en cada combat.',
+                'aboutme_text2': 'La meva passió pel Muay Thai va més enllà de la competició. Com a instructor, he tingut l’honor de compartir els meus coneixements durant més de dues dècades, guiant els meus alumnes cap a la mestria, sempre amb els valors de respecte, disciplina i perseverança.',
+                'aboutme_text3': 'A la meva acadèmia, ensenyem no només tècniques de combat, sinó també creixement personal. Si busques aprendre Muay Thai amb un instructor experimentat i apassionat, estàs al lloc adequat. Uneix-te a mi per assolir nous objectius en aquest camí apassionant. Ens veiem al gimnàs!',
+                'aboutme_beneficios_thai': 'Beneficis del Muay Thai',
+                'aboutme_beneficios_1_title': 'Millora la salut cardiovascular',
+                'aboutme_beneficios_1_text': 'Enforteix el cor i millora la circulació sanguínia.',
+                'aboutme_beneficios_2_title': 'Augmenta la força',
+                'aboutme_beneficios_2_text': 'Desenvolupa la musculatura i millora la resistència física.',
+                'aboutme_beneficios_3_title': 'Desenvolupa la concentració',
+                'aboutme_beneficios_3_text': 'Ajuda a millorar el focus mental i l’agilitat mental.',
+                'aboutme_beneficios_4_title': 'Fomenta el treball en equip',
+                'aboutme_beneficios_4_text': 'Inspira a treballar en conjunt i a donar-se suport mutuament.',
+                'aboutme_beneficios_5_title': 'Enforteix la disciplina.',
+                'aboutme_beneficios_5_text': 'Promou l’autodisciplina i la constància en els entrenaments.',
+                'aboutme_beneficios_6_title': 'Redueix l\'estrès',
+                'aboutme_beneficios_6_text': 'Libera tensions acumulades i millora el benestar emocional.',
+                'aboutme_beneficios_7_title': 'Augmenta la confiança',
+                'aboutme_beneficios_7_text': 'Desenvolupa l\'autoestima i la seguretat en un mateix.',
+                'aboutme_beneficios_8_title': 'Millora la condició física',
+                'aboutme_beneficios_8_text': 'Incrementa la resistència, velocitat i agilitat corporal.',
+                'aboutme_beneficios_9_title': 'Benestar emocional',
+                'aboutme_beneficios_9_text': 'Proporciona un espai per alliberar emocions i energies.',
+
+                //Section Discipline
+                'discipline_muaythai_title': 'Muay Thai',
+                'discipline_muaythai_text': 'El Muay Thai és una disciplina de combat originària de Tailàndia que combina força, agilitat i resistència.',
+                'discipline_muaythai_1': 'Augmenta la força',
+                'discipline_muaythai_2': 'Tonifica el cos',
+                'discipline_muaythai_3': 'Millora la salut cardiovascular',
+
+                'discipline_yoga_title': 'Ioga',
+                'discipline_yoga_text': 'El Ioga combina postures físiques i tècniques de respiració per millorar la flexibilitat i la salut mental.',
+                'discipline_yoga_1': 'Millora la flexibilitat',
+                'discipline_yoga_2': 'Redueix l’estrès',
+                'discipline_yoga_3': 'Afavoreix la salut mental',
+
+                'discipline_kali_title': 'Kali Filipí',
+                'discipline_kali_text': 'El Kali Filipí és un art marcial que ensenya defensa personal utilitzant bastons i altres armes blanques.',
+                'discipline_kali_1': 'Millora l’agilitat',
+                'discipline_kali_2': 'Augmenta l’autoseguretat',
+                'discipline_kali_3': 'Millora la coordinació',
+
+                'discipline_boxing_title': 'Boxa',
+                'discipline_boxing_text': 'La boxa és un esport de combat que millora la resistència i la força física a través d’entrenaments exigents.',
+                'discipline_boxing_1': 'Augmenta la força',
+                'discipline_boxing_2': 'Millora la coordinació',
+                'discipline_boxing_3': 'Redueix l’estrès',
+
+                'discipline_jjb_title': 'Jiu-Jitsu',
+                'discipline_jjb_text': 'El Jiu-Jitsu és un art marcial que se centra en tècniques de lluita a terra i en subjeccions.',
+                'discipline_jjb_1': 'Augmenta la flexibilitat',
+                'discipline_jjb_2': 'Millora la coordinació',
+                'discipline_jjb_3': 'Afavoreix l’agilitat',
+
+                'discipline_thaiKids_title': 'Muay Thai Kids',
+                'discipline_thaiKids_text': 'Muay Thai Kids és una versió dissenyada per ensenyar als més petits disciplina i autodefensa.',
+                'discipline_thaiKids_1': 'Fomenta la disciplina',
+                'discipline_thaiKids_2': 'Desenvolupa habilitats motores',
+                'discipline_thaiKids_3': 'Augmenta la confiança',
+
+                // Section Muay Thai Kids
+                'text_thaiKids_1_title': 'Forja el seu Caràcter',
+                'text_thaiKids_1_text': 'A Muay Thai Kids, el teu fill aprèn a ser fort i respectuós. Sense agressivitat, només amb respecte i disciplina, entendrà el veritable significat de la força.',
+                'text_thaiKids_2_title': 'Millora Socialment',
+                'text_thaiKids_2_text': 'Aquí, el teu fill fa amics mentre aprèn valors de respecte. A cada classe de Muay Thai, millora la seva capacitat per relacionar-se i enfortir amistats.',
+                'text_thaiKids_3_title': 'Autodefensa Segura',
+                'text_thaiKids_3_text': 'El Muay Thai li ofereix eines per defensar-se amb respecte i autoconfiança, sense caure en la violència. Ensenya disciplina, control emocional, enforteix el cos i la ment, promovent un estil de vida saludable i equilibrat.',
+                'text_thaiKids_4_title': 'Exercici Físic',
+                'text_thaiKids_4_text': 'Mantén-te actiu i saludable amb el Muay Thai, ideal per millorar la seva condició física de manera divertida i segura.',
+
+
+                // Section OSTEOPATHY
+                'osteopatia_service': 'Sóc la Susanna i des del centre, oferim serveis d’osteopatia enfocats en el teu benestar. Amb tractaments holístics i tècniques manuals, que aborden les arrels de les teves dolències per aconseguir resultats efectius i duradors.',
+                'osteopatia_benefit': 'Beneficis de l’osteopatia:',
+                'osteopatia_contact': 'Contacta’m',
+                'osteopatia_benefits_1': 'Alleujar el dolor muscular i articular.',
+                'osteopatia_benefits_2': 'Millorar la flexibilitat i la mobilitat.',
+                'osteopatia_benefits_3': 'Corregir desequilibris posturals.',
+                'osteopatia_benefits_4': 'Accelerar la recuperació de lesions.',
+                'osteopatia_benefits_5': 'Optimitzar el rendiment físic.',
+                'osteopatia_benefits_6': 'Reduir el risc de lesions cròniques.',
+                'osteopatia_benefits_7': 'Promoure la circulació sanguínia.',
+                'osteopatia_benefits_8': 'Mantenir la salut general i el benestar físic.',
+
+                // Section timetable
+                'day_week_1': 'Dilluns',
+                'day_week_2': 'Dimarts',
+                'day_week_3': 'Dimecres',
+                'day_week_4': 'Dijous',
+                'day_week_5': 'Divendres',
+
+                // Section footer
+                'politica_privacidad': 'Política de privacitat',
+                'aviso_legal': 'Avís legal',
+
+                'free_day': '¡Entrenament gratis! Completa!',
+                'free_day_name': 'Nom',
             },
             'es': {
                 'menu_contacto': 'Contacto',
-                'menu_instalaciones': 'Instalaciones',
-                'menu_clases': 'Las clases',
-                'menu_martial_arts': 'Artes marciales',
-                'menu_osteo': 'Osteopatía',
+                'menu_timetable': 'Horario',
                 'menu_about': 'Sobre mi',
-                'menu_inicio': 'Inicio',
-                'menu_politica': 'Política de privacidad',
-                'menu_aviso': 'Aviso legal',
-                'texto_main': 'Clases de MuayThai, Boxing, Jiu-jitsu, Kali y Yoga. Entrenador personal y Osteopatía',
-                'about_t1': 'Desde el 1989 dedicado al arte del Muay Thai, puedo afirmar con orgullo que mi pasión ' +
-                    'por este deporte ha sido una constante en mi vida.Desde mis primeros pasos en el gimnasio hasta competir en el ring,' +
-                    'cada momento ha sido una oportunidad para aprender, crecer y compartir mi amor por esta disciplina.',
-                'about_t2': 'Mi viaje en el Muay Thai comenzó hace en 1993, cuando decidí adentrarme en este arte marcial tan cautivador. ' +
-                    'Desde entonces, he dedicado innumerables horas al entrenamiento, perfeccionando mi técnica y sumergiéndome en la rica historia y filosofía que rodea al Muay Thai.',
-                'about_t3': 'Como competidor, he tenido el privilegio de enfrentarme a desafíos emocionantes y aprender lecciones valiosas en el ring. ' +
-                    'Cada pelea ha sido una oportunidad para poner a prueba mis habilidades, mi resistencia y mi determinación, y estoy agradecido por cada experiencia que me ha ayudado a crecer como atleta y como persona.',
-                'about_t4': 'Pero mi pasión por el Muay Thai va más allá de la competición. Durante más de dos décadas, he tenido el honor de compartir mis conocimientos y mi amor por este arte con mis alumnos. Como profesor de Muay Thai, mi objetivo es inspirar, motivar y guiar a cada uno de mis estudiantes en su viaje hacia la maestría de este deporte.',
-                'about_t5': 'En mi academia, no solo enseñamos técnicas de combate, sino también valores como el respeto, la disciplina y la perseverancia. Creo firmemente que el Muay Thai es mucho más que una forma de luchar; es un camino hacia el autodescubrimiento y el crecimiento personal.',
-                'about_t6': 'Si estás buscando aprender Muay Thai de la mano de un instructor con experiencia y pasión por este arte, has llegado al lugar indicado. Estoy aquí para ayudarte a alcanzar tus objetivos, ya sea que desees competir en el ring o simplemente mejorar tu condición física y tu confianza.',
-                'about_t7': 'Únete a mí en esta emocionante aventura en el mundo del Muay Thai. ¡Juntos, alcanzaremos nuevas alturas! ¡Nos vemos en el gimnasio',
-                'features_thai': 'BENEFICIOS DEL MUAYTHAI',
-                'feature_thai_1': 'Aumenta la fuerza',
-                'feature_thai_2': 'Tonifica el cuerpo',
-                'feature_thai_3': 'Ayuda a adelgazar',
-                'feature_thai_4': 'Mejora la salud cardiováscular',
-                'feature_thai_5': 'Mejora nuestra coordinación',
-                'feature_thai_6': 'Ayuda a liberar estrés',
-                'feature_thai_7': 'Ayuda a tener autoseguridad',
-                'feature_thai_8': 'Ayuda a tener más agilidad',
-                'contact_social': 'Redes sociales',
-                'contact_address': 'Dirección',
-                'clase_dia_1': 'Lunes',
-                'clase_dia_2': 'Martes',
-                'clase_dia_3': 'Miércoles',
-                'clase_dia_4': 'Jueves',
-                'clase_dia_5': 'Viernes',
-                'clase_ver_entreno1': 'Artes marciales MuayThai Costa fit Calella',
-                'osteo_main': 'Soy Susanna y desde el gimnasio también se ofrecen servicios de osteopatía de alta calidad diseñados para mejorar tu bienestar general y promover una vida más saludable. Nuestro enfoque se centra en tratamientos holísticos que abordan las raíces de tus dolencias para lograr resultados efectivos y duraderos.',
-                'osteo_title_1': '¿QUÉ ES LA OSTEOPATÍA?',
-                'osteo_subtitle_1': 'La osteopatía es una disciplina terapéutica que se basa en el principio de que el bienestar del cuerpo depende de que sus sistemas estén en equilibrio. Nuestros osteópatas altamente capacitados utilizan técnicas manuales especializadas para aliviar el dolor, mejorar la movilidad y restaurar la función óptima del cuerpo.',
-                'osteo_title_2': 'OSTEOPATÍA Y EL MUAYTHAI',
-                'osteo_subtitle_2': 'La osteopatía es beneficiosa para los practicantes de muay thai debido a su capacidad para:',
-                'feature_osteo_1': 'Aliviar el dolor muscular y articular.',
-                'feature_osteo_2': 'Mejorar la flexibilidad y la movilidad.',
-                'feature_osteo_3': 'Corregir desequilibrios posturales.',
-                'feature_osteo_4': 'Acelerar la recuperación de lesiones.',
-                'feature_osteo_5': 'Optimizar el rendimiento físico.',
-                'feature_osteo_6': 'Reducir el riesgo de lesiones crónicas.',
-                'feature_osteo_7': 'Promover la circulación sanguínea.',
-                'feature_osteo_8': 'Equilibrar el cuerpo y la mente.',
-                'feature_osteo_9': 'Mantener la salud general y el bienestar físico',
-                'boxing_description': 'El boxeo mejora la condición física, fortalece la mente y enseña disciplina. Además, es una excelente forma de liberar estrés, mejorar la coordinación y aumentar la confianza personal. Ideal para todas las edades.',
-                'Kali_description': 'El Kali es un arte marcial filipino que enseña autodefensa con armas y manos vacías. Mejora los reflejos, la coordinación y la concentración, brindando herramientas prácticas para la protección personal y el crecimiento mental.',
-                'thai_description': 'El Muay Thai es un entrenamiento completo que mejora la fuerza, la resistencia y la disciplina. Además, es ideal para liberar estrés, aumentar la confianza y aprender técnicas de autodefensa.',
-                'thai_kids_description': 'El Muay Thai para niños fomenta la disciplina, la confianza y el respeto. Mejora su condición física, coordinación y autocontrol, mientras aprenden valores como la perseverancia en un entorno seguro y divertido.',
-                'yoga_description': 'El yoga mejora la flexibilidad, la fuerza y el equilibrio, mientras reduce el estrés y fomenta la calma mental. Es una práctica ideal para conectar cuerpo y mente, beneficiando la salud global.',
-                'jiujitsu_description': 'El Jiu-jitsu es un arte marcial que enseña técnicas de control y sumisión. Mejora la fuerza, la flexibilidad y la confianza, mientras fomenta el respeto y la disciplina. Ideal para todas las edades.',
+                'menu_discipline': 'Disciplina',
+                'menu_ostepatia': 'Osteopatia',
+                'menu_gallery': 'Galeria',
+                'title_about': 'Sobre mi',
+
+
+                //Section About me
+                'aboutme_profile': 'Profesor de Muay thai, Boxing, Entrenador personal y fundador',
+                'aboutme_text1': 'Desde 1989, me dedico al arte del Muay Thai, una pasión que ha sido una constante en mi vida. Comencé en 1993, perfeccionando mi técnica y adentrándome en la filosofía que rodea este deporte. Como competidor, he enfrentado grandes desafíos, aprendiendo valiosas lecciones en cada pelea.',
+                'aboutme_text2': 'Mi pasión por el Muay Thai va más allá de la competición. Como instructor, he tenido el honor de compartir mis conocimientos durante más de dos décadas, guiando a mis estudiantes hacia la maestría, siempre con los valores de respeto, disciplina y perseverancia.',
+                'aboutme_text3': 'En mi academia, enseñamos no solo técnicas de combate, sino también crecimiento personal. Si buscas aprender Muay Thai con un instructor experimentado y apasionado, estás en el lugar correcto. Únete a mí para alcanzar nuevas alturas en este emocionante camino. ¡Nos vemos en el gimnasio!',
+                'aboutme_beneficios_thai': 'Beneficios del Muay Thai',
+                'aboutme_beneficios_1_title': 'Mejora la salud cardiovascular',
+                'aboutme_beneficios_1_text': 'Fortalece el corazón y mejora la circulación sanguínea.',
+                'aboutme_beneficios_2_title': 'Increases strength',
+                'aboutme_beneficios_2_text': 'Builds muscle and improves physical endurance.',
+                'aboutme_beneficios_3_title': 'Desarrolla la concentración',
+                'aboutme_beneficios_3_text': 'Ayuda a mejorar el enfoque mental y la agilidad mental.',
+                'aboutme_beneficios_4_title': 'Fomenta el trabajo en equipo',
+                'aboutme_beneficios_4_text': 'Inspira a trabajar en conjunto y a apoyarse mutuamente',
+                'aboutme_beneficios_5_title': 'Fortalece la disciplina',
+                'aboutme_beneficios_5_text': 'Promueve la autodisciplina y la constancia en los entrenamientos.',
+                'aboutme_beneficios_6_title': 'Reduce el estrés',
+                'aboutme_beneficios_6_text': 'Libera tensiones acumuladas y mejora el bienestar emocional.',
+                'aboutme_beneficios_7_title': 'Aumenta la confianza',
+                'aboutme_beneficios_7_text': 'Desarrolla la autoestima y la seguridad en uno mismo.',
+                'aboutme_beneficios_8_title': 'Mejora la condición física',
+                'aboutme_beneficios_8_text': 'Incrementa la resistencia, velocidad y agilidad corporal.',
+                'aboutme_beneficios_9_title': 'Bienestar emocional',
+                'aboutme_beneficios_9_text': 'Proporciona un espacio para liberar emociones y energías.',
+
+                //Section Discipline
+                'discipline_muaythai_title': 'Muay Thai',
+                'discipline_muaythai_text': 'El Muay Thai es una disciplina de combate originaria de Tailandia que combina fuerza, agilidad y resistencia.',
+                'discipline_muaythai_1': 'Aumenta la fuerza',
+                'discipline_muaythai_2': 'Tonifica el cuerpo',
+                'discipline_muaythai_3': 'Mejora la salud cardiovascular',
+
+                'discipline_yoga_title': 'Yoga',
+                'discipline_yoga_text': 'El Yoga combina posturas físicas y técnicas de respiración para mejorar la flexibilidad y la salud mental.',
+                'discipline_yoga_1': 'Mejora la flexibilidad',
+                'discipline_yoga_2': 'Reduce el estrés',
+                'discipline_yoga_3': 'Favorece la salud mental',
+
+                'discipline_kali_title': 'Kali Filipino',
+                'discipline_kali_text': 'El Kali Filipino es un arte marcial que enseña defensa personal utilizando bastones y otras armas blancas.',
+                'discipline_kali_1': 'Mejora la agilidad',
+                'discipline_kali_2': 'Aumenta la autoseguridad',
+                'discipline_kali_3': 'Mejora la coordinación',
+
+
+                'discipline_boxing_title': 'Boxeo',
+                'discipline_boxing_text': 'El Boxeo es un deporte de combate que mejora la resistencia y la fuerza física a través de entrenamientos exigentes.',
+                'discipline_boxing_1': 'Aumenta la fuerza',
+                'discipline_boxing_2': 'Mejora la coordinación',
+                'discipline_boxing_3': 'Reduce el estrés',
+
+                'discipline_jjb_title': 'Jiu-Jitsu',
+                'discipline_jjb_text': 'El Jiu-Jitsu es un arte marcial que se enfoca en técnicas de lucha en el suelo y en sumisiones.',
+                'discipline_jjb_1': 'Aumenta la flexibilidad',
+                'discipline_jjb_2': 'Mejora la coordinación',
+                'discipline_jjb_3': 'Favorece la agilidad',
+
+                'discipline_thaiKids_title': 'Muay Thai Kids',
+                'discipline_thaiKids_text': 'Muay Thai Kids es una versión diseñada para enseñar a los más pequeños disciplina y autodefensa.',
+                'discipline_thaiKids_1': 'Fomenta la disciplina',
+                'discipline_thaiKids_2': 'Desarrolla habilidades motoras',
+                'discipline_thaiKids_3': 'Aumenta la confianza',
+
+                // Section Muay thai kids
+                'text_thaiKids_1_title': 'Forja su Carácter',
+                'text_thaiKids_1_text': 'En Muay Thai Kids, tu hijo aprende a ser fuerte y respetuoso. Sin agresividad, solo con respeto y disciplina, logrará entender el verdadero significado de la fuerza.',
+                'text_thaiKids_2_title': 'Mejora Socialmente',
+                'text_thaiKids_2_text': 'Aquí, tu hijo hace amigos mientras aprende valores de respeto. En cada clase de Muay Thai, mejora su habilidad para relacionarse y fortalecer amistades.',
+                'text_thaiKids_3_title': 'Defensa Personal Segura',
+                'text_thaiKids_3_text': 'Muay Thai le ofrece herramientas para defenderse con respeto y autoconfianza, sin caer en la violencia. Enseña disciplina, control emocional, fortalece el cuerpo y la mente, promoviendo un estilo de vida saludable y equilibrado.',
+                'text_thaiKids_4_title': 'Ejercicio Físico',
+                'text_thaiKids_4_text': 'Mantente activo y saludable con Muay Thai, ideal para mejorar su condición física de manera divertida y segura.',
+
+                // Section OSTEOPATHY
+                'osteopatia_service': 'Soy Susanna y desde el centro, ofrecemos servicios de osteopatía enfocados en tu bienestar. Con tratamientos holísticos y técnicas manuales, que abordan las raíces de tus dolencias para lograr resultados efectivos y duraderos.',
+                'osteopatia_benefit': 'Beneficios de la osteopatía:',
+                'osteopatia_contact': 'Contáctame',
+                'osteopatia_benefits_1': 'Aliviar el dolor muscular y articular.',
+                'osteopatia_benefits_2': 'Mejorar la flexibilidad y la movilidad.',
+                'osteopatia_benefits_3': 'Corregir desequilibrios posturales.',
+                'osteopatia_benefits_4': 'Acelerar la recuperación de lesiones.',
+                'osteopatia_benefits_5': 'Optimizar el rendimiento físico.',
+                'osteopatia_benefits_6': 'Reducir el riesgo de lesiones crónicas.',
+                'osteopatia_benefits_7': 'Promover la circulación sanguínea.',
+                'osteopatia_benefits_8': 'Mantener la salud general y el bienestar físico',
+
+                // Section timetable
+                'day_week_1': 'Lunes',
+                'day_week_2': 'Martes',
+                'day_week_3': 'Miercoles',
+                'day_week_4': 'Jueves',
+                'day_week_5': 'Viernes',
+
+                // Section footer
+                'politica_privacidad': ' Política de privacidad',
+                'aviso_legal': ' Aviso legal',
+
+                //Section Trainning
+                'free_day': '¡Entreno gratis! Completa!',
+                'free_day_name': 'Nombre',
+            },
+            'en': {
+                'menu_contacto': 'Contact',
+                'menu_timetable': 'Timetable',
+                'menu_about': 'About me',
+                'menu_discipline': 'Discipline',
+                'menu_ostepatia': 'Osteopathy',
+                'menu_gallery': 'Gallery',
+                'title_about': 'About me',
+
+
+                //About me
+                'aboutme_profile': 'Muay Thai Instructor, Boxing Coach, Personal Trainer, and Founder',
+                'aboutme_text1': 'Since 1989, I have been dedicated to the art of Muay Thai, a passion that has been a constant in my life. I started in 1993, perfecting my technique and delving into the philosophy surrounding this sport. As a competitor, I have faced great challenges, learning valuable lessons in each fight.',
+                'aboutme_text2': 'My passion for Muay Thai goes beyond competition. As an instructor, I have had the honor of sharing my knowledge for over two decades, guiding my students towards mastery, always with the values of respect, discipline, and perseverance.',
+                'aboutme_text3': ' academy, we teach not only combat techniques but also personal growth. If you are looking to learn Muay Thai with an experienced and passionate instructor, you are in the right place. Join me to reach new heights on this exciting journey. See you at the gym!',
+                'aboutme_beneficios_thai': 'Benefits of Muay Thai',
+                'aboutme_beneficios_1_title': 'Improves cardiovascular health',
+                'aboutme_beneficios_1_text': 'Strengthens the heart and improves blood circulation.',
+                'aboutme_beneficios_2_title': 'Increases strength',
+                'aboutme_beneficios_2_text': 'Builds muscle and improves physical endurance.',
+                'aboutme_beneficios_3_title': 'Develops concentration',
+                'aboutme_beneficios_3_text': 'Helps improve mental focus and agility.',
+                'aboutme_beneficios_4_title': 'Promotes teamwork',
+                'aboutme_beneficios_4_text': 'Inspires working together and supporting each other.',
+                'aboutme_beneficios_5_title': 'Strengthens discipline.',
+                'aboutme_beneficios_5_text': 'Promotes self-discipline and consistency in training.',
+                'aboutme_beneficios_6_title': 'Reduces stress',
+                'aboutme_beneficios_6_text': 'Releases accumulated tension and improves emotional well-being.',
+                'aboutme_beneficios_7_title': 'Increases confidence',
+                'aboutme_beneficios_7_text': 'Builds self-esteem and self-security.',
+                'aboutme_beneficios_8_title': 'Improves physical condition',
+                'aboutme_beneficios_8_text': 'Increases endurance, speed, and body agility.',
+                'aboutme_beneficios_9_title': 'Emotional well-being',
+                'aboutme_beneficios_9_text': 'Provides a space to release emotions and energy.',
+
+                //Discipline
+                'discipline_muaythai_title': 'Muay Thai',
+                'discipline_muaythai_text': 'Muay Thai is a combat discipline originating from Thailand that combines strength, agility, and endurance.',
+                'discipline_muaythai_1': 'Increases strength',
+                'discipline_muaythai_2': 'Tones the body',
+                'discipline_muaythai_3': 'Improves cardiovascular health',
+
+                'discipline_yoga_title': 'Yoga',
+                'discipline_yoga_text': 'Yoga combines physical postures and breathing techniques to improve flexibility and mental health.',
+                'discipline_yoga_1': 'Improves flexibility',
+                'discipline_yoga_2': 'Reduces stress',
+                'discipline_yoga_3': 'Supports mental health',
+
+                'discipline_kali_title': 'Filipino Kali',
+                'discipline_kali_text': 'Filipino Kali is a martial art that teaches self-defense using sticks and other bladed weapons.',
+                'discipline_kali_1': 'Improves agility',
+                'discipline_kali_2': 'Increases self-confidence',
+                'discipline_kali_3': 'Improves coordination',
+
+                'discipline_boxing_title': 'Boxing',
+                'discipline_boxing_text': 'Boxing is a combat sport that enhances endurance and physical strength through intense training.',
+                'discipline_boxing_1': 'Increases strength',
+                'discipline_boxing_2': 'Improves coordination',
+                'discipline_boxing_3': 'Reduces stress',
+
+                'discipline_jjb_title': 'Jiu-Jitsu',
+                'discipline_jjb_text': 'Jiu-Jitsu is a martial art focused on ground fighting techniques and submissions.',
+                'discipline_jjb_1': 'Increases flexibility',
+                'discipline_jjb_2': 'Improves coordination',
+                'discipline_jjb_3': 'Enhances agility',
+
+                'discipline_thaiKids_title': 'Muay Thai Kids',
+                'discipline_thaiKids_text': 'Muay Thai Kids is a version designed to teach young children discipline and self-defense.',
+                'discipline_thaiKids_1': 'Promotes discipline',
+                'discipline_thaiKids_2': 'Develops motor skills',
+                'discipline_thaiKids_3': 'Increases confidence',
+
+                // Section Muay Thai Kids
+                'text_thaiKids_1_title': 'Builds Character',
+                'text_thaiKids_1_text': 'In Muay Thai Kids, your child learns to be strong and respectful. Without aggression, only with respect and discipline, they will understand the true meaning of strength.',
+                'text_thaiKids_2_title': 'Improves Social Skills',
+                'text_thaiKids_2_text': 'Here, your child makes friends while learning respect values. In each Muay Thai class, they enhance their social skills and strengthen friendships.',
+                'text_thaiKids_3_title': 'Safe Self-Defense',
+                'text_thaiKids_3_text': 'Muay Thai provides them with tools to defend themselves with respect and confidence, without resorting to violence. It teaches discipline, emotional control, strengthens the body and mind, promoting a healthy and balanced lifestyle.',
+                'text_thaiKids_4_title': 'Physical Exercise',
+                'text_thaiKids_4_text': 'Stay active and healthy with Muay Thai, ideal for improving physical fitness in a fun and safe way.',
+
+                // Section OSTEOPATHY
+                'osteopatia_service': 'I am Susanna, and from the center, we offer osteopathy services focused on your well-being. With holistic treatments and manual techniques, addressing the root causes of your ailments to achieve effective and lasting results.',
+                'osteopatia_benefit': 'Benefits of osteopathy:',
+                'osteopatia_contact': 'Contact me',
+                'osteopatia_benefits_1': 'Relieve muscle and joint pain.',
+                'osteopatia_benefits_2': 'Improve flexibility and mobility.',
+                'osteopatia_benefits_3': 'Correct postural imbalances.',
+                'osteopatia_benefits_4': 'Speed up injury recovery.',
+                'osteopatia_benefits_5': 'Optimize physical performance.',
+                'osteopatia_benefits_6': 'Reduce the risk of chronic injuries.',
+                'osteopatia_benefits_7': 'Promote blood circulation.',
+                'osteopatia_benefits_8': 'Maintain overall health and physical well-being.',
+
+                // Section timetable
+                'day_week_1': 'Monday',
+                'day_week_2': 'Tuesday',
+                'day_week_3': 'Wednesday',
+                'day_week_4': 'Thursday',
+                'day_week_5': 'Friday',
+
+                // Section footer
+                'politica_privacidad': 'Privacy Policy',
+                'aviso_legal': 'Legal Notice',
+
+                //Section Trainning
+                'free_day': 'Train for free! Complete!',
+                'free_day_name': 'Name',
+            },
+            'fr': {
+                'menu_contacto': 'Contact',
+                'menu_timetable': 'Horaire',
+                'menu_about': 'À propos de moi',
+                'menu_discipline': 'Discipline',
+                'menu_ostepatia': 'Ostéopathie',
+                'menu_gallery': 'Galerie ',
+                'title_about': 'À propos de moi',
+
+                //About me
+                'aboutme_profile': 'Professeur de Muay Thai, Boxe, Entraîneur personnel et fondateur',
+                'aboutme_text1': 'Depuis 1989, je me consacre à l\'art du Muay Thai, une passion qui est une constante dans ma vie.J\'ai commencé en 1993, perfectionnant ma technique et me plongeant dans la philosophie qui entoure ce sport. En tant que compétiteur, j\'ai relevé de grands défis, apprenant des leçons précieuses à chaque combat.',
+                'aboutme_text2': 'Ma passion pour le Muay Thai va bien au-delà de la compétition. En tant qu\'instructeur, j\'ai eu l\'honneur de partager mes connaissances pendant plus de deux décennies, guidant mes élèves vers la maîtrise, toujours avec des valeurs de respect, de discipline et de persévérance.',
+                'aboutme_text3': 'Dans mon académie, nous enseignons non seulement des techniques de combat, mais aussi le développement personnel. Si vous cherchez à apprendre le Muay Thai avec un instructeur expérimenté et passionné, vous êtes au bon endroit. Rejoignez-moi pour atteindre de nouveaux sommets sur ce chemin passionnant. À bientôt au gymnase !',
+                'aboutme_beneficios_thai': 'Bienfaits du Muay Thai',
+                'aboutme_beneficios_1_title': 'Améliore la santé cardiovasculaire',
+                'aboutme_beneficios_1_text': 'Renforce le cœur et améliore la circulation sanguine.',
+                'aboutme_beneficios_2_title': 'Augmente la force',
+                'aboutme_beneficios_2_text': 'Développe la musculature et améliore l\'endurance physique.',
+                'aboutme_beneficios_3_title': 'Développe la concentration',
+                'aboutme_beneficios_3_text': 'Aide à améliorer la concentration mentale et l\'agilité mentale.',
+                'aboutme_beneficios_4_title': 'Encourage le travail d\'équipe',
+                'aboutme_beneficios_4_text': 'Inspire à travailler ensemble et à se soutenir mutuellement.',
+                'aboutme_beneficios_5_title': 'Renforce la discipline.',
+                'aboutme_beneficios_5_text': 'Favorise l’autodiscipline et la constance dans les entraînements.',
+                'aboutme_beneficios_6_title': 'Réduit le stress',
+                'aboutme_beneficios_6_text': 'Libère les tensions accumulées et améliore le bien-être émotionnel.',
+                'aboutme_beneficios_7_title': 'Augmente la confiance',
+                'aboutme_beneficios_7_text': 'Développe l\'estime de soi et la sécurité en soi.',
+                'aboutme_beneficios_8_title': 'Améliore la condition physique',
+                'aboutme_beneficios_8_text': 'Augmente l\'endurance, la vitesse et l\'agilité corporelle.',
+                'aboutme_beneficios_9_title': 'Bien-être émotionnel',
+                'aboutme_beneficios_9_text': 'Offre un espace pour libérer les émotions et les énergies.',
+
+                //Discipline
+                'discipline_muaythai_title': 'Muay Thai',
+                'discipline_muaythai_text': 'Le Muay Thai est une discipline de combat originaire de la Thaïlande qui combine force, agilité et endurance.',
+                'discipline_muaythai_1': 'Augmente la force',
+                'discipline_muaythai_2': 'Tonifie le corps',
+                'discipline_muaythai_3': 'Améliore la santé cardiovasculaire',
+
+                'discipline_yoga_title': 'Yoga',
+                'discipline_yoga_text': 'Le yoga combine des postures physiques et des techniques de respiration pour améliorer la flexibilité et la santé mentale.',
+                'discipline_yoga_1': 'Améliore la flexibilité',
+                'discipline_yoga_2': 'Réduit le stress',
+                'discipline_yoga_3': 'Favorise la santé mentale',
+
+                'discipline_kali_title': 'Kali Philippin',
+                'discipline_kali_text': 'Le Kali Philippin est un art martial qui enseigne l’autodéfense avec des bâtons et autres armes blanches.',
+                'discipline_kali_1': 'Améliore l’agilité',
+                'discipline_kali_2': 'Augmente la confiance en soi',
+                'discipline_kali_3': 'Améliore la coordination',
+
+                'discipline_boxing_title': 'Boxe',
+                'discipline_boxing_text': 'La boxe est un sport de combat qui améliore l’endurance et la force physique par un entraînement exigeant.',
+                'discipline_boxing_1': 'Augmente la force',
+                'discipline_boxing_2': 'Améliore la coordination',
+                'discipline_boxing_3': 'Réduit le stress',
+
+                'discipline_jjb_title': 'Jiu-Jitsu',
+                'discipline_jjb_text': 'Le Jiu-Jitsu est un art martial axé sur les techniques de combat au sol et les soumissions.',
+                'discipline_jjb_1': 'Augmente la flexibilité',
+                'discipline_jjb_2': 'Améliore la coordination',
+                'discipline_jjb_3': 'Favorise l’agilité',
+
+                'discipline_thaiKids_title': 'Muay Thai Kids',
+                'discipline_thaiKids_text': 'Muay Thai Kids est une version conçue pour enseigner aux plus jeunes la discipline et l’autodéfense.',
+                'discipline_thaiKids_1': 'Favorise la discipline',
+                'discipline_thaiKids_2': 'Développe les compétences motrices',
+                'discipline_thaiKids_3': 'Augmente la confiance',
+
+                // Section Muay Thai Kids
+                'text_thaiKids_1_title': 'Forge son Caractère',
+                'text_thaiKids_1_text': 'Dans Muay Thai Kids, votre enfant apprend à être fort et respectueux. Sans agressivité, seulement avec respect et discipline, il comprendra le véritable sens de la force.',
+                'text_thaiKids_2_title': 'Améliore les Compétences Sociales',
+                'text_thaiKids_2_text': 'Ici, votre enfant se fait des amis tout en apprenant les valeurs de respect. Dans chaque cours de Muay Thai, il améliore ses compétences sociales et renforce ses amitiés.',
+                'text_thaiKids_3_title': 'Autodéfense Sécurisée',
+                'text_thaiKids_3_text': 'Le Muay Thai lui offre des outils pour se défendre avec respect et confiance, sans recourir à la violence. Il enseigne la discipline, le contrôle émotionnel, renforce le corps et l’esprit, en promouvant un mode de vie sain et équilibré.',
+                'text_thaiKids_4_title': 'Exercice Physique',
+                'text_thaiKids_4_text': 'Reste actif et en bonne santé avec le Muay Thai, idéal pour améliorer sa condition physique de manière ludique et sécurisée.',
+
+                // Section ostéopathie
+                'osteopatia_service': 'Je suis Susanna, et depuis le centre, nous proposons des services d’ostéopathie axés sur votre bien-être. Avec des traitements holistiques et des techniques manuelles, qui abordent les racines de vos maux pour obtenir des résultats efficaces et durables.',
+                'osteopatia_benefit': 'Bienfaits de l’ostéopathie :',
+                'osteopatia_contact': 'Contactez-moi',
+                'osteopatia_benefits_1': 'Soulager les douleurs musculaires et articulaires.',
+                'osteopatia_benefits_2': 'Améliorer la flexibilité et la mobilité.',
+                'osteopatia_benefits_3': 'Corriger les déséquilibres posturaux.',
+                'osteopatia_benefits_4': 'Accélérer la récupération des blessures.',
+                'osteopatia_benefits_5': 'Optimiser les performances physiques.',
+                'osteopatia_benefits_6': 'Réduire le risque de blessures chroniques.',
+                'osteopatia_benefits_7': 'Favoriser la circulation sanguine.',
+                'osteopatia_benefits_8': 'Maintenir la santé générale et le bien-être physique.',
+
+                // Section timetable
+                'day_week_1': 'Lundi',
+                'day_week_2': 'Mardi',
+                'day_week_3': 'Mercredi',
+                'day_week_4': 'Jeudi',
+                'day_week_5': 'Vendredi',
+
+                // Section footer
+                'politica_privacidad': 'Politique de confidentialité',
+                'aviso_legal': 'Mentions légales',
+
+                //Section Trainning
+                'free_day': 'Entraînement gratuit ! Complété',
+                'free_day_name': 'Nom',
             }
         };
+
+        
+
+        /*------------------
+         Chatbox
+         --------------------*/
         /* Mensaje style chatbox */
         document.addEventListener("DOMContentLoaded", function () {
             var chatIcon = document.getElementById("chatIcon");
@@ -886,9 +1493,9 @@
                 document.getElementById("chatMessages").appendChild(messageElement);
             }
         });
-    </script>
-    <script src="assets/js/main.js"></script>
 
+
+    </script>
 
 </body>
 

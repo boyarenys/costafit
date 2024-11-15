@@ -1,0 +1,1723 @@
+/*------------------------------------------------------------------
+[Content]
+1.  Template default CSS
+	1.1	Variables
+	1.2	Mixins
+	1.3	Flexbox
+	1.4	Reset
+2.  Helper Css
+3.  Header Section
+4.  Hero Section
+5.  About thai Section
+6.  Disciplines Section
+7.  Play video Header Section
+8.  Class Section
+9.  Contact
+10.  Footer Style
+
+-------------------------------------------------------------------*/
+
+/*----------------------------------------*/
+
+/* Template default CSS
+/*----------------------------------------*/
+
+html, body {
+	height: 100%;
+	font-family: "Poppins", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	color: #111111;
+	font-weight: 400;
+	font-family: "Poppins", sans-serif;
+}
+h1 {
+	font-size: 70px;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	font-size: 30px;
+}
+h4 {
+	font-size: 24px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+p {
+	font-size: 16px;
+	font-family: "Poppins", sans-serif;
+	color: #6b6b6b;
+	font-weight: 400;
+	line-height: 26px;
+	margin: 0 0 15px 0;
+}
+img {
+	max-width: 100%;
+}
+input:focus, select:focus, button:focus, textarea:focus {
+	outline: none;
+}
+a:hover, a:focus {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+}
+ul, ol {
+	padding: 0;
+	margin: 0;
+}
+/*---------------------
+  Helper CSS
+-----------------------*/
+.section-title {
+	text-align: center;
+	margin-bottom: 30px;
+	position: relative;
+	opacity: 0; /* Para usar el efecto de aparición */
+	animation: fadeInUp 1.2s ease forwards;
+}
+
+	.section-title h2 {
+		font-size: 36px;
+		color: #fd3c3d;
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-family: 'Thonburi', sans-serif;
+		position: relative;
+		display: inline-block;
+		padding: 0.5em 1em;
+		transition: all 0.3s ease;
+	}
+
+		.section-title h2::before,
+		.section-title h2::after {
+			content: "";
+			position: absolute;
+			width: 40px;
+			height: 3px;
+			background-color: #d42f2f;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.section-title h2::before {
+			left: -50px;
+		}
+
+		.section-title h2::after {
+			right: -50px;
+		}
+
+		/* Efecto de brillo al pasar el cursor */
+		.section-title h2:hover {
+			color: #ff5656; /* Cambia a un tono rojo brillante */
+			text-shadow: 0 0 8px rgba(255, 86, 86, 0.8), 0 0 15px rgba(255, 86, 86, 0.5);
+			transform: scale(1.05); /* Ligero aumento de tamaño */
+		}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+	.section-title h2 {
+		font-size: 2.5rem; /* Reduce el tamaño del título */
+		padding: 0.5em 0.8em; /* Ajusta el padding */
+	}
+
+		.section-title h2::before,
+		.section-title h2::after {
+			width: 30px; /* Reduce el tamaño de las líneas */
+			left: -30px; /* Ajusta la posición de las líneas */
+			right: -30px;
+		}
+}
+
+@media (max-width: 480px) {
+	.section-title h2 {
+		font-size: 2rem; /* Reduce aún más el tamaño para dispositivos pequeños */
+		padding: 0.5em 0.6em; /* Ajusta el padding */
+	}
+
+		.section-title h2::before,
+		.section-title h2::after {
+			width: 20px; /* Reduce aún más el tamaño de las líneas */
+			left: -20px; /* Ajusta la posición */
+			right: -20px;
+		}
+}
+
+
+
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+.spad {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.spad-2 {
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+
+.spad-3 {
+	padding-top: 150px;
+	padding-bottom: 70px;
+}
+.text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6, .text-white p, .text-white span, .text-white li, .text-white a {
+	color: #fff;
+}
+/* buttons */
+
+.primary-btn {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 0 12px;
+	color: #ffffff;
+	text-align: center;
+	width: 160px;
+	height: 46px;
+	border-left: 2px solid #eb3c5a;
+	border-right: 2px solid #f67831;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background-position: 0 0, 0 100%;
+	background-repeat: no-repeat;
+	background-size: 100% 2px;
+	background-image: -webkit-gradient(linear, left top, right top, from(#eb3c5a), to(#f67831)), -webkit-gradient(linear, left top, right top, from(#eb3c5a), to(#f67831));
+	background-image: -o-linear-gradient(left, #eb3c5a 0%, #f67831 100%), -o-linear-gradient(left, #eb3c5a 0%, #f67831 100%);
+	background-image: linear-gradient(to right, #eb3c5a 0%, #f67831 100%), linear-gradient(to right, #eb3c5a 0%, #f67831 100%);
+	-webkit-transition-duration: 1000ms;
+	-o-transition-duration: 1000ms;
+	transition-duration: 1000ms;
+	line-height: 45px;
+	position: relative;
+	z-index: 1;
+}
+.primary-btn:after {
+	color: #fff;
+	-webkit-transition-duration: 500ms;
+	-o-transition-duration: 500ms;
+	transition-duration: 500ms;
+	background: #f67831;
+	background: -webkit-gradient(linear, left top, right top, from(#eb3c5a), to(#f67831));
+	background: -o-linear-gradient(left, #eb3c5a, #f67831);
+	background: linear-gradient(to right, #eb3c5a, #f67831);
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 1;
+}
+/* Preloder */
+
+#preloder {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background: #000;
+}
+.loader {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 60px;
+	animation: loader 0.8s linear infinite;
+	-webkit-animation: loader 0.8s linear infinite;
+}
+@keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+		border: 4px solid #673ab7;
+		border-left-color: transparent;
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+}
+@-webkit-keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		border: 4px solid #673ab7;
+		border-left-color: transparent;
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+}
+
+
+/* Botón Scroll to Top  */
+#scrollTopBtn {
+	display: none; /* Oculto por defecto */
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #f0715f;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	z-index: 1000;
+}
+
+	#scrollTopBtn:hover {
+		background-color: #ff6f4e;
+		transform: scale(1.1);
+	}
+
+	#scrollTopBtn:focus {
+		outline: none;
+	}
+
+
+
+/*---------------------
+  Header
+-----------------------*/
+.header-section {
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8); /* Negro con opacidad del 80% */
+	position: fixed; /* Fija el menú en la parte superior */
+	z-index: 1000;
+	color: rgba(255, 255, 255, 0.7);
+	font-family: "Poppins", sans-serif;
+}
+
+.language-links {
+	gap: 10px;
+}
+
+.lang-circle {
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	margin-right: 8px;
+}
+
+	.lang-circle:hover {
+		background: #f54021;
+	}
+
+/* Ajustes para mantener los iconos justo al lado del logo */
+.logo-container {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	height: 65px;
+}
+
+/* Ajustes responsive */
+@media (max-width: 767px) {
+	.logo {
+		height: 50px;
+	}
+}
+
+.icon-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px; /* Espacio entre iconos */
+}
+
+/* Estilos generales para los iconos */
+.social-icon {
+	font-size: 1rem; /* Tamaño inicial en pantallas pequeñas */
+	color: #ffffff;
+	transition: color 0.3s;
+}
+
+	.social-icon.facebook {
+		color: #4267B2;
+	}
+
+	.social-icon.instagram {
+		color: #E1306C;
+	}
+
+	.social-icon.youtube {
+		color: #FF0000;
+	}
+
+	.social-icon.whatsapp {
+		color: #25D366;
+	}
+
+	.social-icon:hover {
+		color: #fff;
+	}
+
+/* Ajuste responsive */
+@media (min-width: 768px) {
+	.social-icon {
+		font-size: 1rem; /* Tamaño en pantallas medianas */
+	}
+}
+
+@media (min-width: 992px) {
+	.social-icon {
+		font-size: 1.5rem; /* Tamaño en pantallas grandes */
+	}
+}
+
+.customLink a {
+	color: #ffffff; /* Color del texto en blanco */
+	text-decoration: none; /* Sin subrayado por defecto */
+	position: relative; /* Para el efecto de subrayado */
+	font-size: 17px;
+}
+
+	.customLink a::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 3px; /* Grosor del subrayado */
+		background: #fd3c3d; /* Color del subrayado */
+		left: 0;
+		bottom: 5px; /* Espacio del subrayado desde el texto */
+		transform: scaleX(0); /* Oculta el subrayado inicialmente */
+		transition: transform 0.3s ease; /* Transición suave */
+	}
+
+	.customLink a:hover::after {
+		transform: scaleX(1); /* Muestra el subrayado en hover */
+	}
+	.customLink a i {
+		margin-right: 8px; /* Espacio entre el icono y el texto */
+		color: #ffffff; /* Color del icono */
+		transition: color 0.3s; /* Transición de color en hover */
+	}
+
+	.customLink a:hover i {
+		color: #fd3c3d; /* Color del icono en hover */
+	}
+
+.custom-navbar {
+	display: flex;
+	justify-content: space-around;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+/* Estilos para el dropdown */
+.dropdown-menu {
+	background: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
+	border: none; /* Sin borde */
+}
+
+.dropdown-item {
+	color: #ffffff; /* Color del texto del dropdown */
+	transition: background 0.3s; /* Transición para el fondo */
+}
+
+	.dropdown-item:hover {
+		background: rgba(255, 255, 255, 0.1); /* Fondo en hover */
+		color: #fd3c3d; /* Color del texto en hover */
+	}
+
+
+/*---------------------
+  Hero Section
+-----------------------*/
+
+.hero-section {
+	background-image: url('../img/hero-bg.png'); /* Asegúrate de que esta ruta sea correcta */
+	background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+	background-position: center; /* Centra la imagen */
+	min-height: 400px; /* Altura mínima del contenedor */
+	color: #fff; /* Color del texto */
+	display: flex; /* Para centrar el contenido */
+	align-items: center; /* Centra verticalmente */
+	justify-content: center; /* Centra horizontalmente */
+	position: relative; /* Para asegurar que otros elementos se posicionen correctamente */
+	height: 850px;
+}
+.hero-text {
+	display: flex; /* Usar flexbox para centrar elementos */
+	flex-direction: column; /* Colocar elementos en columna */
+	height: 100%; /* Asegurar que ocupe toda la altura del contenedor */
+	padding-top: 100px;
+}
+
+
+.hero-text span,
+.hero-text h1,
+.hero-text p {
+  text-align:center;
+    text-shadow: 
+        -1px -1px 0 rgba(0, 0, 0, 1),  
+         1px -1px 0 rgba(0, 0, 0, 1),  
+        -1px  1px 0 rgba(0, 0, 0, 1),  
+         1px  1px 0 rgba(0, 0, 0, 1); /* Borde negro */
+}
+.hero-text span {
+	font-size: 18px;
+	color: #fd3c3d;
+	padding-left: 10px;
+	text-transform: uppercase;
+	letter-spacing: 15px;
+	font-weight: 600;
+}
+
+	.hero-text h1 {
+		font-size: 78px;
+		color: #ffffff;
+		font-weight: 600;
+		margin-top: 11px;
+		margin-bottom: 18px;
+	}
+
+
+.hero-text p {
+	color: dodgerblue;
+	margin: 2px;
+}
+
+
+
+.form-container {
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 30px;
+	border: 2px solid #fd3c3d;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para el contenedor del formulario */
+	color: white;	
+}
+
+	.form-container h2 {
+		margin-bottom: 20px; /* Espacio inferior para separar del formulario */
+		font-size: 24px; /* Tamaño de fuente */
+		color: white; /* Color del texto */
+		font-weight: bold; /* Negrita */
+		text-align: center; /* Centrar texto */
+	}
+
+
+
+
+.google-style-form {
+	display: flex; /* Utilizar flexbox para alinear elementos */
+	flex-direction: column; /* Dirección en columna */
+	align-items: center; /* Centrar elementos en el eje transversal */
+	margin-top: 20px; /* Margen superior */
+}
+
+.form-group {
+	display: flex; /* Alinear inputs en una fila */
+	align-items: center; /* Alinear el botón y los inputs */
+	gap: 0; /* Sin espacio entre elementos */
+}
+
+.form-control {
+	flex: 1; /* Tomar espacio igual */
+	padding: 10px; /* Relleno interno */
+	border: 1px solid #ddd; /* Borde ligero */
+	border-radius: 20px 0 0 20px; /* Esquinas redondeadas solo a la izquierda */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+	transition: border-color 0.3s; /* Transición suave */
+	height: 50px; /* Altura uniforme para inputs */
+}
+
+	.form-control.no-border {
+		border: none; /* Sin borde para el campo de email */
+		border-radius: 0; /* Sin borde redondeado */
+	}
+
+	.form-control:focus {
+		border-color: #4285f4; /* Color del borde al enfocar */
+		outline: none; /* Sin contorno */
+	}
+
+	.form-control:first-child {
+		border-radius: 20px 0 0 20px; /* Esquinas redondeadas solo a la izquierda para el nombre */
+	}
+
+	.form-control:last-child {
+		border-radius: 0; /* Sin esquinas redondeadas para el campo de fecha */
+	}
+
+.btn-primary {
+	background-color: #4285f4; /* Color del botón */
+	color: white; /* Color del texto */
+	border-radius: 0 20px 20px 0; /* Esquinas redondeadas solo a la derecha */
+	border: none; /* Sin borde */
+	padding: 10px 20px; /* Relleno */
+	cursor: pointer; /* Cambiar cursor */
+	transition: background-color 0.3s; /* Transición suave */
+	margin-left: 0; /* Sin margen entre el input y el botón */
+	height: 50px; /* Altura uniforme para el botón */
+}
+
+	.btn-primary:hover {
+		background-color: #357ae8; /* Color al pasar el cursor */
+	}
+
+/* Ajustes para mantener alineación en dispositivos más pequeños */
+@media (max-width: 768px) {
+	.form-group {
+		flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+		align-items: stretch; /* Expandir inputs y botón */
+	}
+
+	.btn-primary {
+		margin-left: 0; /* Eliminar margen en pantallas pequeñas */
+		margin-top: 10px; /* Espacio superior para el botón */
+	}
+}
+
+
+/*---------------------
+  About thai Section
+-----------------------*/
+.profile-head {
+	transform: translateY(5rem)
+}
+
+.cover {
+	background-image: url(../img/trainer/cover-thai.jpg);
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+/* CSS de Beneficios */
+.benefits-title {
+	position: relative;
+	color: #e8b923;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 2rem;
+}
+
+.benefit-card-container {
+	perspective: 1000px;
+}
+
+.benefit-card {
+	background: #f9f9f9;
+	transition: transform 0.4s;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	color: #333;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	border: 1px solid #e8b923;
+	border-radius: 10px;
+}
+
+	.benefit-card:hover {
+		transform: rotateY(-10deg);
+		box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+	}
+
+.benefit-icon {
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0%, 100% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+}
+
+
+/*---------------------
+  Disciplines Section
+-----------------------*/
+
+.disciplines-section {
+	padding-top: 90px;
+	padding-bottom: 95px;
+	background-color: #f8f8f8;
+}
+
+/* Contenedor principal de las disciplinas */
+.disciplines-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+/* Estilo general para cada disciplina */
+.discipline-item {
+	position: relative;
+	margin-bottom: 30px;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+/* Imagen de cada disciplina */
+.discipline-image {
+	width: 100%;
+	height: 220px;
+	background-size: cover;
+	background-position: center;
+	transition: transform 0.3s ease;
+	border-radius: 8px 8px 0 0;
+}
+
+/* Efecto hover en la imagen de la disciplina */
+.discipline-item:hover .discipline-image {
+	transform: scale(1.1);
+}
+
+/* Información del entrenador de la disciplina */
+.trainer-info {
+	padding: 15px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-top: 1px solid #eee;
+}
+
+	/* Foto del entrenador */
+	.trainer-info .trainer-photo {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		margin-right: 15px;
+		object-fit: cover; /* Asegura que la imagen no se distorsione */
+	}
+
+	/* Nombre del entrenador */
+	.trainer-info span {
+		font-size: 16px;
+		font-weight: bold;
+		color: #333;
+		padding-right: 10px;
+	}
+
+/* Redes sociales del entrenador */
+.trainer-social a {
+	color: #333;
+	margin-right: 10px;
+	font-size: 16px;
+}
+
+	.trainer-social a:hover {
+		color: #e85d39;
+	}
+
+/* Contenido de cada disciplina */
+.discipline-content {
+	padding: 20px;
+	text-align: left;
+}
+
+	/* Título de la disciplina */
+	.discipline-content h4 {
+		font-size: 22px;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+
+	/* Descripción de la disciplina */
+	.discipline-content p {
+		font-size: 14px;
+		margin-bottom: 15px;
+		color: #555;
+	}
+
+	/* Lista de beneficios de la disciplina */
+	.discipline-content ul {
+		list-style: none;
+		padding-left: 0;
+	}
+
+		.discipline-content ul li {
+			font-size: 14px;
+			margin-bottom: 5px;
+			color: #444;
+		}
+
+			.discipline-content ul li::before {
+				content: "•";
+				margin-right: 8px;
+				color: #e85d39;
+			}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 767px) {
+	.discipline-item {
+		width: 100%;
+	}
+}
+
+
+
+/*---------------------
+  Play video Header Section
+-----------------------*/
+
+/* Estilo para el botón de Play */
+.btn-play-video {
+	font-size: 55px; /* Tamaño del ícono */
+	color: #ffffff; /* Color del ícono */
+	display: inline-block;
+	margin-top: 20px;
+	transition: color 0.3s ease; /* Transición de color */
+}
+
+	.btn-play-video:hover {
+		color: #fd3c3d; /* Color al hacer hover */
+	}
+
+/* Estilos para el popup del video */
+
+.video-popup {
+	display: none; /* Oculto por defecto */
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+}
+
+.video-popup-content {
+	position: relative;
+	margin: auto;
+	top: 50%; /* Ajusta verticalmente */
+	transform: translateY(-50%); /* Centra verticalmente */
+	width: 90%;
+	max-width: 1200px; /* Aumenta el tamaño máximo del video */
+	background-color: transparent;
+}
+
+.video-wrapper {
+	width: 100%;
+	padding-top: 56.25%; /* Proporción 16:9 */
+	position: relative;
+}
+
+	.video-wrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none; /* Quita el borde del iframe */
+	}
+
+
+/* Botón de cerrar */
+.close {
+	position: absolute;
+	top: 10px; /* Posición más cerca de la parte superior */
+	right: 10px; /* Posición más cerca del borde derecho */
+	color: #fff; /* Color del texto */
+	font-size: 48px; /* Tamaño de fuente más grande */
+	font-weight: bold;
+	cursor: pointer;
+	z-index: 1000; /* Asegúrate de que esté por encima del video */
+	transition: color 0.3s; /* Transición suave para el color */
+}
+
+
+/*---------------------
+  Banner Section
+-----------------------*/
+
+
+.banner-text {
+	padding: 30px;
+}
+.banner-text h2 {
+	font-size: 40px;
+	color: #000;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.banner-text p {
+	font-size: 18px;
+	line-height: 30px;
+	color: #000;
+	margin-bottom: 50px;
+}
+
+/*---------------------
+  Footer Banner Section
+-----------------------*/
+
+.footer-banner-item {
+	height: 400px;
+	margin-left: -15px;
+	margin-right: -15px;
+	position: relative;
+	padding-top: 85px;
+	padding-left: 60px;
+	padding-right: 60px;
+	z-index: 1;
+}
+.footer-banner-item:after {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 520px;
+	height: 310px;
+	border: 18px solid rgba(255, 255, 255, 0.1);
+	content: "";
+	-webkit-transform: translate(-260px, -155px);
+	-ms-transform: translate(-260px, -155px);
+	transform: translate(-260px, -155px);
+	z-index: -1;
+}
+.footer-banner-item span {
+	font-size: 16px;
+	color: #fd3c3d;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.footer-banner-item h2 {
+	font-size: 40px;
+	color: #ffffff;
+	font-weight: 600;
+	margin-top: 30px;
+	margin-bottom: 5px;
+}
+.footer-banner-item p {
+	color: #ffffff;
+	margin-bottom: 42px;
+}
+/*---------------------
+  Footer
+-----------------------*/
+
+.footer-section {
+	background: #111111;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #fd3c3d;
+}
+
+.contact-info a {
+	color: #fd3c3d;
+	text-decoration: none;
+}
+	.contact-info a:hover {
+		color: #fff;
+	}
+
+
+.contact-address .ca-widget {
+	overflow: hidden;
+	margin-bottom: 16px;
+}
+
+	.cw-icon {
+		height: 60px;
+		width: 60px;
+		border: 1px solid #ebebeb;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 60px;
+		float: left;
+		margin-right: 28px;
+	}	
+
+.cw-text h5 {
+	color: #fd3c3d;
+	margin-bottom: 5px;
+	padding-top: 18px;
+}
+	
+
+.copyright-text {
+	text-align: center;
+}
+
+.copyright-text ul {
+	display: inline-block;
+}
+.copyright-text ul li {
+	color: #ffffff;
+	list-style: none;
+	font-size: 16px;
+	display: inline-block;
+	margin-right: 25px;
+	line-height: 40px;
+}
+	.copyright-text ul li:hover {
+		color: #eb3c5a;
+	}
+
+.copyright-text ul li:last-child {
+	margin-right: 0;
+}
+	.copyright-text ul li a {
+		color: #ffffff;
+	}
+	.copyright-text ul li a:hover {
+		color: #eb3c5a;
+	}
+
+.copyright-text ul li:last-child {
+	margin-right: 0;
+}
+
+
+
+
+/*---------------------------
+  Classes Timetable Section
+----------------------------*/
+
+.classes-timetable {
+	padding-top: 0;
+}
+.classes-timetable .nav-controls {
+	text-align: center;
+	margin-bottom: 42px;
+}
+.classes-timetable .nav-controls ul li {
+	list-style: none;
+	font-size: 16px;
+	color: #111111;
+	font-weight: 600;
+	display: inline-block;
+	margin-right: 48px;
+	text-transform: uppercase;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.classes-timetable .nav-controls ul li.active {
+	color: #fd3c3d;
+}
+.classes-timetable .nav-controls ul li:hover {
+	color: #fd3c3d;
+}
+.classes-timetable .nav-controls ul li:last-child {
+	margin-right: 0;
+}
+.schedule-table.filtering .ts-item {
+	opacity: 0;
+}
+.schedule-table.filtering .ts-item.show {
+	opacity: 1;
+}
+.schedule-table table {
+	width: 100%;
+	text-align: center;
+	border: 1px solid #e1e1e1;
+}
+.schedule-table table thead tr th {
+	font-size: 16px;
+	color: #000000;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 25px 0;
+	background: #f0f0f0;
+}
+.schedule-table table tbody tr {
+	border-top: 1px solid #e5e5e5;
+}
+.schedule-table table tbody tr td {
+	width: 146px;
+	background: #ffffff;
+	border-right: 1px solid #e5e5e5;
+	padding: 18px 0;
+	position: relative;
+	z-index: 1;
+}
+.schedule-table table tbody tr td.ts-item {
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.schedule-table table tbody tr td:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, left top, right top, from(#eb3c5a), to(#f67831));
+	background: -o-linear-gradient(left, #eb3c5a, #f67831);
+	background: linear-gradient(to right, #eb3c5a, #f67831);
+	content: "";
+	opacity: 0;
+	z-index: -1;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.schedule-table table tbody tr td.hover-bg:hover h6 {
+	color: #ffffff;
+}
+.schedule-table table tbody tr td.hover-bg:hover span {
+	color: #ffffff;
+}
+
+.schedule-table table tbody tr td.hover-bg:hover:after {
+	opacity: 1;
+}
+.schedule-table table tbody tr td.workout-time {
+	font-size: 16px;
+	color: #000000;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.schedule-table table tbody tr td h6 {
+	font-weight: 600;
+	color: #fd3c3d;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+.schedule-table table tbody tr td span {
+	font-size: 14px;
+	font-weight: 600;
+	color: #111111;
+}
+
+
+/*---------------------
+  Gallery Section
+-----------------------*/
+
+.gallery-item .item {
+	float: left;
+	margin-bottom: 20px;
+	width: 100%; /* Ocupa el 100% del contenedor por defecto */
+}
+
+	/* Aumentar el tamaño de las imágenes */
+	.gallery-item .item img {
+		width: 100%; /* La imagen ocupará el 100% del contenedor de la clase 'item' */
+		height: 100%; /* Mantiene la proporción original */
+		max-height: 300px; /* Establece un alto máximo para que no se vean demasiado pequeñas */
+		object-fit: cover; /* Asegura que la imagen se recorte de manera proporcional si es necesario */
+		border-radius: 6px; /* Bordes redondeados si se desea */
+		transition: transform 0.3s ease; 
+	}
+
+		/* Efecto hover: zoom de imagen */
+		.gallery-item .item img:hover {
+			transform: scale(1.1); /* Aumenta ligeramente la imagen al pasar el cursor */
+		}
+
+/* Ajustar la distribución de las imágenes en pantallas grandes */
+@media (min-width: 1200px) {
+	.gallery-item .item {
+		width: 24%; /* Las imágenes ocuparán el 24% del contenedor en pantallas grandes */
+	}
+}
+
+/* En pantallas medianas (tabletas) las imágenes ocupan el 48% */
+@media (max-width: 991px) {
+	.gallery-item .item {
+		width: 48%; /* Las imágenes ocuparán el 48% en pantallas medianas */
+	}
+}
+
+/* En pantallas pequeñas (móviles), las imágenes ocuparán el 100% */
+@media (max-width: 767px) {
+	.gallery-item .item {
+		width: 100%; /* Las imágenes ocuparán el 100% del contenedor en pantallas pequeñas */
+	}
+}
+
+
+/*---------------------
+  Map Section
+-----------------------*/
+
+.map {
+	height: 400px;
+	position: relative;
+}
+.map iframe {
+	width: 100%;
+}
+.map img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-14px, -21px);
+	-ms-transform: translate(-14px, -21px);
+	transform: translate(-14px, -21px);
+}
+
+/*-------------------------------- Respinsive Media Styles --------------------------------*/
+
+@media only screen and (min-width: 1200px) {
+	.container {
+		max-width: 1170px;
+	}
+}
+/* Medium Device: 1200px */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.services-item {
+		padding-top: 70px;
+		padding-left: 37px;
+		padding-right: 30px;
+	}
+	.services-item img {
+		left: 40px;
+		top: 35px;
+	}
+	.services-item.pd-b {
+		padding-top: 70px;
+	}
+	.single-trainer-item .trainer-text {
+		width: 282px;
+		-webkit-transform: translateX(-141px);
+		-ms-transform: translateX(-141px);
+		transform: translateX(-141px);
+	}
+	.about-counter-text .single-counter {
+		margin-right: 110px;
+	}
+	.about-text {
+		padding-top: 0;
+		padding-left: 20px;
+	}
+	.award-text {
+		padding-top: 0;
+	}
+}
+@media only screen and (max-width: 991px) {
+	
+	.banner-text {
+		margin-bottom: 30px;
+	}
+	.single-trainer-item {
+		margin-bottom: 110px;
+	}
+	.trainer-section {
+		padding-bottom: 80px;
+	}
+	.membership-item {
+		margin-bottom: 40px;
+	}
+	.register-section {
+		padding-top: 195px;
+	}
+	.register-pic {
+		margin-left: 0;
+		padding-top: 30px;
+	}
+	.classes-page-text .register-pic {
+		padding-top: 0;
+	}
+	.subscribe-option .so-text {
+		float: none;
+	}
+	.subscribe-option .subscribe-form {
+		float: none;
+		margin: 5px 0 37px;
+	}
+	.award-text {
+		margin-bottom: 30px;
+	}
+	.classes-page-text .register-pic img {
+		min-width: 100%;
+	}
+	.contact-info {
+		margin-bottom: 30px;
+	}
+	.register-text {
+		margin-right: 0;
+	}
+}
+/* Tablet Device: 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.nav-menu .mainmenu ul li {
+		margin-right: 12px;
+	}
+	.nav-menu .signup-btn {
+		margin: 16px 0px 16px 0px;
+		width: 145px;
+	}
+	.about-counter-text .single-counter {
+		margin-right: 30px;
+	}
+	.services-pic img {
+		height: auto;
+	}
+	.register-pic img {
+		height: auto;
+		min-width: 100%;
+	}
+}
+/* Large Mobile: 480px */
+
+@media only screen and (max-width: 767px) {
+	.slicknav_menu {
+		display: block;
+		background: transparent;
+		padding: 0;
+		position: relative;
+		z-index: 55;
+	}
+	.slicknav_btn {
+		margin: 22px 0;
+		border-radius: 0;
+	}
+	.slicknav_nav {
+		background: #222;
+	}
+	.slicknav_nav ul {
+		margin: 10px;
+	}
+	.slicknav_nav a:hover {
+		border-radius: 0;
+		background: #fd3c3d;
+		color: #ffffff;
+	}
+	.slicknav_nav a {
+		padding: 10px;
+	}
+	.nav-menu .mainmenu {
+		display: none;
+	}
+	.nav-menu .signup-btn {
+		display: none;
+	}
+	.hero-text h1 {
+		font-size: 65px;
+	}
+	.services-pic img {
+		height: auto;
+	}
+	
+	.footer-banner-item:after {
+		width: 450px;
+		-webkit-transform: translate(-225px, -155px);
+		-ms-transform: translate(-225px, -155px);
+		transform: translate(-225px, -155px);
+	}
+	.banner-text {
+		padding-top: 40px;
+	}
+	.register-pic img {
+		height: auto;
+		min-width: 100%;
+	}
+	.copyright-text {
+		text-align: center;
+	}
+	.copyright-text p {
+		float: none;
+		display: block;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+	.copyright-text .footer-social {
+		float: none;
+	}
+	.about-section .about-text {
+		padding-left: 0;
+	}
+	.about-counter-text {
+		padding: 35px 35px 15px;
+	}
+	.about-counter-text .single-counter {
+		float: none;
+		margin-right: 0;
+		text-align: center;
+	}
+	.schedule-table {
+		overflow: auto;
+	}
+	.classes-timetable .nav-controls ul li {
+		margin-right: 10px;
+	}
+	.gallery-controls li {
+		margin-right: 15px;
+	}
+	.bd-text .tag-share .tags {
+		float: none;
+		margin-bottom: 10px;
+	}
+	.bd-text .tag-share .social-share {
+		float: none;
+	}
+	
+}
+/* Small Mobile: 320px */
+
+@media only screen and (max-width: 479px) {
+	.hero-text h1 {
+		font-size: 42px;
+	}
+	.single-trainer-item .trainer-text {
+		width: 284px;
+		-webkit-transform: translateX(-142px);
+		-ms-transform: translateX(-142px);
+		transform: translateX(-142px);
+	}
+	.footer-banner-item:after {
+		width: 300px;
+		-webkit-transform: translate(-150px, -155px);
+		-ms-transform: translate(-150px, -155px);
+		transform: translate(-150px, -155px);
+	}
+	.footer-banner-item {
+		padding-top: 28px;
+	}
+	.subscribe-option {
+		padding: 0 15px;
+	}
+	.subscribe-option .subscribe-form {
+		width: 260px;
+	}
+	.copyright-text ul li {
+		margin-right: 15px;
+	}
+	.register-text {
+		padding: 50px 35px 60px 35px;
+	}
+	.services-item {
+		padding-left: 40px;
+		padding-top: 100px;
+	}
+	.services-item.pd-b {
+		padding-top: 80px;
+	}
+	.services-item img {
+		left: 40px;
+		top: 40px;
+	}
+	.bd-text .tag-share .tags a {
+		margin-bottom: 5px;
+	}
+	.gallery-controls li {
+		margin-right: 10px;
+	}
+}
+
+
+
+
+/*---------------------
+  Muay Thai Kids Section
+-----------------------*/
+
+.kids-style {
+	padding: 40px 0;
+}
+
+
+
+.kids-pic {
+	text-align: center;
+}
+
+.number-icon {
+	font-size: 72px; /* Tamaño grande para destacar los números */
+	font-weight: bold; /* Negrita para mayor visibilidad */
+	margin-bottom: 20px; /* Espacio debajo del icono */
+	color: #fd3c3d; /* Color del número */
+}
+
+.kids-item {
+	padding: 20px;
+}
+
+	.kids-item h4 {
+		font-size: 20px;
+		margin-top: 10px;
+		color: #fd3c3d;
+		font-family: 'Thonburi', sans-serif;
+	}
+
+	.kids-item p {
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+	}
+
+
+
+
+/*---------------------
+  Osteopatia Section
+-----------------------*/
+
+.section-osteopatia {
+	background: #f8f8f8;
+	padding: 40px 20px;
+	border-radius: 8px;
+}
+
+/* Author Info */
+.author-info {
+	display: flex;
+	align-items: flex-start;
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.author-img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+
+.author-details h5 {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 8px;
+}
+
+.author-details p {
+	font-size: 16px;
+	line-height: 1.6;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+.benefits h6 {
+	font-size: 18px;
+	color: #333;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+/* Benefits in two columns */
+.benefits-columns {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.benefits-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	flex: 1;
+}
+
+	.benefits-list li {
+		font-size: 16px;
+		line-height: 1.8;
+		color: #555;
+		padding-left: 30px;
+		position: relative;
+		margin-bottom: 8px;
+	}
+
+		.benefits-list li::before {
+			content: '✔';
+			color: cornflowerblue;
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+/* Contact Button */
+.contact-osteopatia a {
+	color: #fff;
+	background-color: cornflowerblue;
+	padding: 10px 20px;
+	border-radius: 4px;
+	text-decoration: none;
+	font-size: 16px;
+	margin-top: 20px;
+	display: inline-block;
+	transition: background-color 0.3s ease;
+}
+
+	.contact-osteopatia a:hover {
+		background-color: #fd3c3d;
+	}
+
+	.contact-osteopatia a i {
+		margin-right: 8px;
+	}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+	.author-info {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.author-img {
+		margin-bottom: 15px;
+	}
+
+	.benefits-columns {
+		flex-direction: column;
+	}
+
+	.benefits-list {
+		margin-top: 20px;
+	}
+}
+
+
+
+/*
+ Chatbox + button open chat
+*/
+
+.chat-box {
+	display: none;
+	position: fixed;
+	bottom: 75px;
+	right: 78px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	width: 298px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+	background-color: #25d366;
+	color: #fff;
+	padding: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.profile-picture {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+#closeChat {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+	#closeChat:hover {
+		color: #ccc;
+	}
+
+#userInput {
+	width: calc(100% - 80px);
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	margin: 10px;
+}
+
+#sendMessage {
+	padding: 5px 8px;
+	background-color: #25d366;
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	margin: 10px;
+}
+
+	#sendMessage:hover {
+		background-color: rgba(37, 211, 102, 0.8);
+	}
+
+
+/* Bola chatbox icon */
+.conversation-icon {
+	background-color: #25d366;
+	color: #fff;
+	font-size: 20px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	position: fixed;
+	bottom: 75px;
+	right: 20px;
+}
+
+	.conversation-icon:hover {
+		background-color: rgba(37, 211, 102, 0.8);
+	}
