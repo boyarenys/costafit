@@ -565,22 +565,24 @@ ul, ol {
 	flex-direction: column; /* Dirección en columna */
 	align-items: center; /* Centrar elementos en el eje transversal */
 	margin-top: 20px; /* Margen superior */
+	width: 100%;
 }
 
 .form-group {
 	display: flex; /* Alinear inputs en una fila */
 	align-items: center; /* Alinear el botón y los inputs */
 	gap: 0; /* Sin espacio entre elementos */
+	width: 100%;
 }
 
 .form-control {
-	flex: 1; /* Tomar espacio igual */
-	padding: 10px; /* Relleno interno */
-	border: 1px solid #ddd; /* Borde ligero */
-	border-radius: 20px 0 0 20px; /* Esquinas redondeadas solo a la izquierda */
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-	transition: border-color 0.3s; /* Transición suave */
-	height: 50px; /* Altura uniforme para inputs */
+	flex: 1;
+	padding: 12px 20px;
+	border: 1px solid #ddd;
+	border-radius: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: border-color 0.3s;
+	height: 50px;
 }
 
 	.form-control.no-border {
@@ -606,7 +608,7 @@ ul, ol {
 	color: white; /* Color del texto */
 	border-radius: 0 20px 20px 0; /* Esquinas redondeadas solo a la derecha */
 	border: none; /* Sin borde */
-	padding: 10px 20px; /* Relleno */
+	padding: 12px 20px;
 	cursor: pointer; /* Cambiar cursor */
 	transition: background-color 0.3s; /* Transición suave */
 	margin-left: 0; /* Sin margen entre el input y el botón */
@@ -617,16 +619,29 @@ ul, ol {
 		background-color: #357ae8; /* Color al pasar el cursor */
 	}
 
-/* Ajustes para mantener alineación en dispositivos más pequeños */
+/* Estilos para dispositivos pequeños */
 @media (max-width: 768px) {
 	.form-group {
-		flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-		align-items: stretch; /* Expandir inputs y botón */
+		flex-direction: column;
+		align-items: stretch;
+		width: 100%;
 	}
 
+	/* Quitar borde redondeado en el primer input */
+	.google-style-form .form-control:first-child {
+		border-radius: 0 !important; /* Eliminar borde redondeado solo en el primer input */
+	}
+
+	/* Aplicar bordes rectos a todos los inputs y al botón */
+	.google-style-form .form-control {
+		border-radius: 0 !important; /* Quitar bordes redondeados */
+		margin-bottom: 10px;
+	}
+
+	/* Ajustes del botón */
 	.btn-primary {
-		margin-left: 0; /* Eliminar margen en pantallas pequeñas */
-		margin-top: 10px; /* Espacio superior para el botón */
+		border-radius: 0 !important; /* Bordes rectos para el botón */
+		margin-top: 10px;
 	}
 }
 
