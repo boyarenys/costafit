@@ -1721,3 +1721,69 @@ ul, ol {
 	.conversation-icon:hover {
 		background-color: rgba(37, 211, 102, 0.8);
 	}
+
+
+	/* Eventos section */
+.events-section {
+	padding: 60px 0;
+	background-color: #f9f9f9;
+}
+
+	.events-section h2 {
+		font-size: 2rem;
+		margin-bottom: 20px;
+	}
+
+	.events-section .section-description {
+		font-size: 1.2rem;
+		margin-bottom: 40px;
+		color: #555;
+	}
+
+.event-item {
+	text-align: center;
+	transition: transform 0.3s ease;
+}
+
+	.event-item:hover {
+		transform: scale(1.05);
+	}
+
+.event-image {
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease;
+}
+
+	.event-image:hover {
+		box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+	}
+
+.event-title {
+	font-size: 1rem;
+	color: #333;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.video-container {
+	position: relative;
+	width: 100%;
+	padding-bottom: 63.5%; 
+	overflow: hidden;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		object-fit: cover;
+	}
+
+
+
