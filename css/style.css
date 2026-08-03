@@ -794,27 +794,24 @@ INI: TIMETABLE
 
 
 .schedule-table {
-
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-
-    border-radius: 25px;
-  min-width: 900px;
-    background: #111;
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, .35);
-
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    min-width:0;
 }
 
 .schedule-table table {
-
-    margin: 0;
-
+    width:100%;
+    min-width:900px;
     color: var(--text);
 
 }
+
+.table-responsive{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
 
 .schedule-table th {
 
@@ -1004,6 +1001,37 @@ INI: TIMETABLE
 .class:hover::before {
 
     left: 150%;
+
+}
+@media (max-width:768px){
+
+.schedule-table table{
+    min-width:700px;
+}
+
+.schedule-table th,
+.schedule-table td{
+    padding:8px;
+}
+
+.hour{
+    width:60px;
+    font-size:13px;
+}
+
+.class{
+    padding:8px;
+    min-height:55px;
+    border-radius:10px;
+}
+
+.class-name{
+    font-size:11px;
+}
+
+.class-time{
+    font-size:10px;
+}
 
 }
 
@@ -1559,7 +1587,9 @@ INI: HEADER
     display: flex;
     overflow: hidden;
     animation: enter 1.2s ease;
-
+    min-height:100vh;
+    padding-top:170px;
+    box-sizing:border-box;
 
 }
 
@@ -1575,6 +1605,62 @@ INI: HEADER
     }
 }
 
+.trial-card{
+    max-width:900px;
+    margin:auto;
+    background:#1b1b1b;
+    color:#fff;
+    padding:40px;
+    border-radius:12px;
+    border:2px solid #d4af37;
+    text-align:center;
+}
+
+.trial-badge{
+    display:inline-block;
+    background:#d4af37;
+    color:#000;
+    padding:6px 14px;
+    border-radius:30px;
+    font-weight:700;
+    font-size:.8rem;
+    letter-spacing:1px;
+    margin-bottom:15px;
+}
+
+.trial-card h2{
+    margin-bottom:15px;
+    font-size:2rem;
+}
+
+
+.price{
+    font-size:2rem;
+    color:#d4af37;
+    font-weight:700;
+}
+
+.trial-info{
+    background:rgba(255,255,255,.06);
+    border-left:4px solid #d4af37;
+    padding:18px;
+    margin:25px auto;
+    border-radius:8px;
+    line-height:1.8;
+}
+
+.form-row button{
+    background:#d4af37;
+    color:#000;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.form-row button:hover{
+    background:#f0c94c;
+    transform:translateY(-2px);
+}
 /* VIDEO */
 .video-bg iframe {
     position: absolute;
