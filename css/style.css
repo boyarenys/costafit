@@ -923,17 +923,26 @@ INI: TIMETABLE
 .muay {
 
     background: var(--primary);
-
-    color: var(--text);
+    
 
 }
 
 .kids {
 
     background: #ffbe0b;
+  
+}
 
-    color: #111;
+.juniors {
 
+    background: #cc4444;
+  
+}
+
+.educativo {
+
+    background: #e4548b;
+  
 }
 
 .boxing {
@@ -947,8 +956,13 @@ INI: TIMETABLE
     background: #8E24AA;
 
 }
+.rutina{
 
-.yoga {
+    background: #0b5102;
+
+}
+
+.slow-training {
 
     background: #2ecc71;
 
@@ -960,7 +974,7 @@ INI: TIMETABLE
 
 }
 
-.senior {
+.cardio {
 
     background: #d81b60;
 
