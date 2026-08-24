@@ -148,5 +148,10 @@
   "footer_designed_by": "Dissenyat per ",
   "section10": "SECTION SHIRT --------------------------------------------------------------------------------------------------------------------",
   "shirt_title": "Samarreta",
-  "shirt_description": "Edició d'entrenament · màxima comoditat"
+  "shirt_description": "Edició d'entrenament · màxima comoditat",
+    "section11": "SECTION HOLIDAYS --------------------------------------------------------------------------------------------------------------------",
+   "holidays_title": "ÚLTIM",
+  "holidays_round": "ROUND",
+  "holidays_description": "Ens prenem uns dies per descansar. Tornem a entrenar el",
+  "holidays_bottom": "🥊 DESCANSA · RECUPERA · TORNA"
 }
