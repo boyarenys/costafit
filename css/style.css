@@ -2807,3 +2807,276 @@ pre {
 /*------------------------------------------
   END:  Mode edition
 -------------------------------------------*/
+
+
+/*------------------------------------------
+  INI: Holidays
+-------------------------------------------*/
+
+.vacaciones-round {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 90px 25px;
+
+  color: #fff;
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #0d0d0d 0px,
+      #0d0d0d 12px,
+      #121212 12px,
+      #121212 24px
+    );
+}
+
+
+/* Textura lateral */
+
+.vacaciones-round::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,.06),
+      transparent 45%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Líneas decorativas */
+
+.vacaciones-round::after {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 50%;
+
+  right: -250px;
+  top: -200px;
+
+  pointer-events: none;
+}
+
+
+/* Contenedor */
+
+.round-inner {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, 100%);
+
+  text-align: center;
+}
+
+
+
+
+/* Título */
+
+.round-inner h2 {
+  margin: 0;
+
+  font-size: clamp(70px, 13vw, 150px);
+
+  line-height: .78;
+
+  font-weight: 900;
+
+  letter-spacing: -.06em;
+
+  text-transform: uppercase;
+}
+
+
+/* Segunda línea */
+
+.round-inner h2 span {
+  -webkit-text-stroke: 1px rgba(255,255,255,.65);
+  color: transparent;
+}
+
+
+/* Línea */
+
+.round-line {
+  width: 140px;
+  height: 2px;
+
+  margin: 50px auto 35px;
+
+  background: rgba(255,255,255,.8);
+}
+
+
+/* Fechas */
+
+.round-dates {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  font-size: 18px;
+  font-weight: 900;
+
+  letter-spacing: .08em;
+}
+
+
+.round-dates strong {
+  color: rgba(255,255,255,.4);
+
+  font-size: 25px;
+}
+
+
+/* Descripción */
+
+.round-description {
+  max-width: 520px;
+
+  margin: 30px auto;
+
+  color: rgba(255,255,255,.55);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+.round-description strong {
+  color: #fff;
+}
+
+
+
+
+/* Texto inferior */
+
+.round-bottom {
+  margin-top: 35px;
+
+  color: rgba(255,255,255,.25);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: .2em;
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes roundPulse {
+
+  0% {
+    opacity: .5;
+    transform: scaleX(.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  100% {
+    opacity: .5;
+    transform: scaleX(.8);
+  }
+
+}
+
+
+.round-line {
+  animation: roundPulse 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+  .vacaciones-round {
+    min-height: 570px;
+
+    padding: 70px 20px;
+  }
+
+
+  .round-label {
+    font-size: 10px;
+
+    letter-spacing: .3em;
+  }
+
+
+  .round-inner h2 {
+    font-size: clamp(65px, 20vw, 100px);
+  }
+
+
+  .round-line {
+    margin: 40px auto 30px;
+  }
+
+
+  .round-dates {
+    gap: 14px;
+
+    font-size: 14px;
+  }
+
+
+  .round-dates strong {
+    font-size: 20px;
+  }
+
+
+  .round-description {
+    font-size: 14px;
+  }
+
+
+  .round-button {
+    width: 100%;
+  }
+
+
+  .round-bottom {
+    font-size: 8px;
+  }
+
+}
+
+/*------------------------------------------
+  END: Holidays
+-------------------------------------------*/
