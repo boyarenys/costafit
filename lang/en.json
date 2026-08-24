@@ -148,5 +148,10 @@
   "footer_designed_by": "Designed by",
   "section10": "SECTION SHIRT --------------------------------------------------------------------------------------------------------------------",
   "shirt_title": "Shirt",
-  "shirt_description": "Training Edition · Maximum Comfort"
+  "shirt_description": "Training Edition · Maximum Comfort",
+    "section11": "SECTION HOLIDAYS --------------------------------------------------------------------------------------------------------------------",
+    "holidays_title": "FINAL",
+  "holidays_round": "ROUND",
+  "holidays_description": "We're taking a few days off to rest. Training resumes on",
+  "holidays_bottom": "🥊 REST · RECHARGE · COME BACK"
 }
