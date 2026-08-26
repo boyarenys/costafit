@@ -7,7 +7,7 @@ const vacacionesCostaFit = {
 
     inicio: "2026-08-17",
 
-    fin: "2026-09-01"
+    fin: "2026-08-31"
 
 };
 
