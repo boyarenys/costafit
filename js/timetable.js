@@ -459,12 +459,7 @@ window.initTimetable = function () {
         const lang =
             getCurrentLanguage();
 
-            console.log(
-"TRANSLATION TEST",
-lang,
-key,
-window.translations?.[lang]?.[key]
-);
+
 
         /*
          * ==================================================
