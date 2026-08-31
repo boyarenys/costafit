@@ -2,21 +2,18 @@
 
     <div class="container">
 
-        <!-- ==================================================
-             CABECERA
-        =================================================== -->
-
+        <!-- ================= CABECERA  ================= -->
         <div class="section-header">
 
             <span
                 class="section-label"
-                data-lang="timetable_label">
+                data-lang="schedule_label">
                 ORGANIZACIÓN
             </span>
 
             <h2
                 class="section-title"
-                data-lang="timetable_title">
+                data-lang="schedule_title">
                 Horario
             </h2>
 
@@ -24,28 +21,28 @@
 
 
         <!-- ==================================================
-             BOTONES HOY / SEMANA
-        =================================================== -->
+             HOY / SEMANA
+        ================================================== -->
 
         <div class="schedule-controls">
 
             <div class="schedule-view-buttons">
 
-               <button
-        type="button"
-        class="schedule-view-btn active"
-        data-view="today"
-        data-lang="schedule_today">
-        Hoy
-    </button>
+                <button
+                    type="button"
+                    class="schedule-view-btn active"
+                    data-view="today"
+                    data-lang="schedule_today">
+                    Hoy
+                </button>
 
-    <button
-        type="button"
-        class="schedule-view-btn"
-        data-view="week"
-        data-lang="schedule_week">
-        Semana
-    </button>
+                <button
+                    type="button"
+                    class="schedule-view-btn"
+                    data-view="week"
+                    data-lang="schedule_week">
+                    Semana
+                </button>
 
             </div>
 
@@ -54,7 +51,7 @@
 
         <!-- ==================================================
              VISTA HOY
-        =================================================== -->
+        ================================================== -->
 
         <div
             id="schedule-today"
@@ -99,37 +96,86 @@
 
             <div class="schedule-days">
 
-               <button type="button" data-day="lunes">
-        <span data-lang="schedule_monday_letter">L</span>
-        <small data-lang="schedule_monday_short">Lun</small>
-    </button>
+                <button
+                    type="button"
+                    data-day="lunes">
+
+                    <span data-lang="schedule_monday_letter">
+                        L
+                    </span>
+
+                    <small data-lang="schedule_monday_short">
+                        Lun
+                    </small>
+
+                </button>
 
 
-            
- <button type="button" data-day="martes">
-        <span data-lang="schedule_tuesday_letter">M</span>
-        <small data-lang="schedule_tuesday_short">Mar</small>
-    </button>
+                <button
+                    type="button"
+                    data-day="martes">
 
-    <button type="button" data-day="miércoles">
-        <span data-lang="schedule_wednesday_letter">X</span>
-        <small data-lang="schedule_wednesday_short">Mié</small>
-    </button>
+                    <span data-lang="schedule_tuesday_letter">
+                        M
+                    </span>
 
-    <button type="button" data-day="jueves">
-        <span data-lang="schedule_thursday_letter">J</span>
-        <small data-lang="schedule_thursday_short">Jue</small>
-    </button>
+                    <small data-lang="schedule_tuesday_short">
+                        Mar
+                    </small>
 
-    <button type="button" data-day="viernes">
-        <span data-lang="schedule_friday_letter">V</span>
-        <small data-lang="schedule_friday_short">Vie</small>
-    </button>
+                </button>
+
+
+                <button
+                    type="button"
+                    data-day="miércoles">
+
+                    <span data-lang="schedule_wednesday_letter">
+                        X
+                    </span>
+
+                    <small data-lang="schedule_wednesday_short">
+                        Mié
+                    </small>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    data-day="jueves">
+
+                    <span data-lang="schedule_thursday_letter">
+                        J
+                    </span>
+
+                    <small data-lang="schedule_thursday_short">
+                        Jue
+                    </small>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    data-day="viernes">
+
+                    <span data-lang="schedule_friday_letter">
+                        V
+                    </span>
+
+                    <small data-lang="schedule_friday_short">
+                        Vie
+                    </small>
+
+                </button>
 
             </div>
 
 
-            <!-- CLASES GENERADAS POR JAVASCRIPT -->
+            <!-- ==================================================
+                 CLASES GENERADAS POR JS
+            ================================================== -->
 
             <div
                 id="schedule-day-classes"
@@ -139,14 +185,14 @@
         </div>
 
 
-        <!-- ==================================================
-             VISTA SEMANAL
-        =================================================== -->
+         <!-- =========================
+             SEMANA
+        ========================== -->
 
         <div
             id="schedule-week"
-            class="schedule-week">
-
+            class="schedule-week"
+            hidden>
 
             <div class="schedule-table-wrapper">
 
@@ -158,671 +204,23 @@
 
                             <tr>
 
-                                   <th
-            class="hour"
-            data-lang="schedule_hour">
-            Hora
-        </th>
+                                <th
+                                    class="hour"
+                                    data-lang="schedule_hour">
+                                    Hora
+                                </th>
 
-                                 <th data-lang="schedule_monday">
-            Lunes
-        </th>
-
-        <th data-lang="schedule_tuesday">
-            Martes
-        </th>
-
-        <th data-lang="schedule_wednesday">
-            Miércoles
-        </th>
-
-        <th data-lang="schedule_thursday">
-            Jueves
-        </th>
-
-        <th data-lang="schedule_friday">
-            Viernes
-        </th>
+                                <th data-day-header="lunes"></th>
+                                <th data-day-header="martes"></th>
+                                <th data-day-header="miercoles"></th>
+                                <th data-day-header="jueves"></th>
+                                <th data-day-header="viernes"></th>
 
                             </tr>
 
                         </thead>
 
-
-                        <tbody>
-
-
-                            <!-- =================================
-                                 09:30
-                            ================================== -->
-
-                            <tr>
-
-                                <td class="schedule-hour-column">
-                                    09:30
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class cardio">
-
-                                        <div class="class-name">
-                                            Cardio muaythai
-                                        </div>
-
-                                        <div class="class-time">
-                                            09:30 - 10:15
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class slow-training">
-
-                                        <div class="class-name">
-                                            Slow training
-                                        </div>
-
-                                        <div class="class-time">
-                                            09:30 - 10:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class cardio">
-
-                                        <div class="class-name">
-                                            Cardio muaythai
-                                        </div>
-
-                                        <div class="class-time">
-                                            09:30 - 10:15
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class slow-training">
-
-                                        <div class="class-name">
-                                            Slow training
-                                        </div>
-
-                                        <div class="class-time">
-                                            09:30 - 10:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class cardio">
-
-                                        <div class="class-name">
-                                            Cardio muaythai
-                                        </div>
-
-                                        <div class="class-time">
-                                            09:30 - 10:15
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-                            </tr>
-
-
-                            <!-- =================================
-                                 10:30
-                            ================================== -->
-
-                            <tr>
-
-                                <td class="schedule-hour-column">
-                                    10:30
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class muay">
-
-                                        <div class="class-name">
-                                            Muay Thai
-                                        </div>
-
-                                        <div class="class-time">
-                                            10:30 - 11:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class jiu">
-
-                                        <div class="class-name">
-                                            Jiu-Jitsu
-                                        </div>
-
-                                        <div class="class-time">
-                                            10:00 - 11:15
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class muay">
-
-                                        <div class="class-name">
-                                            Muay Thai
-                                        </div>
-
-                                        <div class="class-time">
-                                            10:30 - 11:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class jiu">
-
-                                        <div class="class-name">
-                                            Jiu-Jitsu
-                                        </div>
-
-                                        <div class="class-time">
-                                            10:00 - 11:15
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class muay">
-
-                                        <div class="class-name">
-                                            Muay Thai
-                                        </div>
-
-                                        <div class="class-time">
-                                            10:30 - 11:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-                            </tr>
-
-
-                            <!-- =================================
-                                 11:30
-                            ================================== -->
-
-                            <tr>
-
-                                <td class="schedule-hour-column">
-                                    11:30
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class boxing">
-
-                                        <div class="class-name">
-                                            Boxing
-                                        </div>
-
-                                        <div class="class-time">
-                                            11:30 - 12:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class rutina">
-
-                                        <div class="class-name">
-                                            Rutina
-                                        </div>
-
-                                        <div class="class-time">
-                                            11:30 - 12:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class boxing">
-
-                                        <div class="class-name">
-                                            Boxing
-                                        </div>
-
-                                        <div class="class-time">
-                                            11:30 - 12:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class rutina">
-
-                                        <div class="class-name">
-                                            Rutina
-                                        </div>
-
-                                        <div class="class-time">
-                                            11:30 - 12:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class boxing">
-
-                                        <div class="class-name">
-                                            Boxing
-                                        </div>
-
-                                        <div class="class-time">
-                                            11:30 - 12:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-                            </tr>
-
-
-                            <!-- =================================
-                                 17:00
-                            ================================== -->
-
-                            <tr>
-
-                                <td class="schedule-hour-column">
-                                    17:00
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class educativo">
-
-                                        <div class="class-name">
-                                            Muay Thai Educativo
-                                        </div>
-
-                                        <div class="class-time">
-                                            17:15 - 18:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class kids">
-
-                                        <div class="class-name">
-                                            Muay Thai Kids
-                                        </div>
-
-                                        <div class="class-time">
-                                            17:00 - 18:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class educativo">
-
-                                        <div class="class-name">
-                                            Muay Thai Educativo
-                                        </div>
-
-                                        <div class="class-time">
-                                            17:15 - 18:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class kids">
-
-                                        <div class="class-name">
-                                            Muay Thai Kids
-                                        </div>
-
-                                        <div class="class-time">
-                                            17:00 - 18:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td></td>
-
-                            </tr>
-
-
-                            <!-- =================================
-                                 18:00
-                            ================================== -->
-
-                            <tr>
-
-                                <td class="schedule-hour-column">
-                                    18:00
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class boxing">
-
-                                        <div class="class-name">
-                                            Boxing
-                                        </div>
-
-                                        <div class="class-time">
-                                            18:00 - 19:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class juniors">
-
-                                        <div class="class-name">
-                                            Muay Thai juniors
-                                        </div>
-
-                                        <div class="class-time">
-                                            18:00 - 19:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class boxing">
-
-                                        <div class="class-name">
-                                            Boxing
-                                        </div>
-
-                                        <div class="class-time">
-                                            18:00 - 19:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class juniors">
-
-                                        <div class="class-name">
-                                            Muay Thai juniors
-                                        </div>
-
-                                        <div class="class-time">
-                                            18:00 - 19:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class boxing">
-
-                                        <div class="class-name">
-                                            Boxing
-                                        </div>
-
-                                        <div class="class-time">
-                                            18:00 - 19:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-                            </tr>
-
-
-                            <!-- =================================
-                                 19:00
-                            ================================== -->
-
-                            <tr>
-
-                                <td class="schedule-hour-column">
-                                    19:00
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class jiu">
-
-                                        <div class="class-name">
-                                            Jiu-Jitsu
-                                        </div>
-
-                                        <div class="class-time">
-                                            19:00 - 20:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class muay">
-
-                                        <div class="class-name">
-                                            Muay Thai
-                                        </div>
-
-                                        <div class="class-time">
-                                            19:00 - 20:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class jiu">
-
-                                        <div class="class-name">
-                                            Jiu-Jitsu
-                                        </div>
-
-                                        <div class="class-time">
-                                            19:00 - 20:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class muay">
-
-                                        <div class="class-name">
-                                            Muay Thai
-                                        </div>
-
-                                        <div class="class-time">
-                                            19:00 - 20:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <div class="class jiu">
-
-                                        <div class="class-name">
-                                            Jiu-Jitsu
-                                        </div>
-
-                                        <div class="class-time">
-                                            19:00 - 20:30
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-                            </tr>
-
-
-                            <!-- =================================
-                                 20:00
-                            ================================== -->
-
-                            <tr>
-
-                                <td class="schedule-hour-column">
-                                    20:00
-                                </td>
-
-
-                                <td></td>
-
-
-                                <td>
-
-                                    <div class="class defense">
-
-                                        <div class="class-name">
-                                            Defensa personal
-                                        </div>
-
-                                        <div class="class-time">
-                                            20:00 - 21:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td></td>
-
-
-                                <td>
-
-                                    <div class="class defense">
-
-                                        <div class="class-name">
-                                            Defensa personal
-                                        </div>
-
-                                        <div class="class-time">
-                                            20:00 - 21:00
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td></td>
-
-                            </tr>
-
-
-                        </tbody>
+                        <tbody id="schedule-week-body"></tbody>
 
                     </table>
 
@@ -831,7 +229,180 @@
             </div>
 
         </div>
+       
+
+</section>
+
+
+<!-- =========================================================
+     MODAL RESERVA
+========================================================= -->
+
+<div
+    id="bookingOverlay"
+    class="booking-overlay"
+    aria-hidden="true">
+
+    <div
+        class="booking-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="booking-title">
+
+        <div class="booking-modal-header">
+
+            <div>
+
+                <span
+                    class="booking-eyebrow"
+                    data-lang="booking_label">
+                    COSTA FIT · RESERVA
+                </span>
+
+                <h2
+                    id="booking-title"
+                    data-lang="booking_title">
+                    Reserva tu clase
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="booking-close"
+                id="bookingClose"
+                aria-label="Cerrar">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- CLASE SELECCIONADA -->
+
+        <div class="booking-selected">
+
+            <div class="booking-selected-top">
+
+                <strong id="bookingClass">
+                    Muay Thai
+                </strong>
+
+                <span class="booking-price">
+                    10 €
+                </span>
+
+            </div>
+
+            <span id="bookingDate">
+                Lunes · 26 de agosto
+            </span>
+
+            <span id="bookingTime">
+                10:30 - 11:30
+            </span>
+
+        </div>
+
+
+        <!-- FORMULARIO -->
+
+        <form id="bookingForm">
+
+            <div class="booking-field">
+
+                <label
+                    for="bookingName"
+                    data-lang="booking_name">
+                    Nombre
+                </label>
+
+                <input
+                    type="text"
+                    id="bookingName"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    placeholder="Tu nombre">
+
+            </div>
+
+
+            <div class="booking-field">
+
+                <label
+                    for="bookingPhone"
+                    data-lang="booking_phone">
+                    Teléfono
+                </label>
+
+                <input
+                    type="tel"
+                    id="bookingPhone"
+                    name="phone"
+                    required
+                    autocomplete="tel"
+                    placeholder="600 000 000">
+
+            </div>
+
+
+            <div class="booking-field">
+
+                <label
+                    for="bookingEmail"
+                    data-lang="booking_email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="bookingEmail"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    placeholder="tu@email.com">
+
+            </div>
+
+
+            <div class="booking-total">
+
+                <span data-lang="booking_total">
+                    Total
+                </span>
+
+                <strong>
+                    10 €
+                </strong>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="booking-confirm">
+
+                <span data-lang="booking_whatsapp">
+                    Reservar por WhatsApp
+                </span>
+
+                <span class="booking-whatsapp-icon">
+                    ↗
+                </span>
+
+            </button>
+
+        </form>
+
+
+        <p
+            class="booking-note"
+            data-lang="booking_note">
+            Al confirmar se abrirá WhatsApp con los datos de tu reserva.
+        </p>
 
     </div>
 
-</section>
+</div>
