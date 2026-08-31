@@ -1,0 +1,1337 @@
+/**************************************************************************************************************************
+INI: TIMETABLE
+***************************************************************************************************************************/
+
+.section-timetable {
+    background: var(--section1);
+}
+
+
+/* =========================================================
+   CONTROLES HOY / SEMANA
+========================================================= */
+
+.schedule-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.schedule-view-buttons {
+    display: inline-flex;
+    padding: 5px;
+    background: #181818;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.schedule-view-btn {
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.schedule-view-btn:hover {
+    background: rgba(255,255,255,.08);
+}
+
+.schedule-view-btn.active {
+    background: var(--primary);
+    color: #fff;
+}
+
+
+/* =========================================================
+   VISTA HOY
+========================================================= */
+
+.schedule-today {
+    width: 100%;
+}
+
+
+/* =========================================================
+   CABECERA DEL DÍA
+========================================================= */
+
+.schedule-day-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.schedule-current-day {
+    min-width: 220px;
+    text-align: center;
+}
+
+.schedule-current-day span {
+    display: block;
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--text);
+    text-transform: capitalize;
+}
+
+.schedule-current-day small {
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
+    opacity: .65;
+}
+
+.schedule-arrow {
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    background: #181818;
+    color: var(--text);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.schedule-arrow:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   SELECTOR DE DÍAS
+========================================================= */
+
+.schedule-days {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.schedule-days button {
+    min-width: 58px;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,.08);
+    background: #181818;
+    color: var(--text);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.schedule-days button span {
+    display: block;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.schedule-days button small {
+    display: block;
+    margin-top: 2px;
+    font-size: 10px;
+    opacity: .6;
+}
+
+.schedule-days button:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,.08);
+}
+
+.schedule-days button.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: transparent;
+}
+
+.schedule-days button.today:not(.active) {
+    border-color: var(--primary);
+}
+
+
+/* =========================================================
+   LISTA DE CLASES
+========================================================= */
+
+.schedule-day-classes {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.schedule-day-item {
+     width: 100%;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   HORA
+========================================================= */
+
+.schedule-day-hour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 105px;
+
+    background: #181818;
+
+    color: var(--text);
+
+    border-radius: 16px;
+
+    font-size: 16px;
+    font-weight: 900;
+
+    border: 1px solid rgba(255,255,255,.07);
+}
+
+
+/* =========================================================
+   PANEL DE CLASE
+========================================================= */
+
+.schedule-day-card {
+   width: 100%;
+}
+
+
+/*
+ * La tarjeta completa:
+ *
+ * Cardio muaythai
+ * 45 min · 09:30 - 10:15
+ * 10 €       Reservar
+ */
+
+.schedule-day-card .class {
+     width: 100%;
+    min-height: 100px;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+
+    padding: 18px 20px;
+
+    display: grid;
+
+    grid-template-columns: 75px 1fr auto;
+
+    grid-template-rows: auto auto;
+
+    column-gap: 15px;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    cursor: default;
+
+    transition: .25s ease;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+}
+
+
+/* =========================================================
+   NOMBRE
+========================================================= */
+
+.schedule-day-card .class-name {
+    grid-column: 2;
+    grid-row: 1;
+
+    font-size: 18px;
+    font-weight: 850;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   TIEMPO
+========================================================= */
+
+.schedule-day-card .class-time {
+     grid-column: 1;
+    grid-row: 1 / 3;
+
+    font-size: 22px;
+    font-weight: 900;
+
+    opacity: 1;
+
+    letter-spacing: -.03em;
+}
+
+
+/* =========================================================
+   PARTE DERECHA
+========================================================= */
+
+.schedule-class-right {
+    grid-column: 2;
+
+    grid-row: 1 / 3;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   PRECIO
+========================================================= */
+
+.schedule-class-price {
+    font-size: 17px;
+    font-weight: 900;
+
+    color: #fff;
+
+    white-space: nowrap;
+}
+
+/* =========================================================
+   DURACIÓN
+========================================================= */
+
+.schedule-day-card .class-duration {
+    grid-column: 2;
+    grid-row: 2;
+
+    margin-top: 4px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    opacity: .8;
+}
+
+
+/* =========================================================
+   BOTÓN RESERVAR
+========================================================= */
+
+.class-book {
+    grid-column: 3;
+    grid-row: 1 / 3;
+
+    border: 0;
+
+    background: #fff;
+    color: #111;
+
+    border-radius: 999px;
+
+    padding: 11px 17px;
+
+    font-size: 13px;
+    font-weight: 850;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+.class-book:hover {
+    transform: scale(1.05);
+    background: #111;
+    color: #fff;
+}
+
+
+/* =========================================================
+   BRILLO
+========================================================= */
+
+.schedule-day-card .class::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 60%;
+    height: 100%;
+
+    background: rgba(255,255,255,.18);
+
+    transform: skewX(-25deg);
+
+    transition: .6s;
+}
+
+.schedule-day-card .class:hover::before {
+    left: 150%;
+}
+
+
+/* =========================================================
+   CLASE ACTUAL
+========================================================= */
+
+.schedule-day-item.is-now .schedule-day-card .class {
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,.75),
+        0 15px 35px rgba(0,0,0,.30);
+
+    transform: scale(1.015);
+}
+
+.schedule-day-item.is-now .schedule-day-card::after {
+    content: "AHORA";
+
+    position: absolute;
+
+    top: 8px;
+    right: 10px;
+
+    padding: 4px 8px;
+
+    background: #fff;
+    color: #111;
+
+    border-radius: 6px;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: .5px;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   SIN CLASES
+========================================================= */
+
+.schedule-no-classes {
+    text-align: center;
+
+    padding: 45px 20px;
+
+    background: #181818;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,.06);
+}
+
+.schedule-no-classes-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.schedule-no-classes-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.schedule-no-classes-text {
+    font-size: 13px;
+    opacity: .6;
+}
+
+
+/* =========================================================
+   VISTA SEMANAL
+========================================================= */
+
+.schedule-week {
+    width: 100%;
+}
+/*
+ * Cuando hidden está presente:
+ * la semana permanece oculta.
+ *
+ * Cuando JS hace:
+ * weekContainer.hidden = false;
+ * esta regla permite que se muestre.
+ */
+
+.schedule-week[hidden] {
+    display: none !important;
+}
+
+.schedule-week:not([hidden]) {
+    display: block;
+}
+
+.schedule-table-wrapper {
+    width: 100%;
+}
+
+.schedule-table-scroll {
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
+}
+
+
+/* =========================================================
+   TABLA
+========================================================= */
+
+.schedule-table-grid {
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    color: var(--text);
+}
+
+.schedule-table-grid th {
+    background: #181818;
+
+    color: var(--text);
+
+    font-size: 18px;
+    font-weight: 700;
+
+    padding: 18px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,.05);
+}
+
+.schedule-table-grid td {
+    height: 95px;
+
+    padding: 10px;
+
+    vertical-align: middle;
+
+    text-align: center;
+
+    background: #0d0d0d;
+
+    border: 1px solid rgba(255,255,255,.05);
+}
+
+
+/* =========================================================
+   COLUMNA HORA
+========================================================= */
+
+.schedule-hour-column {
+    width: 110px;
+    min-width: 110px;
+
+    background: linear-gradient(
+        180deg,
+        #f54021,
+        #c62828
+    ) !important;
+
+    color: #fff !important;
+
+    font-weight: 800;
+    font-size: 18px;
+
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+
+/* =========================================================
+   TARJETAS SEMANA
+========================================================= */
+
+.schedule-table-grid .class {
+    width: 100%;
+
+    min-height: 72px;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+
+    padding: 14px 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+}
+
+.schedule-table-grid .class:hover {
+    transform: translateY(-4px) scale(1.02);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.35);
+}
+
+.schedule-table-grid .class-name {
+    font-size: 15px;
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+.schedule-table-grid .class-time {
+    font-size: 12px;
+    font-weight: 500;
+
+    opacity: .85;
+
+    letter-spacing: .5px;
+}
+
+
+/* =========================================================
+   COLORES
+========================================================= */
+
+.muay {
+    background: var(--primary);
+}
+
+.kids {
+    background: #ffbe0b;
+}
+
+.juniors {
+    background: #cc4444;
+}
+
+.educativo {
+    background: #e4548b;
+}
+
+.boxing {
+    background: #2196F3;
+}
+
+.jiu {
+    background: #8E24AA;
+}
+
+.rutina {
+    background: #0b5102;
+}
+
+.slow-training {
+    background: #2ecc71;
+}
+
+.defense {
+    background: #607D8B;
+}
+
+.cardio {
+    background: #d81b60;
+}
+
+
+/* =========================================================
+   MODAL RESERVA
+========================================================= */
+
+.booking-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px;
+
+    background: rgba(0,0,0,.68);
+
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.booking-overlay.open {
+    display: flex;
+}
+
+
+.booking-modal {
+    width: min(520px, 100%);
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    background: #fff;
+
+    color: #111;
+
+    border-radius: 26px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.45);
+
+    animation: bookingModalIn .22s ease;
+}
+
+@keyframes bookingModalIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+.booking-modal-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.booking-eyebrow {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: .1em;
+
+    color: #73736d;
+}
+
+
+.booking-modal h2 {
+    margin: 0;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    letter-spacing: -.04em;
+}
+
+
+.booking-close {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 auto;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #f0f0ec;
+
+    color: #111;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.booking-close:hover {
+    background: #e2e2dd;
+
+    transform: rotate(5deg);
+}
+
+
+/* =========================================================
+   CLASE SELECCIONADA
+========================================================= */
+
+.booking-selected {
+    background: #f3f3ef;
+
+    border-radius: 17px;
+
+    padding: 17px;
+
+    margin-bottom: 20px;
+}
+
+
+.booking-selected-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.booking-selected strong {
+    display: block;
+
+    font-size: 19px;
+
+    font-weight: 900;
+}
+
+
+.booking-selected > span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #73736d;
+
+    font-size: 14px;
+}
+
+
+.booking-price {
+    color: #111 !important;
+
+    font-size: 18px !important;
+
+    font-weight: 900 !important;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+#bookingForm {
+    display: grid;
+
+    gap: 13px;
+}
+
+
+.booking-field label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.booking-field input {
+    width: 100%;
+
+    margin-top: 6px;
+
+    padding: 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d8d8d2;
+
+    border-radius: 13px;
+
+    background: #fff;
+
+    color: #111;
+
+    outline: none;
+
+    font: inherit;
+}
+
+.booking-field input:focus {
+    border-color: #111;
+
+    box-shadow:
+        0 0 0 3px rgba(0,0,0,.06);
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.booking-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid #e1e1db;
+
+    padding-top: 18px;
+
+    margin-top: 5px;
+}
+
+
+.booking-total span {
+    color: #73736d;
+
+    font-size: 14px;
+}
+
+
+.booking-total strong {
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   BOTÓN WHATSAPP
+========================================================= */
+
+.booking-confirm {
+    width: 100%;
+
+    border: 0;
+
+    background: #111;
+
+    color: #fff;
+
+    border-radius: 999px;
+
+    padding: 14px 18px;
+
+    font-weight: 900;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transition: .2s ease;
+}
+
+.booking-confirm:hover {
+    transform: translateY(-2px);
+
+    background: #222;
+}
+
+
+.booking-whatsapp-icon {
+    font-size: 17px;
+}
+
+
+.booking-note {
+    margin: 13px 0 0;
+
+    color: #73736d;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .schedule-controls {
+        margin-bottom: 20px;
+    }
+
+    .schedule-view-btn {
+        padding: 9px 20px;
+    }
+
+
+    .schedule-day-header {
+        gap: 15px;
+    }
+
+    .schedule-current-day {
+        min-width: 180px;
+    }
+
+    .schedule-current-day span {
+        font-size: 21px;
+    }
+
+
+    .schedule-days {
+        gap: 5px;
+    }
+
+    .schedule-days button {
+         width: 100%;
+    margin-bottom: 12px;
+    }
+
+
+    .schedule-day-item {
+        grid-template-columns: 65px 1fr;
+        gap: 10px;
+    }
+
+    .schedule-day-hour {
+        min-height: 95px;
+        border-radius: 12px;
+        font-size: 13px;
+    }
+
+    .schedule-day-card .class {
+        min-height: 95px;
+        padding: 14px;
+    }
+
+
+    .schedule-day-card .class-name {
+        font-size: 16px;
+    }
+
+    .schedule-day-card .class-time {
+        font-size: 12px;
+    }
+
+
+    .schedule-class-price {
+        font-size: 15px;
+    }
+
+    .schedule-book {
+        padding: 10px 14px;
+    }
+
+
+    .schedule-table-grid {
+        min-width: 750px;
+    }
+
+    .schedule-table-grid th {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .schedule-table-grid td {
+        padding: 7px;
+    }
+
+    .schedule-hour-column {
+        width: 70px;
+        min-width: 70px;
+        font-size: 13px;
+    }
+
+
+    .schedule-table-grid .class {
+        padding: 8px;
+        min-height: 55px;
+        border-radius: 10px;
+    }
+
+    .schedule-table-grid .class-name {
+        font-size: 11px;
+    }
+
+    .schedule-table-grid .class-time {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .schedule-view-buttons {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .schedule-view-btn {
+        flex: 1;
+        padding: 10px 12px;
+    }
+
+
+    .schedule-day-header {
+        gap: 10px;
+    }
+
+    .schedule-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 23px;
+    }
+
+    .schedule-current-day {
+        min-width: 150px;
+    }
+
+    .schedule-current-day span {
+        font-size: 19px;
+    }
+
+    .schedule-current-day small {
+        font-size: 11px;
+    }
+
+
+    .schedule-days {
+        gap: 4px;
+        width: 100%;
+    }
+
+    .schedule-days button {
+        flex: 1;
+        min-width: 0;
+        padding: 7px 3px;
+        border-radius: 9px;
+    }
+
+    .schedule-days button span {
+        font-size: 14px;
+    }
+
+    .schedule-days button small {
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------------------------
+       TARJETA MÓVIL
+    ----------------------------------------------- */
+
+    .schedule-day-item {
+        grid-template-columns: 55px 1fr;
+        gap: 8px;
+
+        margin-bottom: 9px;
+    }
+
+    .schedule-day-hour {
+        min-height: 100px;
+
+        font-size: 11px;
+
+        border-radius: 10px;
+    }
+
+
+    .schedule-day-card .class {
+        min-height: 100px;
+
+        padding: 12px;
+
+        border-radius: 12px;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto auto auto;
+
+        gap: 3px;
+    }
+
+
+    .schedule-day-card .class-name {
+        grid-column: 1;
+
+        font-size: 14px;
+
+        margin-bottom: 2px;
+    }
+
+
+    .schedule-day-card .class-time {
+        grid-column: 1;
+
+        font-size: 10px;
+    }
+
+
+    .schedule-class-right {
+        grid-column: 1;
+
+        grid-row: 3;
+
+        width: 100%;
+
+        justify-content: space-between;
+
+        margin-top: 6px;
+
+        padding-top: 7px;
+
+        border-top: 1px solid rgba(255,255,255,.18);
+    }
+
+
+    .schedule-class-price {
+        font-size: 14px;
+    }
+
+
+    .schedule-book {
+        padding: 8px 13px;
+
+        font-size: 11px;
+    }
+
+
+    /* -----------------------------------------------
+       MODAL
+    ----------------------------------------------- */
+
+    .booking-overlay {
+        padding: 10px;
+    }
+
+    .booking-modal {
+        border-radius: 22px;
+
+        padding: 20px;
+
+        max-height: 94vh;
+    }
+
+    .booking-modal h2 {
+        font-size: 26px;
+    }
+
+    .booking-selected {
+        padding: 14px;
+    }
+
+
+    /* -----------------------------------------------
+       TABLA
+    ----------------------------------------------- */
+
+    .schedule-table-grid {
+        min-width: 700px;
+    }
+
+    .schedule-table-grid th {
+        padding: 10px 6px;
+        font-size: 12px;
+    }
+
+    .schedule-table-grid td {
+        height: 75px;
+        padding: 5px;
+    }
+
+    .schedule-hour-column {
+        width: 55px;
+        min-width: 55px;
+        font-size: 11px;
+    }
+
+    .schedule-table-grid .class {
+        min-height: 60px;
+        padding: 7px 5px;
+        border-radius: 9px;
+    }
+
+    .schedule-table-grid .class-name {
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+
+    .schedule-table-grid .class-time {
+        font-size: 9px;
+    }
+
+
+    .schedule-day-item.is-now .schedule-day-card::after {
+        top: 5px;
+        right: 5px;
+
+        font-size: 7px;
+
+        padding: 3px 5px;
+    }
+
+}
+
+
+/**************************************************************************************************************************
+END: TIMETABLE
+***************************************************************************************************************************/
