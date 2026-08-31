@@ -459,6 +459,13 @@ window.initTimetable = function () {
         const lang =
             getCurrentLanguage();
 
+            console.log(
+"TRANSLATION TEST",
+lang,
+key,
+window.translations?.[lang]?.[key]
+);
+
         /*
          * ==================================================
          * 1. window.translations
@@ -474,35 +481,18 @@ window.initTimetable = function () {
              * translations.ca.schedule_book
              */
 
-            if (
-                window.translations[lang] &&
-                typeof window.translations[lang] === "object" &&
-                window.translations[lang][key] !== undefined
-            ) {
+          if (
+    window.translations &&
+    window.translations[key] !== undefined
+) {
 
-                return window.translations[lang][key];
+    return window.translations[key];
 
-            }
+}
 
 
-            /*
-             * Por si translations utiliza:
-             *
-             * translations["ca-ES"]
-             */
+            
 
-            const fullLanguage =
-                document.documentElement.lang;
-
-            if (
-                fullLanguage &&
-                window.translations[fullLanguage] &&
-                window.translations[fullLanguage][key] !== undefined
-            ) {
-
-                return window.translations[fullLanguage][key];
-
-            }
 
         }
 
@@ -846,25 +836,31 @@ window.initTimetable = function () {
 
     function updateDateHeader(day) {
 
-        const keys =
-            dayTranslationKeys[day];
+    const keys =
+        dayTranslationKeys[day];
 
+    console.log("DAY:", day);
+    console.log("LANG:", getCurrentLanguage());
+    console.log("KEY:", keys?.long);
+    console.log(
+        "TEXT:",
+        getTranslation(keys?.long, day)
+    );
 
-        if (keys) {
+    if (keys) {
 
-            dayNameElement.textContent =
-                getTranslation(
-                    keys.long,
-                    day
-                );
-
-        }
-
-
-        dayDateElement.textContent =
-            getFormattedDate(day);
+        dayNameElement.textContent =
+            getTranslation(
+                keys.long,
+                day
+            );
 
     }
+
+    dayDateElement.textContent =
+        getFormattedDate(day);
+
+}
 
 
     /* ======================================================
@@ -1965,30 +1961,24 @@ ${getTranslation(
        CAMBIO DE IDIOMA
        ====================================================== */
 
-    function refreshTimetable() {
+function refreshTimetable() {
 
-        updateTimetableTranslations();
+    updateTimetableTranslations();
 
-        markRealToday();
+    markRealToday();
 
+    if (currentView === "week") {
 
-        if (
-            currentView === "week"
-        ) {
-
-            renderWeek();
-
-        }
-
-        else {
-
-            renderDay(
-                selectedDay
-            );
-
-        }
+        renderWeek();
 
     }
+    else {
+
+        renderDay(selectedDay);
+
+    }
+
+}
 
 
     /*
