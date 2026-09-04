@@ -1,0 +1,216 @@
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 760px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #050505;
+
+    padding-top: 90px;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 58%;
+
+    z-index: 0;
+}
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        #050505 0%,
+        rgba(5,5,5,.88) 8%,
+        rgba(5,5,5,.35) 38%,
+        rgba(5,5,5,0) 75%
+    );
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   CONTENIDO
+========================================================= */
+
+.hero .container {
+   position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin-top: 20px;
+
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+
+
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.hero h1 {
+    margin: 0;
+
+    font-family: "Russo One", sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+
+    letter-spacing: .05em;
+    line-height: .96;
+
+    text-transform: uppercase;
+}
+
+.hero h1 strong {
+    display: block;
+    color: var(--red);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+    max-width: 590px;
+
+    margin: 25px 0 0;
+
+    color: #dedede;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px 20px;
+
+    margin-top: 26px;
+
+    color: #ccc;
+
+    font-size: .83rem;
+    font-weight: 700;
+}
+
+.hero-trust span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.hero-trust i {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 10px;
+
+    background: red;
+   
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        align-items: flex-end;
+
+        padding-top: 120px;
+        padding-bottom: 70px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image::after {
+        background: linear-gradient(
+            180deg,
+            rgba(5,5,5,.25) 0%,
+            rgba(5,5,5,.55) 35%,
+            #050505 72%,
+            #050505 100%
+        );
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.2rem, 15vw, 5rem);
+    }
+
+    .hero-description {
+        font-size: .98rem;
+    }
+
+    .hero-trust {
+        gap: 8px 15px;
+    }
+}
