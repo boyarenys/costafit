@@ -2,247 +2,653 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="robots" content="index, follow">
+   <meta name="robots" content="index, follow">
     <meta name="author" content="Costa Fit Calella">
     <!-- CANONICAL -->
     <link rel="canonical" href="https://www.costafitcalella.com/">
 
-    <meta name="description"
-        content="Escuela de arte marciales en Calella especializado en Muay Thai, boxeo, jiu-jitsu, yoga y osteopatía. Entrenamiento para adultos y niños. Clases en grupo y personalizadas.">
-    <!-- KEYWORDS (no es clave para Google pero no molesta) -->
-    <meta name="keywords"
-        content="Muay Thai Calella, Escuela Calella, boxeo Calella, osteopatía Calella, jiu jitsu Calella, yoga Calella, artes marciales Calella, Muay Thai niños">
-    <title>Costa Fit Calella - Artes marciales y Osteopatía</title>
+  <title>Costa Fit Calella | Artes Marciales, Entrenamiento y Osteopatía</title>
+  <meta name="description"
+    content="Centro de Artes Marciales en Calella. Muay Thai, Boxeo, Jiu-Jitsu, Kids, Entrenamiento Personal y Osteopatía.">
 
-
-    <meta property="og:title" content="Costa Fit Calella - Muay Thai y Osteopatía">
+      <meta property="og:title" content="Costa Fit Calella - Muay Thai y Osteopatía">
     <meta property="og:description" content="Entrena Muay Thai, boxeo y mejora tu bienestar con osteopatía en Calella.">
     <meta property="og:image" content="https://www.costafitcalella.com/img/og-image.jpg">
     <meta property="og:url" content="https://www.costafitcalella.com/">
     <meta property="og:type" content="website">
 
-    <!-- Favicons -->
+      <!-- Favicons -->
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Black+Ops+One&family=Orbitron:wght@700;800&family=Oswald:wght@600;700&family=Russo+One&family=Teko:wght@500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/timetable.css">
-    <link rel="stylesheet" href="css/hero-c.css">
+  <!-- FUENTES Y FONT AWESOME -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/schedule.css">
+
 </head>
 
 <body>
-    <div class="toolbarEdition">
 
-        <select id="language">
-            <option value="es">Español</option>
-            <option value="ca">Catalán</option>
-            <option value="en">Ingles</option>
-            <option value="fr">Frances</option>
-        </select>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav-container">
 
-        <button id="editBtn">
-            Activar edición
-        </button>
+      <!-- NAV IZQUIERDA (DESKTOP) -->
+      <ul class="nav-group nav-group-left">
+        <li class="nav-item has-dropdown">
+          <a href="#martialarts" class="nav-link" data-i18n="nav.martial_arts">
+            Artes Marciales <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+          </a>
+          <div class="dropdown-box mega-menu-arts">
+            <div class="mega-menu-title" data-i18n="nav.title_highlight">Disciplinas Principales</div>
+            <div class="mega-grid">
+              <a href="#muaythai" class="mega-card"><span class="num">01</span><span class="title"
+                  data-i18n="nav.muay_thai">Muay Thai</span></a>
+              <a href="#boxing" class="mega-card"><span class="num">02</span><span class="title"
+                  data-i18n="nav.boxing">Boxeo</span></a>
+              <a href="#jiujitsu" class="mega-card"><span class="num">03</span><span class="title"
+                  data-i18n="nav.jiu_jitsu">Jiu-Jitsu</span></a>
+              <a href="#defensapersonal" class="mega-card"><span class="num">04</span><span class="title"
+                  data-i18n="nav.defensa_personal">Defensa personal</span></a>
+            </div>
+            <a href="#muaythaikids" class="btn-all-arts" data-i18n="nav.muay_thai_kids">Muay thai Kids<i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="#osteopathy" class="nav-link" data-i18n="nav.osteopathy">Osteopatía</a></li>
+        <li class="nav-item"><a href="#training" class="nav-link" data-i18n="nav.training">Entrenamiento</a></li>
+      </ul>
 
-        <button id="exportBtn">
-            Exportar JSON
-        </button>
-        <button id="toggleOutputBtn">Mostrar JSON</button>
-        <h1>JSON generado</h1>
+      <!-- LOGO CENTRADO -->
+      <div class="logo-wrapper">
+        <a href="/" class="logo-link">
+          <img src="img/logo-costafitcalella.png" alt="Costa Fit Calella Logo" class="logo-img">
+        </a>
+      </div>
 
-        <pre id="output">
-Pulsa "Exportar JSON"
-    </pre>
+      <!-- BOTÓN MÓVIL HAMBURGUESA -->
+      <button class="mobile-toggle" id="mobileMenuOpen" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- NAV DERECHA (DESKTOP) -->
+      <ul class="nav-group nav-group-right">
+        <!-- DROPDOWN CENTRO DESKTOP -->
+        <li class="nav-item has-dropdown">
+          <a href="#" class="nav-link" data-i18n="nav.center">
+            Centro <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+          </a>
+          <div class="dropdown-box dropdown-lang" style="width: 240px;">
+            <div class="mega-menu-title" data-i18n="nav.aboutus">Conócenos</div>
+            <div class="footer-links" style="display: flex; flex-direction: column; gap: 8px;">
+
+              <a href="#facilities" class="mega-card">
+                <i class="fa-solid fa-building icon"></i>
+                <span class="title" data-i18n="nav.facilities">Instalaciones</span>
+              </a>
+              <a href="#merchandising" class="mega-card">
+                <i class="fa-solid fa-shirt icon"></i>
+                <span class="title" data-i18n="nav.merchandising">Merchandising</span>
+              </a>
+              <a href="#team" class="mega-card">
+                <i class="fa-solid fa-users icon"></i>
+                <span class="title" data-i18n="nav.team">Equipo</span>
+              </a>
+              <a href="#faq" class="mega-card">
+                <i class="fa-solid fa-circle-question icon"></i>
+                <span class="title" data-i18n="nav.Faq">Faq</span>
+              </a>
+              <a href="#faq" class="mega-card">
+                <i class="fa-solid fa-star icon"></i>
+                <span class="title" data-i18n="nav.reviews">Reseñas</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item"><a href="#schedule" class="nav-link" data-i18n="nav.schedule">Horarios</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+
+        <li class="nav-item">
+          <a href="https://www.instagram.com/costafitcalella" target="_blank" rel="noopener" class="nav-social-link"
+            title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+
+        <!-- DROPDOWN IDIOMAS -->
+        <li class="nav-item has-dropdown">
+          <a href="#" class="nav-link">
+            <span id="currentLang">ES</span> <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+          </a>
+          <div class="dropdown-box dropdown-lang">
+            <div class="mega-menu-title" data-i18n="nav.language">Idioma</div>
+            <div class="lang-grid">
+              <button onclick="changeLanguage('es')" class="lang-card" data-lang-code="es">
+                <span class="code">ES</span><span class="name">Español</span>
+              </button>
+              <button onclick="changeLanguage('ca')" class="lang-card" data-lang-code="ca">
+                <span class="code">CAT</span><span class="name">Català</span>
+              </button>
+              <button onclick="changeLanguage('en')" class="lang-card" data-lang-code="en">
+                <span class="code">EN</span><span class="name">English</span>
+              </button>
+              <button onclick="changeLanguage('fr')" class="lang-card" data-lang-code="fr">
+                <span class="code">FR</span><span class="name">Français</span>
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <a href="https://wa.me/34679089961" class="btn-header-cta" data-i18n="nav.start">Quiero Empezar <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </li>
+      </ul>
 
     </div>
+  </header>
 
+  <!-- MENÚ LATERAL MÓVIL MEJORADO (CON TODOS LOS SUBMENÚS) -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu-drawer" id="mobileDrawer">
 
-
-    <header class="header">
-
-        <!-- TOP BAR -->
-        <div class="top-bar">
-            <div class="center-group">
-
-                <div class="lang-group">
-                    <a href="#" class="lang" data-lang-code="es">ES</a>
-                    <a href="#" class="lang" data-lang-code="ca">CA</a>
-                </div>
-
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="img/logo.png" alt="Costa Fit Calella">
-                    </a>
-                </div>
-
-                <div class="lang-group">
-                    <a href="#" class="lang" data-lang-code="en">EN</a>
-                    <a href="#" class="lang" data-lang-code="fr">FR</a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- SOCIAL -->
-        <div class="social">
-            <a href="https://www.facebook.com/ruben.siamgym" target="_blank" title="facebook"><i
-                    class="fab fa-facebook"></i></a>
-            <a href="https://www.youtube.com/@yougarci" target="_blank" title="youtube"><i
-                    class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/costafit_calella/" target="_blank" title="instagram"><i
-                    class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/34679089961?text=Mensaje+desde+la+web+de+costafit_calella%3A+" target="_blank"
-                title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
-
-        <!-- BURGER -->
-        <div class="burger" id="burger">☰ Menú</div>
-
-        <!-- NAV -->
-        <nav class="nav" id="nav">
-
-            <div class="dropdown">
-                <a href="#martialarts" data-lang="menu_martial_arts"></a>
-                <div class="dropdown-menu">
-                    <a href="#">Muay Thai</a>
-                    <a href="#">Kids</a>
-                    <a href="#">Boxing</a>
-                    <a href="#">Jiu-Jitsu</a>
-                    <a href="#">Yoga</a>
-                </div>
-            </div>
-
-            <a href="#osteopathy" data-lang="menu_osteopathy"></a>
-            <a href="#timetable" data-lang="menu_timetable"></a>
-            <a href="#aboutme" data-lang="menu_aboutme"></a>
-            <a href="#trainers" data-lang="menu_trainer">Entrenadores</a>
-            <a href="#facilities" data-lang="menu_facilities"></a>
-            <a href="#contact" data-lang="menu_contact"></a>
-
-        </nav>
-
-    </header>
-
-
-
-
-
-
-    <!-- ================= SECTION MARTIAL ARTS  ================= -->
-    <div data-include="components/hero-c.html"></div>
-
-        <!-- ================= SECTION MODAL WINDOWS  ================= -->
-    <div data-include="components/submenu-new.html"></div>
-
-
-
-
-
-    <!-- ================= SECTION MARTIAL ARTS  ================= -->
-    <div data-include="components/martial-arts.html"></div>
-
-    <!-- ================= SECTION OSTEOPATHY  ================= -->
-    <div data-include="components/osteopathy.html"></div>
-
-    <!-- ================= SECTION THAIKIDS  ================= -->
-    <div data-include="components/kids-banner.html"></div>
-
-    <!-- ================= SECTION ABOUT ME  ================= -->
-
-    <div data-include="components/aboutme.html"></div>
-
-    <!-- ================= SECTION SHIRT ================= -->
-    <div data-include="components/shirt-banner.html"></div>
-
-
-    <!-- ================= SECTION TIMETABLE  ================= -->
-    <div data-include="components/timetable.html"></div>
-    
-
-    <!-- ================= SECTION TRAINER  ================= -->
-    <div data-include="components/trainer.html"></div>
-
-   
-
-    <!-- ================= SECTION FACILITIES  ================= -->
-    <div data-include="components/facilities.html"></div>
-
-    <!-- ================= SECTION CONTACT  ================= -->
-    <div data-include="components/contact.html"></div>
-
-    <!-- ================= SECTION FOOTER  ================= -->
-    <div data-include="components/footer.html"></div>
-
-    <!-- ================= SECTION MODAL WINDOWS  ================= -->
-    <div data-include="components/modal-windows.html"></div>
-
-
-
-
-
-
-    <div id="chatBox" class="chat-box">
-        <div class="chat-header">
-            <img src="img/logo.png" alt="costafitcalella" class="profile-picture">
-            <button id="closeChat">&times;</button>
-        </div>
-        <input type="text" id="userInput" placeholder="Quiero más información" disabled>
-        <a href="https://wa.me/34679089961?text=Mensaje+desde+la+web+de+costafit_calella%3A+" target="_blank"
-            id="sendMessage"><i class="fas fa-paper-plane"></i></a>
+    <div class="mobile-drawer-header">
+      <div style="color: var(--primary-red); font-family: var(--font-heading); font-size: 1.5rem;">MENÚ COSTA FIT</div>
+      <button class="close-mobile-menu" id="mobileMenuClose"><i class="fa-solid fa-xmark"></i></button>
     </div>
-    <div id="chatIcon" class="conversation-icon"><i class="fab fa-whatsapp "></i></div>
 
-    <!-- Scroll top -->
-    <button id="scrollTopBtn" onclick="scrollToTop()">
-        <i class="fas fa-hand-rock"></i>
-    </button>
+    <ul class="mobile-nav-list">
+      <!-- OPCIÓN DESPLEGABLE: ARTES MARCIALES -->
+      <li class="mobile-nav-item">
+        <button class="mobile-nav-link accordion-toggle">
+          <span data-i18n="nav.martial_arts">Artes Marciales</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="mobile-submenu">
+          <li class="mobile-submenu-item"><a href="#muaythai" data-i18n="nav.muay_thai">Muay Thai</a></li>
+          <li class="mobile-submenu-item"><a href="#boxing" data-i18n="nav.boxing">Boxeo</a></li>
+          <li class="mobile-submenu-item"><a href="#jiujitsu" data-i18n="nav.jiu_jitsu">Jiu Jitsu</a></li>
+          <li class="mobile-submenu-item"><a href="#defensapersonal" data-i18n="nav.defensa_personal">Defensa personal</a></li>
+          <li class="mobile-submenu-item"><a href="#muaythaikids" data-i18n="nav.muay_thai_kids">Muay thai Kids</a></li>
+        </ul>
+      </li>
 
+      <li class="mobile-nav-item"><a href="#osteopathy" class="mobile-nav-link"
+          data-i18n="nav.osteopathy">Osteopatía</a></li>
+      <li class="mobile-nav-item"><a href="#trainning" class="mobile-nav-link"
+          data-i18n="nav.training">Entrenamiento</a></li>
+
+      <!-- OPCIÓN DESPLEGABLE NUEVA: CENTRO (MÓVIL) -->
+      <li class="mobile-nav-item">
+        <button class="mobile-nav-link accordion-toggle">
+          <span data-i18n="nav.center">Centro</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="mobile-submenu">
+          <li class="mobile-submenu-item"><a href="#facilities" onclick="toggleMenu()" data-i18n="nav.facilities">Instalaciones</a></li>
+          <li class="mobile-submenu-item"><a href="#store" onclick="toggleMenu()"
+              data-i18n="nav.merchandising">Equipamiento</a></li>
+          <li class="mobile-submenu-item"><a href="#team" onclick="toggleMenu()" data-i18n="nav.team">Nuestro Equipo</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="mobile-nav-item"><a href="#schedule" class="mobile-nav-link" data-i18n="nav.schedule">Horarios</a></li>
+      <li class="mobile-nav-item"><a href="#contacto" class="mobile-nav-link" data-i18n="nav.contact"
+          onclick="toggleMenu()">Contacto</a></li>
+
+      <!-- OPCIÓN DESPLEGABLE: IDIOMAS -->
+      <li class="mobile-nav-item">
+        <button class="mobile-nav-link accordion-toggle">
+          <span data-i18n="nav.language">Idioma (<strong id="mobileCurrentLang">ES</strong>)</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="mobile-submenu">
+          <li class="mobile-submenu-item">
+            <button onclick="changeLanguage('es')" class="mobile-lang-btn" data-lang-code="es">
+              Español (ES)
+            </button>
+          </li>
+          <li class="mobile-submenu-item">
+            <button onclick="changeLanguage('ca')" class="mobile-lang-btn" data-lang-code="ca">
+              Català (CAT)
+            </button>
+          </li>
+          <li class="mobile-submenu-item">
+            <button onclick="changeLanguage('en')" class="mobile-lang-btn" data-lang-code="en">
+              English (EN)
+            </button>
+          </li>
+          <li class="mobile-submenu-item">
+            <button onclick="changeLanguage('fr')" class="mobile-lang-btn" data-lang-code="fr">
+              Français (FR)
+            </button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="mobile-cta-box">
+      <a href="https://wa.me/34679089961" class="btn-header-cta" style="justify-content: center;"
+        data-i18n="nav.start">Quiero Empezar <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="https://www.instagram.com/costafitcalella" target="_blank" rel="noopener"
+        style="color: #fff; text-align: center; text-decoration: none; font-size: 1.2rem;">
+        <i class="fa-brands fa-instagram"></i>  Instagram
+      </a>
+    </div>
+
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-h1">
+          <span data-i18n="hero.title_1">Lo que tu </span>
+          <span class="highlight" data-i18n="hero.title_highlight">cuerpo</span>
+          <span data-i18n="hero.title_2"> necesita.</span>
+        </h1>
+        <p class="hero-description" data-i18n="hero.description">Artes marciales, entrenamiento y osteopatía en un mismo
+          espacio en <strong>Calella</strong>.</p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/34679089961" class="btn-primary" data-i18n="hero.btn_start">Quiero Empezar</a>
+          <a href="#schedule" class="btn-secondary" data-i18n="hero.btn_schedule">Ver Horarios</a>
+        </div>
+        <div class="hero-tags">
+          <div class="tag-item">
+            <i class="fa-solid fa-check"></i>
+            <span data-i18n="hero.tag_levels"> Todos los niveles</span>
+          </div>
+          <div class="tag-item">
+            <i class="fa-solid fa-check"></i>
+            <span data-i18n="hero.tag_kids"> Niños y adultos</span>
+          </div>
+          <div class="tag-item">
+            <i class="fa-solid fa-check"></i>
+            <span data-i18n="hero.tag_pro">Profesionales</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA INFERIOR / MENÚ GRID RESPONSIVE -->
+  <div class="hero-bottom-bar">
+    <div class="bottom-bar-container">
+      <div class="bar-item">
+        <a href="#" class="bar-link">
+          <i class="fa-solid fa-hand-fist"></i>
+          <span data-i18n="nav.martial_arts">Artes<br>Marciales</span>
+        </a>
+      </div>
+
+      <div class="bar-item">
+        <a href="/entrenamiento-personal" class="bar-link">
+          <i class="fa-solid fa-dumbbell"></i>
+          <span data-i18n="nav.training">Entrenamiento</span>
+        </a>
+      </div>
+
+      <div class="bar-item">
+        <a href="#osteopathy" class="bar-link">
+          <i class="fa-solid fa-user-check"></i>
+          <span data-i18n="nav.osteopathy">Osteopatía</span>
+        </a>
+      </div>
+
+      <div class="bar-item">
+        <a href="/artes-marciales-kids" class="bar-link">
+          <i class="fa-solid fa-child-reaching"></i>
+          <span data-i18n="nav.kids">Kids</span>
+        </a>
+      </div>
+
+      <div class="bar-item">
+        <a href="#schedule" class="bar-link">
+          <i class="fa-regular fa-calendar-days"></i>
+          <span data-i18n="nav.schedule">Horarios</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN MARTIAL ARTS -->
+  <div id="martialarts-slot"></div>
+
+  <!-- SEPARADOR: PULSO CARDÍACO DERECHA -->
+  <div class="ecg-divider ecg-right-inverted">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <filter id="neonGlowRight" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <path d="M 0 40 
+             L 860 40 
+             L 870 55 
+             L 885 10 
+             L 900 50 
+             L 910 30 
+             L 920 40 
+             L 1200 40" fill="none" stroke="#ff2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#neonGlowRight)" />
+    </svg>
+  </div>
+
+
+
+
+  <!-- SECCIÓN osteopathy -->
+  <div id="osteopathy-slot"></div>
+
+  <!-- SEPARADOR: PULSO CARDÍACO IZQUIERDA -->
+  <div class="ecg-divider ecg-left-inverted">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <filter id="neonGlowLeft" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <path d="M 0 40 
+             L 260 40 
+             L 270 55 
+             L 285 10 
+             L 300 50 
+             L 310 30 
+             L 320 40 
+             L 1200 40" fill="none" stroke="#ff2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#neonGlowLeft)" />
+    </svg>
+  </div>
+
+
+  <!-- SECCIÓN TRAINING -->
+  <div id="training-slot"></div>
+
+  <!-- SEPARADOR: PULSO CARDÍACO DERECHA -->
+  <div class="ecg-divider ecg-right-inverted">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <filter id="neonGlowRight" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <path d="M 0 40 
+             L 860 40 
+             L 870 55 
+             L 885 10 
+             L 900 50 
+             L 910 30 
+             L 920 40 
+             L 1200 40" fill="none" stroke="#ff2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#neonGlowRight)" />
+    </svg>
+  </div>
+
+  <!-- SECCIÓN facilities -->
+  <div id="facilities-slot"></div>
+
+  <!-- SEPARADOR: PULSO CARDÍACO IZQUIERDA -->
+  <div class="ecg-divider ecg-left-inverted">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <filter id="neonGlowLeft" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <path d="M 0 40 
+             L 260 40 
+             L 270 55 
+             L 285 10 
+             L 300 50 
+             L 310 30 
+             L 320 40 
+             L 1200 40" fill="none" stroke="#ff2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#neonGlowLeft)" />
+    </svg>
+  </div>
+
+  <!-- SECCIÓN TEAM -->
+  <div id="team-slot"></div>
+
+  <!-- SEPARADOR: PULSO CARDÍACO DERECHA -->
+  <div class="ecg-divider ecg-right-inverted">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <filter id="neonGlowRight" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <path d="M 0 40 
+             L 860 40 
+             L 870 55 
+             L 885 10 
+             L 900 50 
+             L 910 30 
+             L 920 40 
+             L 1200 40" fill="none" stroke="#ff2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#neonGlowRight)" />
+    </svg>
+  </div>
+
+  <!-- SECCIÓN SCHEDULE -->
+  <div id="schedule-slot"></div>
+
+  <!-- SEPARADOR: PULSO CARDÍACO IZQUIERDA -->
+  <div class="ecg-divider ecg-left-inverted">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <filter id="neonGlowLeft" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <path d="M 0 40 
+             L 260 40 
+             L 270 55 
+             L 285 10 
+             L 300 50 
+             L 310 30 
+             L 320 40 
+             L 1200 40" fill="none" stroke="#ff2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#neonGlowLeft)" />
+    </svg>
+  </div>
+
+  <!-- SECCIÓN MERCHANDISING  -->
+  <div id="merch-slot"></div>
+
+  <!-- SEPARADOR: PULSO CARDÍACO DERECHA -->
+  <div class="ecg-divider ecg-right-inverted">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <filter id="neonGlowRight" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <path d="M 0 40 
+             L 860 40 
+             L 870 55 
+             L 885 10 
+             L 900 50 
+             L 910 30 
+             L 920 40 
+             L 1200 40" fill="none" stroke="#ff2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#neonGlowRight)" />
+    </svg>
+  </div>
+
+  <!-- SECCIÓN FAQ  -->
+  <div id="faq-slot"></div>
+
+  <!-- SECCIÓN REVIEWS  
+<div id="reviews-slot"></div>-->
+
+  <div class="ecg-divider ecg-center-inverted">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <filter id="neonGlowCenter" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <path d="M 0 40 
+             L 560 40 
+             L 570 55 
+             L 585 10 
+             L 600 50 
+             L 610 30 
+             L 620 40 
+             L 1200 40" fill="none" stroke="#ff2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#neonGlowCenter)" />
+    </svg>
+  </div>
+
+  <!-- SECCIÓN CONTACT  -->
+  <div id="contact-slot"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-watermark">COSTA FIT CALELLA</div>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <!-- LOGO FOOTER (IMAGEN) -->
+        <a href="/" class="logo-link footer-logo" style="margin-bottom: 25px;">
+          <img src="img/logo-costafitcalella.png" alt="Costa Fit Calella Logo" class="logo-img">
+        </a>
+        <p data-i18n="footer.about_text">Centro de referencia en Calella en Artes Marciales y Osteopatía.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/costafitcalella" target="_blank" rel="noopener"
+            class="footer-social-btn"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title" data-i18n="nav.martial_arts">Artes marciales</h4>
+        <ul class="footer-links">
+          <li><a href="/muay-thai-calella" data-i18n="nav.muay_thai">Muay Thai</a></li>
+          <li><a href="#boxing" data-i18n="nav.boxing">Boxeo</a></li>
+          <li><a href="/jiu-jitsu-calella" data-i18n="nav.jiu_jitsu">Jiu-Jitsu</a></li>
+          <li><a href="/artes-marciales-kids" data-i18n="nav.muay_thai_kids">Kids</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title" data-i18n="nav.center">Centro</h4>
+        <ul class="footer-links">
+          <li><a href="#facilties" data-i18n="nav.facilities">Instalaciones</a></li>
+          <li><a href="#merchandaising" data-i18n="nav.merchandising">Equipamiento</a></li>
+          <li><a href="#schedule" data-i18n="nav.schedule">Horarios</a></li>
+          <li><a href="#osteopathy" data-i18n="nav.osteopathy">Osteopatía</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.hours_title">Atención</h4>
+        <p data-i18n="footer.hours_days" style="color:var(--text-muted)">Lunes a Viernes<br><strong style="color:#fff;">08:00 - 21:30</strong></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <div><p data-i18n="footer.rights">&copy; 2026 Costa Fit Calella. Todos los derechos reservados.</p></div>
+        <div class="legal-links">
+          <a href="https://scordero.com/" target="_blank">by scordero </a>|
+          <a href="#" id="openAviso"  data-i18n="footer.legal_notice">Aviso Legal</a> |
+          <a href="#" id="openPrivacidad" data-i18n="footer.privacy_policy">Política de Privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- MODAL AVISO LEGAL -->
+  <div class="modal-overlay" id="modalAviso">
+    <div class="modal-content">
+      <button class="modal-close" class="closeModal">&times;</button>
+      <h2>Aviso Legal</h2>
+      <div class="modal-body">
+        <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la
+          Información y Comercio Electrónico (LSSI-CE), se exponen los datos identificativos de la empresa:</p>
+        <br>
+        <p><strong>Titular:</strong> Costa Fit Calella</p>
+        <p><strong>Ubicación:</strong> Calella, Barcelona</p>
+        <p><strong>Contacto:</strong> info@costafitcalella.com / +34 679 08 99 61</p>
+        <br>
+        <p>El acceso y/o uso de este portal atribuye la condición de USUARIO, que acepta las Condiciones Generales de
+          Uso aquí reflejadas.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL POLÍTICA DE PRIVACIDAD -->
+  <div class="modal-overlay" id="modalPrivacidad">
+    <div class="modal-content">
+      <button class="modal-close" class="closeModal">&times;</button>
+      <h2>Política de Privacidad</h2>
+      <div class="modal-body">
+        <p>De conformidad con el Reglamento General de Protección de Datos (RGPD) y la LOPDGDD, garantizamos la
+          protección y confidencialidad de los datos personales proporcionados por nuestros usuarios.</p>
+        <br>
+        <p><strong>Finalidad del tratamiento:</strong> Atender solicitudes de información, dudas o reservas de clases
+          solicitadas a través de nuestro sitio web o WhatsApp.</p>
+        <p><strong>Derechos:</strong> Puedes ejercer tus derechos de acceso, rectificación, supresión y oposición
+          enviando un correo a nuestro email de contacto.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESTRUCTURA DEL MODAL -->
+  <div id="image-lightbox" class="lightbox-modal">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Imagen ampliada">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <!-- Botón Scroll to Top -->
+  <button id="scrollTopBtn" aria-label="Volver arriba">
+    <i class="fa-solid fa-hand-fist"></i>
+  </button>
 
     <!-- Start cookieyes banner -->
     <script id="cookieyes" src="https://cdn-cookieyes.com/client_data/c9de8a10d6ca9d9bb0c0471d/script.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "SportsActivityLocation",
-        "name": "Costa Fit Calella",
-        "description": "Escuela especializada en Muay Thai, boxeo y osteopatía en Calella de Mar.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Calella",
-            "addressRegion": "Barcelona",
-            "addressCountry": "ES"
-        },
-        "telephone": "+34 679 08 99 61",
-        "image": "https://www.costafitcalella.com/img/logo.png",
-        "url": "https://www.costafitcalella.com"
-        }
-</script>
-
-    <!-- Js Plugins -->
-   <!-- <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> -->
-
-    <script src="js/lang.js"></script>
-    <script src="js/main.js"></script>    
-    <script src="js/include.js"></script>
-        <script src="js/timetable.js"></script>
-        <script src="js/holidays.js"></script>
-
+  <script src="js/main.js"></script>
+  <script src="js/schedule.js"></script>
 </body>
 
 </html>
