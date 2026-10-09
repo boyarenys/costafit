@@ -1,0 +1,109 @@
+<section class="section-standard" id="schedule">
+  <div class="container-standard">
+
+    <!-- HEADER -->
+    <div class="section-header">
+      <span class="section-subtitle" data-i18n="schedule.subtitle">Organización</span>
+      <h2 class="section-title">
+        <span data-i18n="schedule.title_1">Organización </span>
+        <span class="highlight-red" data-i18n="schedule.title_highlight">Horario</span>
+      </h2>
+      <p class="section-description" data-i18n="schedule.description">Consulta tus clases</p>
+    </div>
+
+
+    <!-- CONTROL DE VISTAS Y DE IDIOMA -->
+    <div class="top-controls">
+
+      <div class="view-switchers">
+        <button id="btn-view-day" class="view-btn active" onclick="setViewMode('day')">
+          <i class="fas fa-calendar-day"></i> <span data-i18n="schedule.viewDay">Vista Día</span>
+        </button>
+        <button id="btn-view-week" class="view-btn" onclick="setViewMode('week')">
+          <i class="fas fa-calendar-week"></i> <span data-i18n="schedule.viewWeek">Vista Semanal</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- PESTAÑAS DÍAS (VISTA DÍA) -->
+    <div id="day-tabs-bar" class="day-tabs">
+      <div class="day-tab" id="tab-0" onclick="selectDay(0)"><span class="day-name"
+          data-i18n="schedule.mon">Lunes</span><span class="day-date" id="tab-date-0"></span></div>
+      <div class="day-tab" id="tab-1" onclick="selectDay(1)"><span class="day-name"
+          data-i18n="schedule.tue">Martes</span><span class="day-date" id="tab-date-1"></span></div>
+      <div class="day-tab" id="tab-2" onclick="selectDay(2)"><span class="day-name"
+          data-i18n="schedule.wed">Miércoles</span><span class="day-date" id="tab-date-2"></span></div>
+      <div class="day-tab" id="tab-3" onclick="selectDay(3)"><span class="day-name"
+          data-i18n="schedule.thu">Jueves</span><span class="day-date" id="tab-date-3"></span></div>
+      <div class="day-tab" id="tab-4" onclick="selectDay(4)"><span class="day-name"
+          data-i18n="schedule.fri">Viernes</span><span class="day-date" id="tab-date-4"></span></div>
+    </div>
+
+    <!-- VISTA DÍA -->
+    <div id="day-view-container" class="day-content-container"></div>
+
+    <!-- VISTA SEMANAL -->
+    <div id="week-view-container" class="week-table-container" style="display: none;">
+      <table class="week-table">
+        <thead>
+          <tr>
+            <th style="width: 90px;" data-i18n="timeHeader">Hora</th>
+            <th data-i18n="schedule.mon">Lunes</th>
+            <th data-i18n="schedule.tue">Martes</th>
+            <th data-i18n="schedule.wed">Miércoles</th>
+            <th data-i18n="schedule.thu">Jueves</th>
+            <th data-i18n="schedule.fri">Viernes</th>
+          </tr>
+        </thead>
+        <tbody id="week-table-body"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- MODAL INFORMACIÓN DE LA CLASE -->
+  <div id="info-modal" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeInfoModal()">&times;</button>
+      <span class="modal-badge info-badge" data-i18n="schedule.infoModalBadge">Información de la Clase</span>
+      <h3 id="info-class-title" class="modal-title">Clase</h3>
+
+      <div class="modal-description-box" id="info-class-desc" style="margin-top: 15px;">
+        Cargando información...
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL RESERVA POR WHATSAPP -->
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+      <span class="modal-badge" data-i18n="schedule.reserveModalBadge">Probar Clase de Prueba</span>
+      <h3 id="modal-class-title" class="modal-title">Clase</h3>
+      <div id="modal-class-time" class="modal-datetime"></div>
+
+      <div class="price-discount-info">
+        <p data-i18n="schedule.modalDiscountNote">La clase suelta cuesta 10€. Si decides apuntarte durante el mes, se te descuentan de tu primera cuota.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="book-name" data-i18n="schedule.lblFullName">Nombre y Apellidos *</label>
+        <input type="text" id="book-name" placeholder="Ej. Carlos García" required>
+      </div>
+
+      <div class="form-group">
+        <label for="book-phone" data-i18n="schedule.lblPhone">Teléfono *</label>
+        <input type="tel" id="book-phone" placeholder="Ej. 612 345 678" required>
+      </div>
+
+      <div class="form-group">
+        <label for="book-email" data-i18n="schedule.lblEmail">Correo Electrónico *</label>
+        <input type="email" id="book-email" placeholder="Ej. carlos@gmail.com" required>
+      </div>
+
+      <button class="btn-whatsapp" onclick="submitBookingWhatsApp()">
+        <i class="fab fa-whatsapp"></i> <span data-i18n="schedule.btnReserveWsp">Reservar por WhatsApp</span>
+      </button>
+    </div>
+  </div>
+</section>
