@@ -203,6 +203,13 @@
       "feat2": "Faible impact articulaire",
       "feat3": "Gain de force et tonicité musculaire"
     },
+     "yoga": {
+      "title": "Yoga",
+      "desc": "Séances axées sur l'amélioration de la mobilité articulaire, la flexibilité profonde et le contrôle de la respiration.",
+      "feat1": "Améliorez la flexibilité globale, l'alignement et la posture physique en toute sécurité.",
+      "feat2": "Maîtrisez les techniques de Pranayama pour canaliser l'énergie et réduire le stress quotidien.",
+      "feat3": "Le complément parfait pour détendre les muscles et accélérer la récupération physique."
+    },
     "routine": {
       "title": "Routine Guidée",
       "desc": "Programmes d'entraînement structurés selon vos objectifs individuels (hypertrophie, perte de gras ou performance). Suivi continu par notre équipe de coachs.",
