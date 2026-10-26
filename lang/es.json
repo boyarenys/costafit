@@ -208,6 +208,14 @@
       "feat2": "Bajo impacto articular",
       "feat3": "Aumento de fuerza y tono muscular"
     },
+     "yoga": {
+      "title": "Yoga",
+      "desc": "Sesiones enfocadas en mejorar la movilidad articular, la flexibilidad profunda y el control de la respiración.",
+      "header_title": "Entrenamiento Consciente",
+      "feat1": "Mejora la flexibilidad general, la alineación y la postura física de forma segura.",
+      "feat2": "Domina técnicas de Pranayama para centrar la energía y reducir el estrés diario.",
+      "feat3": "El complemento perfecto para relajar los músculos y acelerar la recuperación física."
+    },
     "routine": {
       "title": "Rutina Guiada",
       "desc": "Planes de entrenamiento estructurados según tus metas individuales (hipertrofia, pérdida de grasa o rendimiento). Seguimiento continuo por parte de nuestro equipo de entrenadores.",
