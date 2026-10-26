@@ -14,6 +14,7 @@
       --bg-educativo: #7a1529;
       --bg-jiujitsu: #572573;
       --bg-slow: #195e2b;
+      --bg-yoga: #3434ea;
       --bg-rutina: #17612b;
       --bg-kids: #856a00;
       --bg-juniors: #8a3710;
@@ -361,6 +362,7 @@
     .card-educativo { background-color: var(--bg-educativo); }
     .card-jiujitsu { background-color: var(--bg-jiujitsu); }
     .card-slow { background-color: var(--bg-slow); }
+    .card-yoga { background-color: var(--bg-yoga); }
     .card-rutina { background-color: var(--bg-rutina); }
     .card-kids { background-color: var(--bg-kids); }
     .card-juniors { background-color: var(--bg-juniors); }
