@@ -81,7 +81,7 @@
     "g3": "Zapatillas de suela plana",
     "g4": "Protector bucal simple"
   },
-  "defensa_personal": { 
+  "defensa_personal": {
     "subtitle": "Seguridad y Control Real",
     "title_1": "Defensa Personal",
     "about_desc": "Un sistema integral basado en la realidad que integra las mejores técnicas de diversas artes marciales. Diseñado para neutralizar agresiones cotidianas de manera rápida y efectiva sin importar la fuerza física del practicante.",
@@ -168,7 +168,7 @@
     "cta_book": "Pedir Cita por WhatsApp",
     "cta_note": "Cita previa requerida. Consulta disponibilidad."
   },
-"team": {
+  "team": {
     "subtitle": "Aprende y cuidate",
     "title_1": "Nuestro ",
     "title_highlight": "Equipo",
@@ -193,7 +193,7 @@
     "badge": "METODOLOGÍA EXCLUSIVA",
     "title_main": "PROGRAMAS DE ",
     "title_highlight": "ENTRENAMIENTO",
-    "training.description" : "Métodos diseñados para mejorar tu rendimiento",
+    "description": "Métodos diseñados para mejorar tu rendimiento",
     "cardio": {
       "title": "Cardio Muay Thai",
       "desc": "Fusiona la potencia de las técnicas del Muay Thai con ejercicios de alta intensidad (HIIT). Quema calorías, mejora la resistencia cardiovascular y tonifica todo el cuerpo sin contacto directo.",
@@ -208,7 +208,7 @@
       "feat2": "Bajo impacto articular",
       "feat3": "Aumento de fuerza y tono muscular"
     },
-     "yoga": {
+    "yoga": {
       "title": "Yoga",
       "desc": "Sesiones enfocadas en mejorar la movilidad articular, la flexibilidad profunda y el control de la respiración.",
       "header_title": "Entrenamiento Consciente",
@@ -222,145 +222,145 @@
       "feat1": "Plan 100% personalizado",
       "feat2": "Supervisión en sala",
       "feat3": "Evaluación periódica del progreso"
-    },
-    "merchandising": {
-      "subtitle": "Merchandaising Oficial",
-      "title_1": "COSTA FIT ",
-      "title_highlight": "WEAR",
-      "description": "Lleva los colores del club dentro y fuera del centro. Consigue tu equipamiento directamente en recepción.",
-      "sizes_label": "Tallas:",
-      "size_label_single": "Talla:",
-      "size_onesize": "Única",
-      "products": {
-        "tshirt": {
-          "title": "Camiseta Técnica",
-          "alt": "Camiseta Oficial Costa Fit"
-        },
-        "shorts": {
-          "title": "Thai short Costa Fit",
-          "alt": "Pantalón Muay Thai Costa Fit"
-        },
-        "cap": {
-          "title": "Gorra Costa Fit",
-          "alt": "Gorra Snapback Costa Fit"
-        },
-        "hoodie": {
-          "title": "Sudadera Costa Fit",
-          "alt": "Sudadera Hoodie Costa Fit"
-        }
-      }
-    },
-    "schedule": {
-      "subtitle": "Planifica tu entrenamiento",
-      "title_1": "Organización ",
-      "title_highlight": "Clases y Horarios",
-      "description": "Consulta tus clases ",
-      "viewDay": "Vista Día",
-      "viewWeek": "Vista Semanal",
-      "mon": "Lunes",
-      "tue": "Martes",
-      "wed": "Miércoles",
-      "thu": "Jueves",
-      "fri": "Viernes",
-      "timeHeader": "Hora",
-      "infoModalBadge": "Información de la Clase",
-      "reserveModalBadge": "Probar Clase de Prueba",
-      "modalDiscountNote": "💡 La clase suelta cuesta 10€. Si decides apuntarte durante el mes, se te descuentan de tu primera cuota.",
-      "lblFullName": "Nombre y Apellidos *",
-      "lblPhone": "Teléfono *",
-      "lblEmail": "Correo Electrónico *",
-      "btnReserveWsp": "Reservar por WhatsApp",
-      "btnReserve": "Reservar",
-      "titles": {
-        "cardio": "Cardio Muay Thai",
-        "muaythai": "Muay Thai",
-        "boxing": "Boxing",
-        "educativo": "Muay Thai Educativo",
-        "jiujitsu": "Jiu-Jitsu",
-        "slow": "Slow Training",
-        "rutina": "Rutina",
-        "kids": "Muay Thai Kids",
-        "juniors": "Muay Thai Juniors",
-        "defensa": "Defensa Personal"
-      },
-      "descriptions": {
-        "cardio": "Clase de alta intensidad orientada a mejorar la resistencia cardiovascular mediante técnicas de golpeo sin contacto.",
-        "muaythai": "Entrenamiento del arte de las 8 extremidades. Trabajo de puños, codos, rodillas, patadas y preparación física.",
-        "boxing": "Técnica de boxeo tradicional: desplazamientos, combinaciones de golpeo, esquivas y trabajo de saco y manoplas.",
-        "educativo": "Muay Thai enfocado a niños y jóvenes. Fomenta la disciplina, el respeto, la psicomotricidad y el compañerismo.",
-        "jiujitsu": "Arte marcial centrado en el agarre, derribos y sumisiones en el suelo. Desarrolla la fuerza mental y la estrategia.",
-        "slow": "Sesiones suaves para movilidad articular, estiramientos profundos y recuperación activa del cuerpo.",
-         "yoga": "Sesiones enfocadas en la flexibilidad, la alineación corporal y el control de la respiración para el equilibrio físico y mental.",
-        "rutina": "Circuito de acondicionamiento físico guiado para tonificar y mejorar la resistencia general.",
-        "kids": "Iniciación a las artes marciales para los más pequeños, mediante juegos y ejercicios de coordinación.",
-        "juniors": "Entrenamiento juvenil de artes marciales enfocado en técnica, valores y excelente forma física.",
-        "defensa": "Técnicas eficientes y aplicadas de defensa personal urbana para reaccionar ante situaciones reales."
-      }
-    },
-    "facilities": {
-      "subtitle": "Espacio & Centro",
-      "title_1": "NUESTRAS ",
-      "title_highlight": "INSTALACIONES",
-      "description": "Un espacio completamente equipado y pensado para optimizar tu rendimiento, salud y seguridad en cada sesión.",
-      "block_entry": "Entrada Principal",
-      "tag_entry": "Recepción",
-      "entry_title": "Bienvenida & Atención",
-      "entry_text": "Zona de recepción y atención personalizada para asesorarte e informarte antes de tu entrenamiento.",
-      "block_train": "Áreas del Centro",
-      "tag_tatami": "Área 01",
-      "tatami_title": "Tatami Profesional",
-      "tatami_text": "Superficie amplia con alta capacidad de absorción de impactos, perfecta para artes marciales y trabajo en suelo.",
-      "tag_osteopathy": "Salud",
-      "osteopathy_title": "Gabinete de Osteopatía",
-      "osteopathy_text": "Espacio privado dedicado al tratamiento osteopático, prevención de lesiones y recuperación física.",
-      "block_gear": "Equipamiento & Material",
-      "tag_bags": "Golpeo",
-      "bags_title": "Sacos Profesionales",
-      "bags_text": "Sacos de diversas modalidades y pesos para perfeccionar la técnica de golpeo, potencia y resistencia.",
-      "tag_defense": "Defensa",
-      "defense_title": "Defensa Personal",
-      "defense_text": "Simuladores seguros de cuchillos, bastones y protecciones para un entrenamiento realista y controlado.",
-      "tag_fitness": "Acondicionamiento",
-      "fitness_title": "Material de Entrenamiento",
-      "fitness_text": "Mancuernas, kettlebells, paos, cuerdas y balones para potenciar tu fuerza, agilidad y condición física."
-    },
-    "faq": {
-      "subtitle": "Dudas habituales",
-      "title_1": "PREGUNTAS ",
-      "title_highlight": "FRECUENTES",
-      "description": "Encuentra respuestas a las preguntas más comunes sobre nuestras clases, horarios y funcionamiento del centro.",
-      "q1": "¿Necesito experiencia previa para empezar a entrenar?",
-      "a1": "No, en absoluto. Nuestras clases están adaptadas para todos los niveles, desde principiantes desde cero hasta deportistas avanzados. Nuestros instructores te guiarán paso a paso.",
-      "q2": "¿Qué material necesito traer el primer día?",
-      "a2": "Para tu primera sesión solo necesitas ropa deportiva cómoda, una botella de agua y una toalla. El material técnico específico (como protecciones o guantes) te lo prestaremos o te asesoraremos sobre qué adquirir.",
-      "q3": "¿Ofrecen clase de prueba?",
-      "a3": "¡Sí! Puedes solicitar una primera clase de prueba sin compromiso contactando con nosotros por teléfono, WhatsApp o directamente en recepción. El coste de la clase es de 10 €. Si finalmente te apuntas, este importe se descuenta de la cuota de inscripción o matrícula.",
-      "q4": "¿Cuáles son las modalidades de pago y matrícula?",
-      "a4": "Disponemos de cuotas mensuales y bonos por sesiones según la frecuencia de entrenamiento. Puedes abonar la cuota directamente en recepción.",
-      "q5": "¿Hay vestuarios disponibles en el centro?",
-      "a5": "Sí, disponemos de vestuarios totalmente equipados para que puedas cambiarte y guardar tus pertenencias durante la sesión."
-    },
-    "reviews": {
-      "subtitle": "Comunidad Costa Fit",
-      "title_1": "LO QUE DICEN NUESTROS ",
-      "title_highlight": "ALUMNOS",
-      "google_count": "+120 reseñas en Google",
-      "rev1_text": "\"El ambiente es inmejorable. Empecé desde cero en Muay Thai y Rubén te ayuda a progresar respetando tus tiempos. Totalmente recomendado.\"",
-      "rev2_text": "\"Mi hijo va a artes marciales Kids y le encanta. No solo hace ejercicio, ha ganado mucha confianza en sí mismo. Las instalaciones impecables.\"",
-      "rev3_text": "\"Combinar el entrenamiento con las sesiones de osteopatía en el mismo centro ha sido clave para tratar mis problemas de espalda.\""
-    },
-    "contact": {
-      "subtitle": "Dónde Estamos",
-      "title_1": "Contacta con ",
-      "title_highlight": "Nosotros",
-      "description": "Encuéntranos en Calella. Ven a visitar nuestras instalaciones o consulta nuestros horarios de atención.",
-      "address_label": "Dirección",
-      "address_val": "Carrer de Jovara, 64, 08370 Calella, Barcelone",
-      "hours_label": "Horario de Atención",
-      "hours_val": "Lunes a Viernes: 09:00 - 21:00",
-      "phone_label": "Teléfono",
-      "pin_title": "Costa Fit Calella"
     }
+  },
+  "merchandising": {
+    "subtitle": "Merchandising Oficial",
+    "title_1": "COSTA FIT ",
+    "title_highlight": "WEAR",
+    "description": "Lleva los colores del club dentro y fuera del centro. Consigue tu equipamiento directamente en recepción.",
+    "sizes_label": "Tallas:",
+    "size_label_single": "Talla:",
+    "size_onesize": "Única",
+    "products": {
+      "tshirt": {
+        "title": "Camiseta Técnica",
+        "alt": "Camiseta Oficial Costa Fit"
+      },
+      "shorts": {
+        "title": "Thai short Costa Fit",
+        "alt": "Pantalón Muay Thai Costa Fit"
+      },
+      "cap": {
+        "title": "Gorra Costa Fit",
+        "alt": "Gorra Snapback Costa Fit"
+      },
+      "hoodie": {
+        "title": "Sudadera Costa Fit",
+        "alt": "Sudadera Hoodie Costa Fit"
+      }
+    }
+  },
+  "schedule": {
+    "subtitle": "Planifica tu entrenamiento",
+    "title_1": "Organización ",
+    "title_highlight": "Clases y Horarios",
+    "description": "Consulta tus clases ",
+    "viewDay": "Vista Día",
+    "viewWeek": "Vista Semanal",
+    "mon": "Lunes",
+    "tue": "Martes",
+    "wed": "Miércoles",
+    "thu": "Jueves",
+    "fri": "Viernes",
+    "timeHeader": "Hora",
+    "infoModalBadge": "Información de la Clase",
+    "reserveModalBadge": "Probar Clase de Prueba",
+    "modalDiscountNote": "💡 La clase suelta cuesta 10€. Si decides apuntarte durante el mes, se te descuentan de tu primera cuota.",
+    "lblFullName": "Nombre y Apellidos *",
+    "lblPhone": "Teléfono *",
+    "lblEmail": "Correo Electrónico *",
+    "btnReserveWsp": "Reservar por WhatsApp",
+    "btnReserve": "Reservar",
+    "titles": {
+      "cardio": "Cardio Muay Thai",
+      "muaythai": "Muay Thai",
+      "boxing": "Boxing",
+      "educativo": "Muay Thai Educativo",
+      "jiujitsu": "Jiu-Jitsu",
+      "slow": "Slow Training",
+      "rutina": "Rutina",
+      "kids": "Muay Thai Kids",
+      "juniors": "Muay Thai Juniors",
+      "defensa": "Defensa Personal"
+    },
+    "descriptions": {
+      "cardio": "Clase de alta intensidad orientada a mejorar la resistencia cardiovascular mediante técnicas de golpeo sin contacto.",
+      "muaythai": "Entrenamiento del arte de las 8 extremidades. Trabajo de puños, codos, rodillas, patadas y preparación física.",
+      "boxing": "Técnica de boxeo tradicional: desplazamientos, combinaciones de golpeo, esquivas y trabajo de saco y manoplas.",
+      "educativo": "Muay Thai enfocado a niños y jóvenes. Fomenta la disciplina, el respeto, la psicomotricidad y el compañerismo.",
+      "jiujitsu": "Arte marcial centrado en el agarre, derribos y sumisiones en el suelo. Desarrolla la fuerza mental y la estrategia.",
+      "slow": "Sesiones suaves para movilidad articular, estiramientos profundos y recuperación activa del cuerpo.",
+      "yoga": "Sesiones enfocadas en la flexibilidad, la alineación corporal y el control de la respiración para el equilibrio físico y mental.",
+      "rutina": "Circuito de acondicionamiento físico guiado para tonificar y mejorar la resistencia general.",
+      "kids": "Iniciación a las artes marciales para los más pequeños, mediante juegos y ejercicios de coordinación.",
+      "juniors": "Entrenamiento juvenil de artes marciales enfocado en técnica, valores y excelente forma física.",
+      "defensa": "Técnicas eficientes y aplicadas de defensa personal urbana para reaccionar ante situaciones reales."
+    }
+  },
+  "facilities": {
+    "subtitle": "Espacio & Centro",
+    "title_1": "NUESTRAS ",
+    "title_highlight": "INSTALACIONES",
+    "description": "Un espacio completamente equipado y pensado para optimizar tu rendimiento, salud y seguridad en cada sesión.",
+    "block_entry": "Entrada Principal",
+    "tag_entry": "Recepción",
+    "entry_title": "Bienvenida & Atención",
+    "entry_text": "Zona de recepción y atención personalizada para asesorarte e informarte antes de tu entrenamiento.",
+    "block_train": "Áreas del Centro",
+    "tag_tatami": "Área 01",
+    "tatami_title": "Tatami Profesional",
+    "tatami_text": "Superficie amplia con alta capacidad de absorción de impactos, perfecta para artes marciales y trabajo en suelo.",
+    "tag_osteopathy": "Salud",
+    "osteopathy_title": "Gabinete de Osteopatía",
+    "osteopathy_text": "Espacio privado dedicado al tratamiento osteopático, prevención de lesiones y recuperación física.",
+    "block_gear": "Equipamiento & Material",
+    "tag_bags": "Golpeo",
+    "bags_title": "Sacos Profesionales",
+    "bags_text": "Sacos de diversas modalidades y pesos para perfeccionar la técnica de golpeo, potencia y resistencia.",
+    "tag_defense": "Defensa",
+    "defense_title": "Defensa Personal",
+    "defense_text": "Simuladores seguros de cuchillos, bastones y protecciones para un entrenamiento realista y controlado.",
+    "tag_fitness": "Acondicionamiento",
+    "fitness_title": "Material de Entrenamiento",
+    "fitness_text": "Mancuernas, kettlebells, paos, cuerdas y balones para potenciar tu fuerza, agilidad y condición física."
+  },
+  "faq": {
+    "subtitle": "Dudas habituales",
+    "title_1": "PREGUNTAS ",
+    "title_highlight": "FRECUENTES",
+    "description": "Encuentra respuestas a las preguntas más comunes sobre nuestras clases, horarios y funcionamiento del centro.",
+    "q1": "¿Necesito experiencia previa para empezar a entrenar?",
+    "a1": "No, en absoluto. Nuestras clases están adaptadas para todos los niveles, desde principiantes desde cero hasta deportistas avanzados. Nuestros instructores te guiarán paso a paso.",
+    "q2": "¿Qué material necesito traer el primer día?",
+    "a2": "Para tu primera sesión solo necesitas ropa deportiva cómoda, una botella de agua y una toalla. El material técnico específico (como protecciones o guantes) te lo prestaremos o te asesoraremos sobre qué adquirir.",
+    "q3": "¿Ofrecen clase de prueba?",
+    "a3": "¡Sí! Puedes solicitar una primera clase de prueba sin compromiso contactando con nosotros por teléfono, WhatsApp o directamente en recepción. El coste de la clase es de 10 €. Si finalmente te apuntas, este importe se descuenta de la cuota de inscripción o matrícula.",
+    "q4": "¿Cuáles son las modalidades de pago y matrícula?",
+    "a4": "Disponemos de cuotas mensuales y bonos por sesiones según la frecuencia de entrenamiento. Puedes abonar la cuota directamente en recepción.",
+    "q5": "¿Hay vestuarios disponibles en el centro?",
+    "a5": "Sí, disponemos de vestuarios totalmente equipados para que puedas cambiarte y guardar tus pertenencias durante la sesión."
+  },
+  "reviews": {
+    "subtitle": "Comunidad Costa Fit",
+    "title_1": "LO QUE DICEN NUESTROS ",
+    "title_highlight": "ALUMNOS",
+    "google_count": "+120 reseñas en Google",
+    "rev1_text": "\"El ambiente es inmejorable. Empecé desde cero en Muay Thai y Rubén te ayuda a progresar respetando tus tiempos. Totalmente recomendado.\"",
+    "rev2_text": "\"Mi hijo va a artes marciales Kids y le encanta. No solo hace ejercicio, ha ganado mucha confianza en sí mismo. Las instalaciones impecables.\"",
+    "rev3_text": "\"Combinar el entrenamiento con las sesiones de osteopatía en el mismo centro ha sido clave para tratar mis problemas de espalda.\""
+  },
+  "contact": {
+    "subtitle": "Dónde Estamos",
+    "title_1": "Contacta con ",
+    "title_highlight": "Nosotros",
+    "description": "Encuéntranos en Calella. Ven a visitar nuestras instalaciones o consulta nuestros horarios de atención.",
+    "address_label": "Dirección",
+    "address_val": "Carrer de Jovara, 64, 08370 Calella, Barcelona",
+    "hours_label": "Horario de Atención",
+    "hours_val": "Lunes a Viernes: 09:00 - 21:00",
+    "phone_label": "Teléfono",
+    "pin_title": "Costa Fit Calella"
   },
   "footer": {
     "about_text": "Centro de referencia en Calella en Artes Marciales y Osteopatía.",
