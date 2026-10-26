@@ -201,6 +201,13 @@
       "feat2": "Low joint impact",
       "feat3": "Increased strength & muscle tone"
     },
+    "yoga": {
+      "title": "Yoga",
+      "desc": "Sessions focused on improving joint mobility, deep flexibility, and breathing control.",
+      "feat1": "Enhance overall flexibility, alignment, and physical posture safely.",
+      "feat2": "Master Pranayama techniques to center energy and reduce daily stress.",
+      "feat3": "The perfect complement to relax muscles and speed up physical recovery."
+     },
     "routine": {
       "title": "Guided Routine",
       "desc": "Structured training plans tailored to your individual goals (hypertrophy, fat loss, or performance). Continuous monitoring by our coaching team.",
