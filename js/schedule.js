@@ -15,6 +15,7 @@ const scheduleData = [
   {
     dayKey: "tue",
     classes: [
+      { type: "yoga", start: "08:15", end: "09:15", duration: "60 min", yt: "https://youtube.com" },
       { type: "slow", start: "09:30", end: "10:00", duration: "30 min", yt: "https://youtube.com" },
       { type: "jiujitsu", start: "10:00", end: "11:15", duration: "75 min", yt: "https://youtube.com" },
       { type: "rutina", start: "11:30", end: "12:30", duration: "60 min", yt: "https://youtube.com" },
@@ -38,6 +39,7 @@ const scheduleData = [
   {
     dayKey: "thu",
     classes: [
+      { type: "yoga", start: "08:15", end: "09:15", duration: "60 min", yt: "https://youtube.com" },
       { type: "slow", start: "09:30", end: "10:00", duration: "30 min", yt: "https://youtube.com" },
       { type: "jiujitsu", start: "10:00", end: "11:15", duration: "75 min", yt: "https://youtube.com" },
       { type: "rutina", start: "11:30", end: "12:30", duration: "60 min", yt: "https://youtube.com" },
