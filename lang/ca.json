@@ -203,6 +203,13 @@
       "feat2": "Baix impacte articular",
       "feat3": "Augment de força i to muscular"
     },
+    "yoga": {
+      "title": "Yoga",  
+      "desc": "Sessons enfocades a millorar la mobilitat articular, la flexibilitat profunda i el control de la respiració.",
+      "feat1": "Millora la flexibilitat general, l'alineació i la postura física de manera segura.",
+      "feat2": "Domina tècniques de Pranayama per centrar l'energia i reduir l'estrès diari.",
+      "feat3": "El complement perfecte per relaxar els músculs i accelerar la recuperació física."
+    },
     "routine": {
       "title": "Rutina Guiada",
       "desc": "Plans d'entrenament estructurats segons les teves metes individuals (hipertròfia, pèrdua de greix o rendiment). Seguiment continu per part del nostre equip d'entrenadors.",
